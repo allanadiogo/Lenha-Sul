@@ -1,0 +1,143 @@
+.main {
+    background: url('../../../assets/images/fundoazul.png') no-repeat center fixed ;
+    background-size: cover;
+    width: 100%;
+    height: 60em;
+    font-weight: bold;
+    margin-right: 30px;
+    overflow: auto;
+    
+
+    .Div-Mae-Input {
+    background: no-repeat;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+
+    width: 20em;
+    background-color: white;
+    
+   }
+
+
+section {
+    margin-top: 20px;
+}
+
+.Input-Email {
+    border-left: none !important;
+    border: 1px solid white;
+    height: 3em;
+    width: 24.1em;
+}
+
+.Div-imagem-Input {
+    border-right: none;
+    margin-right: 0px;
+    width: 10em;
+    
+    
+}
+
+.Div-Mae-Input-Senha {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 2em;
+}
+
+.Input-Senha {
+    border-left: none !important;
+    border: 1px solid white;
+    height: 3em;
+    width: 24em;
+    margin-top: 0.3em;
+    align-self: center;
+
+}
+
+.Div-imagem-Input-Senha {
+    border-right: none;
+    margin-right: 0px;
+    margin-top: 20px;
+
+    background-color: white
+    
+}
+
+
+.Div-Meio-Login {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+header {
+    margin-top: 2em;
+    margin-left: 4em;
+}
+
+.Img-Logo {
+    width: 150px;
+    padding-bottom: 2em;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+.Div-Button {
+    margin-top: 15px;
+   align-self: center;
+   margin-top: 2em;
+   }
+
+.botao-home{
+    font-family: 'font8';
+    font-size: 1.5em;
+}
+
+button {
+    font-family: 'font7';
+    background-color: black;
+    color: white;
+    height: 2.5em;
+    width: 12em;
+    size: 10px;
+
+    
+}
+
+.botao-entrar{
+    background-color: black;
+    font-size: 18px;
+
+    
+}
+
+.login-administrativo {
+    font-family: 'font4';
+    font-size: 2em;
+    padding-bottom: 0.6em;
+
+}
+
+.Width-Img-Cadeado {
+    width: 20px;
+}
+
+.Width-Img {
+    width: 20px;
+    background-color: w;
+}
+
+::placeholder {
+    color: #909090;
+    font-family: 'font2';
+    padding-left: 0.8em;
+}
+
+}
+
+

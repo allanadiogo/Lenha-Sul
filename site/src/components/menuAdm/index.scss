@@ -1,0 +1,28 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.menu{
+    background-image: url('../../../assets/images/fundoazul.png');
+    width: 15em;
+    height: 100vh;
+    background-repeat: none;
+    flex-direction: column;
+}
+
+.logo{
+   padding: 30px 0px 0px 52px;
+}
+
+.text-1{
+    display: flex;
+
+    align-items: center;
+    justify-content: center; 
+    padding-top: 50px;
+}
+
+.text-menu{
+    padding: 10px ;
+}
