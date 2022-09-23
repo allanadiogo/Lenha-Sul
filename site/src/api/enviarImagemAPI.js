@@ -1,4 +1,4 @@
-export async function enviarimagem (id, imagem){
+export async function EnviarImagem (id, imagem){
     const formData = new FormData();
     formData.append('imgpet', imagem);
     

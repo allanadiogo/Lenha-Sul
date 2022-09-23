@@ -3,15 +3,15 @@ import './index.scss';
 import { useNavigate } from 'react-router-dom';
 import storage from 'local-storage'
 
+import { toast } from 'react-toastify';
+
+
 import LoadingBar from 'react-top-loading-bar'
 
-import { cadastrarProduto } from '../../../api/produtoAPI'
-import { listarCategorias } from '../../../api/categoriaAPI';
-import { enviarImagem } from '../../../api/enviarImagemAPI'
-
-
-
-import { useState, useRef, useEffect } from 'react';
+import { CadastrarProduto } from '../../../api/produtoAPI'
+import { ListarCategorias } from '../../../api/categoriaAPI';
+import { EnviarImagem } from '../../../api/enviarImagemAPI'
+import { useState, useEffect } from 'react';
 
 export default function Index() {
   const navigate = useNavigate();
@@ -32,7 +32,7 @@ export default function Index() {
   const UserLogado = storage('usuario-logado').Nome;
   const [id, SetId] = useState(0);
 
-  async function carregarPost() {
+  async function CarregarPost() {
     const resposta = await buscarPorId(idParam);
     SetId(resposta.id)
     setNome(resposta.nome)
@@ -46,12 +46,17 @@ export default function Index() {
 
   }
 
-  function adicionarCategoria() {
+  function AdicionarCategoria() {
     if (!catSelecionadas.find(item => item == idCategoria)) {
       const categorias = [...catSelecionadas, idCategoria];
       setCatSelecionadas(categorias);
     }
   }
+
+  async function ListarCategorias() {
+    const r = await ListarCategorias();
+    setCategorias(r);
+}
 
   async function onClick() {
     try {
@@ -62,8 +67,8 @@ export default function Index() {
 
       if (id === 0) {
 
-        const NovoPost = await CadastrarPizza(nome, preco, tipo, ingredientes, usuario)
-        const r = await enviarimagem(NovoPost.id, img)
+        const NovoPost = await CadastrarProduto(nome, preco, tipo, ingredientes, usuario)
+        const r = await EnviarImagem(NovoPost.id, img)
         toast.dark("A pizza foi cadastrada ")
 
         SetId(NovoPost.id);
@@ -80,7 +85,7 @@ export default function Index() {
     }
   }
 
-  function escolherimg() {
+  function EnviarImagem() {
     document.getElementById('imgpizza').click();
   }
 
@@ -89,7 +94,7 @@ export default function Index() {
       return URL.createObjectURL(img);
     }
     else {
-      return buscarimagem(img)
+      return EnviarImagem(img)
     }
   }
 
@@ -156,10 +161,10 @@ export default function Index() {
             <p className="P-Categoria">salgada</p>
 
             <input type="checkbox" value={categorias} onChange={e => setCategorias(e.target.value)}></input>
-            <p className="P-Categoria-2">salgada</p>
+            <p className="P-Categoria-2">doce</p>
 
             <input type="checkbox" value={categorias} onChange={e => setCategorias(e.target.value)}></input>
-            <p className="P-Categoria-3">salgada</p>
+            <p className="P-Categoria-3">bebida</p>
           </div>
 
 
