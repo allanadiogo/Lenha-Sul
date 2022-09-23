@@ -5,7 +5,10 @@ import storage from 'local-storage'
 
 import LoadingBar from 'react-top-loading-bar'
 
-import { CadastrarPizza, buscarimagem, enviarimagem, listarCategorias } from '../../../api/usuarioAPI/efetuarlogin'
+import { cadastrarProduto } from '../../../api/produtoAPI'
+import { listarCategorias } from '../../../api/categoriaAPI';
+import { enviarImagem } from '../../../api/enviarImagemAPI'
+
 
 
 import { useState, useRef, useEffect } from 'react';

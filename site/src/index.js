@@ -8,7 +8,7 @@ import App from './App';
 
 import Home from './pages/home';
 
-// import cadastrarProduto from './pages/pagesAdm/cadastrarProduto';
+import cadastrarProduto from './pages/pagesAdm/cadastrarProduto';
 import ConsultarPedidos from './pages/pagesAdm/consultarPedidos';
 import ConsultarProdutos from './pages/pagesAdm/consultarProdutos';
 import HistoricoPedidos from './pages/pagesAdm/historicoPedidos';
@@ -40,7 +40,7 @@ root.render(
     <BrowserRouter>
    <Routes>
      <Route path='/home' element={<Home/>} />
-
+     <Route path='/cadastrarProduto' element={<cadastrarProduto/>}/>
      <Route path='/consultarPedidos' element={<ConsultarPedidos/>}/>
      <Route path='/consultarProdutos' element={<ConsultarProdutos/>}/>
      <Route path='/historicoPedidos' element={<HistoricoPedidos/>} />
@@ -69,6 +69,6 @@ root.render(
      </BrowserRouter>
   </React.StrictMode>
 
-  // <Route path='/cadastrarProduto' element={<cadastrarProduto/>}/>
+
 );
 
