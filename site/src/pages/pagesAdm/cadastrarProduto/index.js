@@ -6,8 +6,6 @@ import storage from 'local-storage'
 import { toast } from 'react-toastify';
 
 
-import LoadingBar from 'react-top-loading-bar'
-
 import { CadastrarProduto } from '../../../api/produtoAPI'
 import { ListarCategorias } from '../../../api/categoriaAPI';
 import { EnviarImagem } from '../../../api/enviarImagemAPI'
@@ -24,7 +22,7 @@ export default function Index() {
   const [nome, setNome] = useState('');
   const [preco, setPreco] = useState('');
   const [ingredientes, setIngredientes] = useState('');
-  const [img, SetImg] = useState();
+  const [img, setImg] = useState();
 
   const [idCategoria, setIdCategoria] = useState();
   const [categorias, setCategorias] = useState([]);
@@ -32,19 +30,8 @@ export default function Index() {
   const UserLogado = storage('usuario-logado').Nome;
   const [id, SetId] = useState(0);
 
-  async function CarregarPost() {
-    const resposta = await buscarPorId(idParam);
-    SetId(resposta.id)
-    setNome(resposta.nome)
-    setPreco(resposta.preco)
-    setIngredientes(resposta.ingredientes)
-    setCategorias(resposta.categorias)
-    setImg(resposta.img)
+  const [catSelecionadas, setCatSelecionadas] = useState([]);
 
-
-
-
-  }
 
   function AdicionarCategoria() {
     if (!catSelecionadas.find(item => item == idCategoria)) {
@@ -67,7 +54,7 @@ export default function Index() {
 
       if (id === 0) {
 
-        const NovoPost = await CadastrarProduto(nome, preco, tipo, ingredientes, usuario)
+        const NovoPost = await CadastrarProduto(nome, preco, ingredientes, usuario)
         const r = await EnviarImagem(NovoPost.id, img)
         toast.dark("A pizza foi cadastrada ")
 
@@ -85,7 +72,7 @@ export default function Index() {
     }
   }
 
-  function EnviarImagem() {
+  function escolherimg() {
     document.getElementById('imgpizza').click();
   }
 
@@ -116,7 +103,7 @@ export default function Index() {
 
           <div className="div-Importar-Foto" onClick={escolherimg}>
             <h2> Importar Arquivo </h2>
-            <input type='file' id='imgpizza' onChange={e => SetImg(e.target.files[0])} />
+            <input type='file' id='imgpizza' onChange={e => setImg(e.target.files[0])} />
           </div>
 
           ''
@@ -152,7 +139,7 @@ export default function Index() {
                 <option value={item.id}> {item.categoria} </option>
               )}
             </select>
-            <button onClick={adicionarCategoria} className='btn-categoria'>+</button>
+            <button onClick={AdicionarCategoria} className='btn-categoria'>+</button>
           </span>
 
           <div className="Div-Botoes-Categoria">

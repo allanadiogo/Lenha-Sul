@@ -8,7 +8,7 @@ import LoadingBar from 'react-top-loading-bar'
 import { EfetuarLogin } from '../../../api/usuarioAPI'
 import logo from '../../../assets/images/logo.png';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 
 export default function Index() {
 
@@ -34,7 +34,7 @@ export default function Index() {
             storage('usuario-logado', r)
 
             setTimeout(() => {
-                navigate('/consultarPedidos')
+                navigate('/cadastrarProduto')
             }, 3000)
 
 

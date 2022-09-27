@@ -4,7 +4,7 @@ export async function Login (email,senha){
     const comando = `
     SELECT id_admin       id,
        ds_email       Email
-FROM tb_admins
+FROM tb_admin
 WHERE ds_email          =?
 AND   ds_senha          =?`
 
