@@ -5,16 +5,23 @@ import storage from 'local-storage'
 
 import LoadingBar from 'react-top-loading-bar'
 
-import { EfetuarLogin } from '../../../api/usuarioAPI'
+import { EfetuarCadastro } from '../../../api/usuarioAPI'
 import usuario2 from '../../../assets/images/image 80.png';
 
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
+
+import { Link } from 'react-router-dom';
 import { useState, useRef, useEffect } from 'react';
 
 export default function Index() {
 
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
-    const [] = useState('');
+    const [nome, setNome] = useState('');
+    const [telefone, setTelefone] = useState('');
+    const [cpf, setCPF] = useState('');
+    const [nascimento, setNascimento] = useState('');
 
     const [erro, setErro] = useState('');
     const [carregando, setCarregando] = useState(false);
@@ -22,42 +29,38 @@ export default function Index() {
     const navigate = useNavigate();
     const ref = useRef();
 
-
-
-
-
-
-    async function onClick() {
-        ref.current.continuousStart();
+    async function onClick(){
+            
         setCarregando(true);
 
         try {
-            const r = await EfetuarLogin(email, senha)
-            storage('usuario-logado', r)
+            const r = await EfetuarCadastro(nome, email, senha, nascimento, telefone, cpf);
+            console.log(r);
+            storage('usuario-logado', r)    
+            toast.dark('Cadastrado com sucesso ✔️')
 
             setTimeout(() => {
                 navigate('/loginUsuario')
             }, 3000)
-
-
-
-        }
+        } 
         catch (err) {
-            ref.current.complete()
-            setCarregando(false)
-            if (err.message.status === 401) {
-                setErro(err.message.data.Erro)
-            }
+        if (err.message.status === 400) { 
+            setErro(err.response.data.Erro)
         }
-    }
-
+        }
+      }
+      useEffect(() => {
+        if(storage('usuario-logado')){
+            navigate('/home')
+        }
+    } ,[])
 
 
 
     return (
 
         <main className="main1">
-            <LoadingBar color='#000' ref={ref} />
+            <LoadingBar color='#0000' ref={ref} />
 
             <header className="Header-Home">
                 <a className="botao-home">Home</a>
@@ -74,9 +77,11 @@ export default function Index() {
 
 
                     <h2 className="login-administrativo">Registrar-se</h2>
+
                     <div className='div-p'>
                     <p className='p'>Nome de usuario</p>
                     </div>
+
                     <div className="Div-Mae-Input">
                     
                         <div>
@@ -85,33 +90,62 @@ export default function Index() {
                     
 
                           
-                        <input className="Input-Email" type="text" placeholder="Nome de Usuário" value={email} onChange={e => setEmail(e.target.value)} />
+                        <input className="Input-Email" type="text" placeholder="Nome de Usuário" value={nome} onChange={e => setNome(e.target.value)} />
                     </div>
 
+                    
 
-                    <div>
-                        <img className="Width-Img-Cadeado" src="../assets/image" alt="" />
+                 
+
+                    <div className='div-p2'>
+                    <p className='p'>E-mail</p>
+                    </div>
+
+                    <input class="Input-Senha" type="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} />
+
+
+                    
+
+                    <div className='div-p3'>
+                    <p className='p'>Telefone</p>
+                    </div>
+
+                    <input class="Input-Senha" type="tel" placeholder="Telefone" value={telefone} onChange={e => setTelefone(e.target.value)} />
+
+                    <div className='div-p4'>
+                    <p className='p'>CPF/CNPJ</p>
+                    </div>
+
+                    <input class="Input-Senha" type="text" placeholder="CPF/CNPJ" value={cpf} onChange={e => setCPF(e.target.value)} />
+
+                    <div className='div-p2'>
+                    <p className='p'>Senha</p>
                     </div>
 
                     <input class="Input-Senha" type="password" placeholder="Senha" value={senha} onChange={e => setSenha(e.target.value)} />
 
-                    <div>
-                        <img className="Width-Img-Cadeado" src="../assets/image" alt="" />
+                    <div className='div-p5'>
+                    <p className='p'>Nascimento</p>
                     </div>
 
-                    <input class="Input-Senha" type="password" placeholder="Senha" value={senha} onChange={e => setSenha(e.target.value)} />
-
+                    <input class="Input-Senha" type="date" value={nascimento} onChange={e => setNascimento(e.target.value)} />
+                    
+                    <div>
+                            {erro}
+                    </div>
 
 
                     <div className="Div-Button">
-                        <button className="botao-entrar" onClick={onClick} disabled={carregando}>Entrar</button>
+                        
+                        <button className="botao-entrar" onClick={onClick} disabled= {carregando} >Registrar-se</button>
+                        <p class="entrar">Já tem uma conta? <Link to='/loginUsuario' >Entrar</Link></p>
                     </div>
+                   
+
 
 
                 </div>
-                <div>
-                    {erro}
-                </div>
+                
 
             </section>
 

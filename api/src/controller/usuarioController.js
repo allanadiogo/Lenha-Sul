@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { Login} from "../repository/usuarioRepository.js";
+import {Cadastro, Login} from "../repository/usuarioRepository.js";
 
 const server = Router();
 
@@ -17,5 +17,26 @@ server.post('/usuario/login', async (req,resp) => {
         })
     }
 })
+
+server.post('/usuario/cadastro', async (req,resp) => {
+    try{ 
+    const {nome,email, senha, nascimento, telefone, cpf} = req.body;
+    if(!nome) throw new Error('O nome é Obrigatório!')
+    if(!email) throw new Error('O email é Obrigatório!')
+    if(!senha) throw new Error('A senha é Obrigatório!')
+    if(!nascimento) throw new Error('O nascimento é Obrigatório!')
+    if(!telefone) throw new Error('O telefone é Obrigatório!')
+    if(!cpf) throw new Error('O CPF/CNPJ é Obrigatório!')
+
+    const resposta = await Cadastro(nome,email,senha,nascimento,telefone,cpf);
+    
+    resp.send(resposta)
+}
+catch(err){
+    resp.status(400).send({
+        Erro:err.message
+    })
+}
+})  
 
 export default server;
