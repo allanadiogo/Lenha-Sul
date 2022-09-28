@@ -74,16 +74,26 @@ export default function Index() {
 
 
                     <h2 className="login-administrativo">Registrar-se</h2>
-
-
+                    <div className='div-p'>
+                    <p className='p'>Nome de usuario</p>
+                    </div>
                     <div className="Div-Mae-Input">
+                    
                         <div>
                             <img className="Width-Img" src="../assets/image/usuario2.png" alt="" />
                         </div>
+                    
 
-                        <input className="Input-Email" type="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} />
+                          
+                        <input className="Input-Email" type="text" placeholder="Nome de Usuário" value={email} onChange={e => setEmail(e.target.value)} />
                     </div>
 
+
+                    <div>
+                        <img className="Width-Img-Cadeado" src="../assets/image" alt="" />
+                    </div>
+
+                    <input class="Input-Senha" type="password" placeholder="Senha" value={senha} onChange={e => setSenha(e.target.value)} />
 
                     <div>
                         <img className="Width-Img-Cadeado" src="../assets/image" alt="" />
