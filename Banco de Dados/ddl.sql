@@ -1,5 +1,5 @@
-create database lenhaSul;
-use lenhaSul;
+create database lenhaasul;
+use lenhaasul;
 
 create table tb_usuario (
 	id_usuario         int primary key auto_increment,

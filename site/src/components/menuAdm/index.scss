@@ -1,14 +1,17 @@
 *{
     margin: 0px;
     padding: 0px;
+    
 }
 
 .menu{
-    background-image: url('../../../public/fundoazul.png');
+    background-image: url('../../assets/images/fundoazul.png');
+    background-size: cover;
     width: 15em;
     height: 100vh;
     background-repeat: none;
     flex-direction: column;
+   
 }
 
 .logo{
@@ -17,10 +20,51 @@
 
 .text-1{
     display: flex;
+    font-size: 0.8em;
+    align-items: center;
+    justify-content: center; 
+    padding-top: 50px;
+   
+}
+
+.text-2{
+    display: flex;
+    font-size: 0.8em;
+    color: black;
 
     align-items: center;
     justify-content: center; 
     padding-top: 50px;
+   
+    margin-left: 3em;
+}
+
+.text-3{
+    display: flex;
+    font-size: 0.8em;
+    color: black;
+    align-items: center;
+    justify-content: center; 
+    padding-top: 40px;
+}
+
+.text-4{
+    display: flex;
+    font-size: 0.8em;
+    color: black;
+    align-items: center;
+    justify-content: center; 
+    padding-top: 40px;
+    
+}
+
+.text-5{
+    display: flex;
+    font-size: 0.8em;
+    color: black;
+    align-items: center;
+    justify-content: center; 
+    padding-top: 40px;
 }
 
 .text-menu{

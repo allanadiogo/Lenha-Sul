@@ -1,4 +1,5 @@
 import './index.scss';
+import { MenuAzul } from '../../../components/menuAdm/index.js';
 
 import { useNavigate } from 'react-router-dom';
 import storage from 'local-storage'
@@ -10,6 +11,7 @@ import { CadastrarProduto } from '../../../api/produtoAPI'
 import { ListarCategorias } from '../../../api/categoriaAPI';
 import { EnviarImagem } from '../../../api/enviarImagemAPI'
 import { useState, useEffect } from 'react';
+
 
 export default function Index() {
   const navigate = useNavigate();
@@ -99,9 +101,16 @@ export default function Index() {
 
 
   return (
+    
     <main>
+      <div>
+     <MenuAzul/>
+      </div>
+      
 
       <div className="Div-Agrupadora-todos">
+
+  
 
         <div className="Lado-Esquerdo-Informações">
 
