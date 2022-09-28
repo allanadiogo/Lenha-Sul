@@ -40,10 +40,19 @@ export default function Index() {
     }
   }
 
-  async function ListarCategorias() {
+  function BuscarCategoria(id) {
+    const cate = categorias.find(item => item.id == id);
+    return cate.categoria;
+  }
+
+
+
+  async function carregarCategorias() {
     const r = await ListarCategorias();
     setCategorias(r);
-}
+  }
+
+  
 
   async function onClick() {
     try {
@@ -131,26 +140,20 @@ export default function Index() {
             <input data-ls-module="charCounter" maxlength="20" type='text' placeholder="Descrição" value={ingredientes} onChange={e => setIngredientes(e.target.value)} />
           </div>
 
-          <span className="Span-4">
-            <select value={idCategoria} onChange={e => setIdCategoria(e.target.value)} >
-              <option selected disabled hidden>Selecione</option>
-
-              {categorias.map(item =>
-                <option value={item.id}> {item.categoria} </option>
-              )}
-            </select>
-            <button onClick={AdicionarCategoria} className='btn-categoria'>+</button>
-          </span>
+          
 
           <div className="Div-Botoes-Categoria">
+          <p className="Span-4">
+              Categoria:
+            </p>
 
-            <input type="checkbox" value={categorias} onChange={e => setCategorias(e.target.value)}></input>
+            <input type="checkbox" value={idCategoria} onChange={e => setIdCategoria(e.target.value)}></input>
             <p className="P-Categoria">salgada</p>
 
-            <input type="checkbox" value={categorias} onChange={e => setCategorias(e.target.value)}></input>
+            <input type="checkbox" value={idCategoria} onChange={e => setIdCategoria(e.target.value)}></input>
             <p className="P-Categoria-2">doce</p>
 
-            <input type="checkbox" value={categorias} onChange={e => setCategorias(e.target.value)}></input>
+            <input type="checkbox" value={idCategoria} onChange={e => setIdCategoria(e.target.value)}></input>
             <p className="P-Categoria-3">bebida</p>
           </div>
 
@@ -199,6 +202,7 @@ export default function Index() {
                     <p> {preco} </p>
                   }
 
+                  
                 </div>
 
               </div>

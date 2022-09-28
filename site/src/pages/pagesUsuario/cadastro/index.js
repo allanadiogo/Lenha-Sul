@@ -14,6 +14,8 @@ export default function Index() {
 
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
+    const [] = useState('');
+
     const [erro, setErro] = useState('');
     const [carregando, setCarregando] = useState(false);
 
@@ -34,7 +36,7 @@ export default function Index() {
             storage('usuario-logado', r)
 
             setTimeout(() => {
-                navigate('/cadastrarProduto')
+                navigate('/loginUsuario')
             }, 3000)
 
 
@@ -54,7 +56,7 @@ export default function Index() {
 
     return (
 
-        <main className="main">
+        <main className="main1">
             <LoadingBar color='#000' ref={ref} />
 
             <header className="Header-Home">
