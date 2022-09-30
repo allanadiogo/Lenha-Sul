@@ -1,7 +1,8 @@
 .megadiv{
     display:flex;
     flex-direction: row;
-    background-color: rgb(120, 31, 161); 
+    background-color: rgb(255, 255, 255); 
+    
 
 
 .Div-Agrupadora-todos{
@@ -24,11 +25,26 @@
 .inf-post{
     font-family: 'font4';
     color: black;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
 }
 
 .Desc{
-   
+    height: 6em;
+    width: 15em;
+   resize: none;
+}
+
+.Impt-Arquivo{
+    font-family: 'font7';
+}
+
+.Span{
+    font-family: 'font2';
+}
+
+.Span-2{
+    font-family: 'font2';
+
 }
 
 }                                                                                         

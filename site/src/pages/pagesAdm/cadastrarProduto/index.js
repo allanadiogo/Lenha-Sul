@@ -119,7 +119,7 @@ export default function Index() {
 
 
             <div className="div-Importar-Foto" onClick={escolherimg}>
-              <h2> Importar Arquivo </h2>
+              <h2 className='Impt-Arquivo'> Importar Arquivo </h2>
               <input type='file' id='imgpizza' onChange={e => setImg(e.target.files[0])} />
             </div>
 
@@ -145,7 +145,7 @@ export default function Index() {
                 Descrição:
               </span>
 
-              <input className='Desc' data-ls-module="charCounter" maxlength="100" type='submit' placeholder="Descrição" value={ingredientes} onChange={e => setIngredientes(e.target.value)} />
+              <textarea className='Desc' data-ls-module="charCounter" maxlength="100" type='submit' placeholder="Descrição" value={ingredientes} onChange={e => setIngredientes(e.target.value)} />
             </div>
 
 
