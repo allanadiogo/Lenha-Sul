@@ -1,6 +1,18 @@
-main{
+.megadiv{
     display:flex;
     flex-direction: row;
+    background-color: rgb(120, 31, 161); 
+
+
+.Div-Agrupadora-todos{
+    display: flex;
+    flex-direction: row;
+}
+
+.Lado-Esquerdo-Informações{
+    display: flex;
+    flex-direction: column;
+   
 }
 
 .Lado-Direito-Informações{
@@ -8,3 +20,15 @@ main{
     flex-direction: column;
  
 }
+
+.inf-post{
+    font-family: 'font4';
+    color: black;
+  letter-spacing: 4px;
+}
+
+.Desc{
+   
+}
+
+}                                                                                         

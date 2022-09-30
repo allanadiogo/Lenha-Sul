@@ -54,7 +54,8 @@ export default function Index() {
 
     return (
 
-        <main className="main">
+        <main className='Divzona'>
+
             <LoadingBar color='#000' ref={ref} />
 
             <header className="Header-Home">
@@ -103,7 +104,7 @@ export default function Index() {
 
             </section>
 
-
+          
         </main>
 
     )

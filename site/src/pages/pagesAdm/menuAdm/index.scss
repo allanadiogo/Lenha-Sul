@@ -1,0 +1,135 @@
+.Div-menuAdm {
+    display: flex;
+    flex-direction: row;
+    background-color: #262D37;
+    background-size: cover;
+    overflow: auto;
+    height: 57.3em;
+    
+    
+
+.Div-Primeira-Fileira-Balão {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 40px;
+    padding-left: 12em !important;
+}
+
+.section-menuadm{
+    margin-top: 3em;
+}
+
+.Bem-Vindo{
+    display: flex;
+    width: 8em;
+    padding-left: 1em;
+    color: white;
+    font-size: 40px;
+    margin-left: 8em;
+    margin-top: 1em;
+    padding-bottom: 1.5em;
+}
+
+
+
+.Primeiro-Balão {
+    padding: 35px 0px 0px 0px;
+    width: 220px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 18px;
+    font-size: 20px;
+    margin-right: 80px;
+    background-color: White;
+}
+
+
+.Segundo-Balão {
+    padding: 35px 0px 0px 0px;
+    width: 220px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 18px;
+    font-size: 20px;
+    background-color: White;
+}
+
+
+.Imagem-Primeiro-Balão {
+    margin-bottom: 0px;
+}
+
+.Imagem-Segundo-Balão {
+    margin-bottom: 0px;
+}
+
+.Imagem-Terceiro-Balão {
+    margin-bottom: 25px;
+}
+
+.Imagem-Quarto-Balão {
+    margin-bottom: 25px;
+}
+
+
+p {
+    font-weight: bold;
+    line-height: 15px;
+}
+
+.p-margin-primeiro-balão {
+    margin-left: 35px;
+}
+
+.p-margin-segundo-balão {
+    margin-left: 35px;
+}
+
+
+
+
+.Div-Segunda-Fileira-Balão {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 80px;
+    padding-left: 12em; 
+}
+
+
+
+.Terceiro-Balão {
+    padding: 35px 0px 0px 0px;
+    width: 220px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 18px;
+    font-size: 20px;
+    margin-right: 80px;
+    background-color: White;
+}
+
+
+.Quarto-Balão {
+    padding: 35px 0px 0px 0px;
+    width: 220px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 18px;
+    font-size: 20px;
+    margin-right: 80px;
+    background-color: White;
+}
+
+
+}
+
