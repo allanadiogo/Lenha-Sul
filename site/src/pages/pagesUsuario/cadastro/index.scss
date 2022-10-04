@@ -15,7 +15,7 @@
     justify-content: center;
     align-self: center;
 
-    width: 20em;
+    width: 21em;
     background-color: #ffff;
     
    }
@@ -25,33 +25,47 @@
    }
 
    .div-p{
-    display: flex;
-    justify-content: center;
-    padding-right: 12em;
-   }
-
-   .div-p2{
-    display: flex;
-    justify-content: center;
-    padding-right: 17em;
-   }
-
-   .div-p3{
+    font-size: 13px;
+    font-family:sans-serif;
     display: flex;
     justify-content: center;
     padding-right: 16em;
    }
 
-   .div-p4{
+   .div-p2{
+    display: flex;
+    font-size: 13px;
+    font-family:sans-serif;
+    padding-top: 1em;
+    justify-content: center;
+    padding-right: 21em;
+   }
+
+   .div-p3{
+    font-size: 13px;
+    font-family:sans-serif;
+    padding-top: 1em;
     display: flex;
     justify-content: center;
-    padding-right: 15em;
+    padding-right: 20.5em;
+   }
+
+   .div-p4{
+    font-size: 13px;
+    font-family:sans-serif;
+    padding-top: 1em;
+    display: flex;
+    justify-content: center;
+    padding-right: 19.5em;
    }
 
    .div-p5{
+    font-size: 13px;
+    font-family:sans-serif;
+    padding-top: 1em;
     display: flex;
     justify-content: center;
-    padding-right: 14em;
+    padding-right: 18.5em;
    }
 
    

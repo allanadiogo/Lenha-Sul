@@ -55,6 +55,10 @@ export default function Index() {
         }
     } ,[])
 
+    function home(){
+        navigate('/home')
+    }
+
 
 
     return (
@@ -63,7 +67,8 @@ export default function Index() {
             <LoadingBar color='#0000' ref={ref} />
 
             <header className="Header-Home">
-                <a className="botao-home">Home</a>
+            
+                <a className="botao-home" onClick={() => home ()}>Home</a>
             </header>
 
 
@@ -79,7 +84,7 @@ export default function Index() {
                     <h2 className="login-administrativo">Registrar-se</h2>
 
                     <div className='div-p'>
-                    <p className='p'>Nome de usuario</p>
+                    <p className='p'>Nome de usuário</p>
                     </div>
 
                     <div className="Div-Mae-Input">
