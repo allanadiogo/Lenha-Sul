@@ -30,6 +30,8 @@ section {
     border: 1px solid white;
     height: 3em;
     width: 24.1em;
+    text-indent: 10px;
+    outline: none;
 }
 
 .Div-imagem-Input {
@@ -54,7 +56,9 @@ section {
     width: 24em;
     margin-top: 0.3em;
     align-self: center;
-
+    text-indent: 10px;
+    outline: none;
+    
 }
 
 .Div-imagem-Input-Senha {
@@ -135,7 +139,6 @@ button {
 ::placeholder {
     color: #909090;
     font-family: 'font2';
-    padding-left: 0.8em;
 }
 
 }
