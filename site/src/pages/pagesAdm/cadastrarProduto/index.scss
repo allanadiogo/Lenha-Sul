@@ -13,13 +13,16 @@
 .Lado-Esquerdo-Informações{
     display: flex;
     flex-direction: column;
+    margin-top: 5em;
+    padding-left: 6em;
    
 }
 
 .Lado-Direito-Informações{
     display: flex;
     flex-direction: column;
- 
+    margin-top: 8em;
+    padding-left: 12em;
 }
 
 .inf-post{
@@ -47,4 +50,74 @@
 
 }
 
-}                                                                                         
+.div-agrupamais{
+    display: flex;
+    flex-direction: row;
+}
+
+.H1-lado-Direito{
+  display: flex;
+  justify-self: center;
+}
+
+.div-Importar-Foto{
+    margin-top: 2em;
+}
+
+.Div-Span-Input{
+    margin-top: 2em;
+}
+
+.Div-Span-Input-2{
+    margin-top: 0.5em;
+}
+
+.Div-Span-Input-3{
+    margin-top: 0.5em;
+}
+
+.Span-3{
+    margin-bottom: 0.3em
+}
+
+.Span-4{
+    margin-top: 0.5em; 
+    margin-bottom: 0.5em
+}
+
+.Div-Botoes-Categoria{
+    display: flex;
+    flex-direction: row;
+   
+    
+}
+
+.imp-doce{
+    margin-left: 1em;
+}
+
+.imp-bebida{
+    margin-left: 1em;
+}
+
+.P-Categoria{
+    padding-left: 7px;
+}
+
+.P-Categoria-2{
+    padding-left: 7px;
+}
+
+.P-Categoria-3{
+    padding-left: 7px;
+}
+
+input[type=checkbox]{
+    margin: solid 1em black;
+    width: 1.5em;
+    
+}
+
+}
+
+                                                                                       
