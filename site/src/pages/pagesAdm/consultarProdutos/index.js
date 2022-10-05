@@ -14,7 +14,7 @@ export default function Index() {
             </div>
 
 
-            <div>
+            <div className='div-itens-header'>
 
                 <div className='div-agrupadora-header'>
 
@@ -32,7 +32,7 @@ export default function Index() {
 
                     <div className='div-input'>
                         <div className='div-input-header'>
-                            <input className='input-header' />
+                            <input className='input-header' placeholder='Digite o que procura' />
                         </div>
                     </div>
 

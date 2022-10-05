@@ -3,13 +3,51 @@
     flex-direction: row;
 
 
-.div-teste {
-    display: flex;
-    flex-direction: row;
-}
 
-.div-row-header {
-    display: flex;
-    flex-direction: row;
-}
+    .div-agrupadora-header {
+        display: flex;
+        flex-direction: row;
+    }
+
+
+    .div-itens-header {
+        padding: 3em 0em 0em 3em;
+
+    }
+
+
+    .div-teste {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .div-row-header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+
+    .img-logo-header {
+        width: 60px;
+    }
+
+
+    .div-input {
+        padding-left: 12em;
+    }
+
+
+    .input-header {
+        padding: 10px 70px 10px 10px;
+        border-radius: 5px;
+        border: 1px solid black;
+        text-decoration: none;
+
+        font-size: 1em;
+
+        .input-header:hover {
+            cursor: pointer;
+        }
+    }
 }
