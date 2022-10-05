@@ -12,7 +12,7 @@ import { toast, ToastContainer  } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css'; 
 
 
-import { Link } from 'react-router-dom';
+
 import { useState, useRef, useEffect } from 'react';
 
 export default function Index() {
@@ -147,7 +147,7 @@ export default function Index() {
                         <button className="botao-entrar" onClick={onClick} disabled= {carregando} >Registrar-se</button>
                         <p class="entrar">Já tem uma conta? <a className='a-cor' onClick={() => LoginUsuario ()} >Entrar</a></p>
                     </div>
-                   
+                   ,
 
 
 
