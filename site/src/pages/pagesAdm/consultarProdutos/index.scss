@@ -11,8 +11,7 @@
 
 
     .div-itens-header {
-        padding: 3em 0em 0em 3em;
-
+        padding: 2em 0em 0em 3em;
     }
 
 
@@ -49,5 +48,36 @@
         .input-header:hover {
             cursor: pointer;
         }
+    }
+
+
+    .tag-tbody {
+        
+    }
+
+    .tag-table {
+        border-collapse: collapse;
+        margin-top: 50px;
+        margin-left: 1.5em;
+        width: 55em;
+    }
+
+    .tag-td {
+        border: 0.5px solid black;
+        border-collapse: collapse;
+
+    }
+    
+
+    th {
+        border-collapse: collapse;
+        border: 1px solid black;
+    }
+
+    .tag-td-id {
+        text-align: center;
+    }
+    .tag-th {
+        text-align: center;
     }
 }

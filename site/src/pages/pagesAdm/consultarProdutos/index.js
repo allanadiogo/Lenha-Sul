@@ -42,11 +42,11 @@ export default function Index() {
 
 
 
-                <table>
+                <table className='tag-table'>
 
-                    <thead>
-                        <tr>
-                            <th>ID</th>
+                    <thead className='tag-thead'>
+                        <tr className='tag-tr'>
+                            <th className='tag-th'>ID</th>
                             <th>Categoria</th>
                             <th>Nome</th>
                             <th>Descrição</th>
@@ -54,13 +54,13 @@ export default function Index() {
                         </tr>
                     </thead>
 
-                    <tbody>
+                    <tbody className='tag-tbody'>
                         <tr>
-                            <td>1</td>
-                            <td>Salgado</td>
-                            <td>Mussarela</td>
-                            <td>Queijo</td>
-                            <td>26,00</td>
+                            <td className='tag-td-id'>1</td>
+                            <td className='tag-td'>Salgado</td>
+                            <td className='tag-td'>Mussarela</td>
+                            <td className='tag-td'>Queijo</td>
+                            <td className='tag-td'>26,00</td>
                         </tr>
                     </tbody>
 
