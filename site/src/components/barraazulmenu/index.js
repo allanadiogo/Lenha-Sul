@@ -4,7 +4,7 @@ import Logo from '../../assets/images/logo.png';
 import icon6 from '../../assets/images/icon6.png';
 
 
-export function MenuAzul2() {
+export function Barraazulmenu() {
   return (
     <main className="menu">
 

@@ -1,12 +1,11 @@
 import './index.scss';
-import { MenuAzul2 } from '../../../components/Componente-Barra(2)';
+
 
 export default function Index() {
     return (
         <main className='Div-menuAdm'>
-            <div>
-                <MenuAzul2 />
-            </div>
+           
+   
 
             <section className='section-menuadm'>
 
