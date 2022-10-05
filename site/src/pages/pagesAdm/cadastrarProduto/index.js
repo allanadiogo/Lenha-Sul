@@ -1,5 +1,5 @@
 import './index.scss';
-import { MenuAzul } from '../../../components/Componente-Barra/index.js';
+import { MenuAzul2 } from '../../../components/menuazul';
 
 import { useNavigate } from 'react-router-dom';
 import storage from 'local-storage'
@@ -106,7 +106,7 @@ export default function Index() {
 
       <div className="Div-Agrupadora-todos">
         <div>
-          <MenuAzul />
+          <MenuAzul2/>
         </div>
 
         <div className='div-agrupamais'>
@@ -128,7 +128,7 @@ export default function Index() {
                 Novo item:
               </div>
 
-              <input data-ls-module="charCounter" maxlength="50" type='text' placeholder="Nome" value={nome} onChange={e => setNome(e.target.value)} />
+              <input className='Preco-Nome' data-ls-module="charCounter" maxlength="50" type='text' placeholder="Nome" value={nome} onChange={e => setNome(e.target.value)} />
             </div>
 
             <div className="Div-Span-Input-2">
@@ -136,7 +136,7 @@ export default function Index() {
                 Preço:
               </div>
 
-              <input data-ls-module="charCounter" maxlength="10" type='text' placeholder="Preço" value={preco} onChange={e => setPreco(e.target.value)} />
+              <input className='Preco-Nome' data-ls-module="charCounter" maxlength="10" type='text' placeholder="Preço" value={preco} onChange={e => setPreco(e.target.value)} />
             </div>
 
             <div className="Div-Span-Input-3">
@@ -154,13 +154,13 @@ export default function Index() {
             <div className="Div-Botoes-Categoria">
 
 
-              <input className='imp-salgada' type="checkbox" value={idCategoria} onChange={e => setIdCategoria(e.target.value)}></input>
+              <input className='imp-salgada' type="radio" name="tipo-salgado" value={idCategoria} onChange={e => setIdCategoria(e.target.value)}></input>
               <p className="P-Categoria"> Salgada </p>
 
-              <input className='imp-doce' type="checkbox" value={idCategoria} onChange={e => setIdCategoria(e.target.value)}></input>
+              <input className='imp-doce' type="radio" name="tipo-salgado" value={idCategoria} onChange={e => setIdCategoria(e.target.value)}></input>
               <p className="P-Categoria-2"> Doce </p>
 
-              <input className='imp-bebida' type="checkbox" value={idCategoria} onChange={e => setIdCategoria(e.target.value)}></input>
+              <input className='imp-bebida' type="radio" name="tipo-salgado" value={idCategoria} onChange={e => setIdCategoria(e.target.value)}></input>
               <p className="P-Categoria-3"> Bebida </p>
             </div>
           </div>

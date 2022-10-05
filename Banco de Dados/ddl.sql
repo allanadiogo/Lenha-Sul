@@ -3,12 +3,12 @@ use lenhaasul;
 
 create table tb_usuario (
     id_usuario         int primary key auto_increment,
-    nm_usuario        varchar(200),
-    ds_cpf        varchar(14),
-    ds_email        varchar(200),
-    ds_senha    varchar(200),
-    ds_telefone        varchar(15)
-    
+    nm_usuario       varchar(200),
+    ds_cpf           varchar(14),
+    ds_email          varchar(200),
+    ds_senha           varchar(200),
+    ds_telefone        varchar(15),
+    dt_nascimento      date
     );
     
 create table tb_pedido (
