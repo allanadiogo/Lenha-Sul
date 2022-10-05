@@ -1,8 +1,16 @@
 import './index.scss'
-import {useNavigate} from 'react-router-dom'
+
+import { useNavigate } from 'react-router-dom';
+
+import logohome1 from '../../assets/images/logohome1.png';
+import usuario from '../../assets/images/usuario.png';
+import carrinho from '../../assets/images/carrinho.png';
+import pizza from '../../assets/images/PizzaGigante.png';
+import iolo from '../../assets/images/homiver.png'
 
 import Carrossel from '../../components/homeComponent2'
 import Rodape from '../../components/roda-pe'
+
 
 export default function Index(){
 

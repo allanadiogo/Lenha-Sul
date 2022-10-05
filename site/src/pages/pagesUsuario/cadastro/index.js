@@ -8,8 +8,9 @@ import LoadingBar from 'react-top-loading-bar'
 import { EfetuarCadastro } from '../../../api/usuarioAPI'
 import usuario2 from '../../../assets/images/image 80.png';
 
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css'
+import { toast, ToastContainer  } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css'; 
+
 
 import { Link } from 'react-router-dom';
 import { useState, useRef, useEffect } from 'react';
@@ -45,26 +46,27 @@ export default function Index() {
         } 
         catch (err) {
         if (err.message.status === 400) { 
-            setErro(err.response.data.Erro)
+            toast.dark(err.response.data.Erro)
         }
         }
       }
-      useEffect(() => {
-        if(storage('usuario-logado')){
-            navigate('/home')
-        }
-    } ,[])
+      
 
     function home(){
-        navigate('/home')
+        navigate('/')
+    }
+
+    function LoginUsuario(){
+        navigate('/loginUsuario')
     }
 
 
 
     return (
-
+       
         <main className="main1">
-            <LoadingBar color='#0000' ref={ref} />
+            <ToastContainer />
+             <LoadingBar color='#0000' ref={ref} />
 
             <header className="Header-Home">
             
@@ -143,7 +145,7 @@ export default function Index() {
                     <div className="Div-Button">
                         
                         <button className="botao-entrar" onClick={onClick} disabled= {carregando} >Registrar-se</button>
-                        <p class="entrar">Já tem uma conta? <Link to='/loginUsuario' >Entrar</Link></p>
+                        <p class="entrar">Já tem uma conta? <a className='a-cor' onClick={() => LoginUsuario ()} >Entrar</a></p>
                     </div>
                    
 

@@ -1,0 +1,228 @@
+@font-face {
+    font-family: 'Timmana';
+    src: url('../../../../public/assets/fonts/Timmana-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'PatuaOne regular';
+    src: url('../../../../public/assets/fonts/PatuaOne-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat-Regular';
+    src: url('../../../../public/assets/fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('../../../../public/assets/fonts/Roboto-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('../../../../public/assets/fonts/Roboto-Regular.ttf');
+}
+
+
+.main-login-usuario{
+    background: url('../../../../public/assets/images/fundoamarelo.png') no-repeat center fixed ;
+    background-size: cover;
+    width: 100%;
+    height: 736px;
+    font-weight: bold;
+    margin-right: 30px;
+    overflow: auto;   
+    
+}
+
+.logo-home-usuario{
+    display: flex;
+    align-items: center;
+}
+
+.login-usuario-logo{
+    margin-right: 1em;
+    margin-left: 2em;
+
+}
+
+    .Div-Mae-Input-usuario {
+     
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    position: relative;
+    background-color: #F1F2F3;
+    
+   }
+
+
+
+.Input-Email-usuario {
+  
+    font-family: 'Montserrat-Regular';
+    text-align: left;
+    padding-left: 5em;
+    border: 1px  #F1F2F3;
+    
+
+    width: 319px;
+    height: 49px;
+   
+}
+
+.icons-login-usuario{
+ width: 60px;
+ margin-left: 2px;
+ position: absolute;
+ top: 0;
+ left: 0;
+
+}
+
+
+
+
+
+.Div-Mae-Input-Senha-usuario {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    position: relative;
+    background-color: #F1F2F3;
+    margin-top: 1em;
+}
+
+.Input-Senha-usuario {
+    font-family: 'Montserrat-Regular';
+    text-align: left;
+    padding-left: 5em;
+    border: 1px  #F1F2F3;
+  
+    width: 319px;
+    height: 49px;
+
+   
+
+
+}
+
+
+.Div-Meio-Login-usuario {
+    display: flex;
+    
+    flex-direction: column;
+    text-align: center;
+}
+
+
+
+
+
+
+.botao-home-usuario{
+    font-family:'Timmana';
+    font-size: 20px;
+    text-decoration: none;
+    color: #000000;
+
+}
+
+.Div-Button-usuario {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   margin-top: 2em;
+
+    
+}
+
+.botao1-usuario{
+    margin-right: 2em;
+
+}
+
+.botao-entrar-usuario{
+
+    background-color: black;
+    border: 0;
+    color: #FFFFFF;
+    font-size: 23px;
+    padding-top: 6px;
+
+   
+
+    cursor: pointer;
+    height: 39px;
+    width: 199px;
+   align-self: center;
+ 
+    
+   
+}
+
+.botao-entrar-usuario:hover{
+   
+    transform: scale(1.1);
+    border-radius: 5px;
+
+    
+}
+
+.botao-criar-usuario{
+    
+    background-color: #33B746;
+    border: 0;
+    color: #FFFFFF;
+    font-size: 18px;
+    padding-top: 6px;
+
+
+    cursor: pointer;
+    height: 39px;
+    width: 162px;
+   align-self: center;
+ 
+
+}
+
+.botao-criar-usuario:hover{
+   
+    transform: scale(1.1);
+    border-radius: 5px;
+
+    
+}
+
+.text-login-usuario {
+    font-family: 'PatuaOne regular';
+    font-size: 32px;
+    padding: 1em;
+
+}
+
+
+::placeholder {
+    color: #ADADAD;
+    font-family:'Montserrat-Regular';
+    
+    font-size: 16px;
+    
+}
+
+.esqueceu-usuario{
+  margin-top: 2em;
+  font-family: 'Roboto-Regular';
+
+}
+
+
+
+
+
+
