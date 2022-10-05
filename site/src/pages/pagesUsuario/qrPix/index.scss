@@ -1,0 +1,48 @@
+.menu-amarelo{
+    background-image: url('../../../../public/assets/images/fundoamarelo.png');
+    position: absolute;
+width: 230px;
+height: 100vh;
+left: 0px;
+top: 0px;
+
+
+    background-size: cover;
+
+}
+
+.logo-menuUsuario{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2em;
+}
+
+.casa-menu{
+    position: absolute;
+width: 33px;
+height: 31px;
+left: 47px;
+top: 229px;
+
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.linha{
+    width: 200px;
+
+}
+
+.boneco-menu{
+    position: absolute;
+width: 27px;
+height: 25px;
+left: 47px;
+top: 304px;
+
+    }
+
+
+
