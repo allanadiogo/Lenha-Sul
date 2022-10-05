@@ -1,5 +1,7 @@
 import './index.scss';
 
+import { useNavigate } from 'react-router-dom';
+
 import logohome1 from '../../assets/images/logohome1.png';
 import usuario from '../../assets/images/usuario.png';
 import carrinho from '../../assets/images/carrinho.png';
