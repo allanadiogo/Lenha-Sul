@@ -1,0 +1,129 @@
+
+  @font-face {
+    font-family: 'PatuaOne regular';
+    src: url('../../../public/assets/fonts/PatuaOne-Regular.ttf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.prove{
+    text-align: center;
+    font-family: 'PatuaOne regular';
+    font-size: 36px;
+    margin-top: 1em;
+  
+
+}
+.todo{
+    width: 100%;
+    min-height: 70vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.item h1{
+  font-family: 'PatuaOne regular';
+  text-align: center;
+}
+.container{
+    max-width: 80vw;
+
+}
+
+.container .nds{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+
+}
+
+
+.container .carrossel{
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.container .carrossel::-webkit-scrollbar{
+display: none;
+}
+
+.item{
+    background-color: rgb(255, 255, 255);
+    width: 338.38px;
+    height: 436px;
+    border-radius: 15px; 
+  
+    box-shadow: 1px 3px 5px 1px rgba(0, 0, 0, 0.281);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    justify-content: flex-start;
+
+   flex: none;
+    transform: scale(0.9);
+    transition: all ease 0.2s;
+
+   
+    
+}
+
+.item:hover{
+   
+    transform: scale(1);
+    border-radius: 5px;
+    color:#D02828;
+    
+}
+
+.romeu{
+   padding: 13px; 
+}
+
+.item img{
+    margin-top: 8px;
+}
+
+.botao-valor{
+    display: flex;
+    align-items: center;
+   
+}
+
+.nome{
+   margin-top: 25px;
+   margin-bottom: 20px;
+   font-size: 28px;
+}
+
+.botao-adicionar{
+    background-color: #D02828;
+    width: 145px;
+    height: 45px;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-size: 24px;
+    
+    border: none;
+    cursor:pointer;
+    margin-right: 25px;
+}
+
+
+
+
+.valor{
+    font-size: 20px;  
+
+    
+}

@@ -1,0 +1,139 @@
+@font-face {
+    font-family: 'PatuaOne regular';
+    src: url('../../../public/assets/fonts/PatuaOne-Regular.ttf');
+}
+
+.acima{
+    font-family: 'PatuaOne regular';
+    font-size: 20px;
+
+    display: flex;
+    justify-content: space-around;
+
+    margin-bottom: 5px;
+
+}
+
+.estamos{
+    display: flex;
+align-items: center;
+
+}
+
+.formas{
+    display: flex;
+    align-items: center;
+}
+.tex-estamos{
+    margin-right: 1em;
+    
+}
+
+.text-formas{
+    margin-right: 1em;
+
+}
+.logoUber{
+   width: 118.89x;
+   height:20.42px;
+
+   margin-right: 1em;
+}
+
+.logoRappi{
+    width: 89px;
+    height: 38px;
+
+    margin-right: 1em;
+ }
+ .logoIfood{
+    width: 81px;
+    height: 43px;
+
+  
+ }
+
+ .logoVisa{
+    width: 55.4px;
+    height: 18.71px;
+
+    margin-right: 1em;
+ }
+
+ .logoMaster{
+    width: 57.8px;
+    height: 35.5px;
+
+    margin-right: 1em;
+ }
+
+ .logoVale{
+    width: 68px;
+    height: 38px;
+
+    margin-right: 1em;
+}
+
+ .logoPix{
+    width: 49.77px;
+    height: 52.38px;
+ 
+    margin-right: 1em;
+}
+
+ .logoalelo{
+    width: 54px;
+    height: 36px;
+ 
+ 
+}
+
+.abaixo{
+    background-image: url('../../../public/assets/images/retanguloroda.png');
+    height: 165px;
+
+    display: flex;
+    justify-content:space-between;
+    padding: 1em;
+
+}
+
+.areaAdm
+{
+   display: flex;
+  
+   flex-direction: column;
+
+   padding: 1em;
+    
+}
+
+.logo-sociais{
+  display: flex;
+margin-top: 1em;
+  justify-content: center;
+}
+
+.botao-adm{
+    font-family:'PatuaOne regular' ;
+    font-size: 20px;
+    color: #FFFFFF;
+
+    background-color: #000000;
+    width: 222.04px;
+    height: 43px;
+    border-radius: 10px;
+    border: none;
+
+    cursor: pointer;
+
+    
+  
+}
+
+.logo-roda{
+    padding: 1em;
+}
+
+
+
