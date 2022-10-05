@@ -20,3 +20,15 @@ VALUES(?,?,?,?,?,? )`
     const [linhas] = await con.query(comando, [nome, email, senha, nascimento, telefone,   cpf])
     return linhas[0];
 }
+
+export async function LoginUsuario (email,senha){
+    const comando = `
+    SELECT id_usuario       id,
+       nm_usuario       Email
+FROM tb_usuario
+WHERE ds_email          =?
+AND   ds_senha          =?`
+
+const [linhas] = await con.query(comando, [email,senha]);
+return linhas[0]
+}

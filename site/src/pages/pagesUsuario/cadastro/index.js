@@ -53,7 +53,7 @@ export default function Index() {
       
 
     function home(){
-        navigate('/home')
+        navigate('/')
     }
 
     function LoginUsuario(){
