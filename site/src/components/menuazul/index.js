@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useEffect} from 'react'
 import './index.scss'
 
-export default function Index(){
+export function MenuAzul2(){
 
 const navigate = useNavigate();
 
