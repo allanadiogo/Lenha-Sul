@@ -1,22 +1,32 @@
 
-*{
+
+
+ 
+ *{
     margin: 0;
     padding: 0;
     list-style: 0;
 }
 
 
+  
+
 .parte-1{
-    background-image: url('../../assets/images/fundoamarelo.png');
+    background-image: url('../../../public/assets/images/fundoamarelo.png');
     width: 100%;
     height: 620px;
     background-repeat: none;
+
     
 }
+    
+
 
 .menu-home{
     display: flex;
     height: 115px;
+
+    
 }
 
 .menu-text{
@@ -26,11 +36,25 @@
    font-family: 'font4';
    font-size: 20px; 
    margin-left: 30px;
+  
         
+}
+
+.lin-1:hover{
+    transform: scale(1.4);
+    border-radius: 10px;
+    color:#D02828;
+    
 }
 
 .menu-text li{
     margin-left: 30px;
+ 
+}
+
+.lin-1{
+    text-decoration: none;
+    color: #000000;
 }
 
 
@@ -64,76 +88,55 @@
 
 }
 
-.icons{
+.icons-menu{
+    display: flex;
     padding: 32px 0px 0px 45px;
+
+    cursor: pointer;
 
 }
 
 .pizza{
   
         display: flex;
-        flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 57vw;
+        width: 90em;
         height: 50vh;
+        padding-left: 3em;
         
-        position: absolute; 
-
+       
 }
 
-.texto-1{
+.parte-pizza{
+    display: flex;
+            
+
+   
+}
+
+.text-home{
+    font-size: 80px;
     font-family: 'font1';
    
-    font-size: 54px;
+    color: #FFFFFF;
 
-    line-height: 100px;
+    line-height: 1.2em;
     letter-spacing: 3px;
-    
-    display: flex;
-    flex-direction: column;
-  
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    align-content: flex-end;
-    padding: 0px 60px 0px 0px;
-    
 
+      
 }
 
-.fimde{
-    color: #FF6900;
-}
 
-.sema{
-    color: #FFFFFF;
-}
-
-.combina{
-    color: #FFFFFF;
-}
-
-.compi{
-    color: #FF6900;
-}
-
-.texto-2{
+.texto-2 p{
     font-family: 'font4';
-  
-    display: flex;
-    flex-direction: column;
-  
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    align-content: flex-end;
-    padding: 0px 230px 0px 0px;
-    
+    width: 25em;
+    padding: 0px 0px 0px 120px;
+
 }
 
 .parte-2{
-    background-image: url('../../assets/images/fundobranco.png');
+   background-image: url('../../../public/assets/images/fundobranco.png');
     height: 233px;
     margin-top: 6px;
 
@@ -145,31 +148,128 @@
 }
 
 .text-3{
-    font-family: 'font1';
+  
     font-size: 36px;
-
+   font-family: 'font1';
     padding: 0px 0px 0px 120px;
 
 }
 
 .text-4{
-    font-family:'font5';
+    font-family: 'font5';
     font-size: 17px;
     padding: 7px 0px 0px 160px;
 }
 
 .text-5{
-    font-family:'font4';
+   font-family: 'font4';
     color: #E80D0D;
     font-size: 20px;
     padding: 0px 0px 0px 230px;
 
 }
 
+.parte-4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 3em;
+}
+
+.titulo-4{
+    font-family: 'font1';
+    font-size: 32px;
+    color: #FF1F00;
+
+    margin-bottom: 15px;
+}
+
+.checks-textos{
+    font-family:'font4' ;
+    font-size: 24px;
+
+    display: flex;
+    align-items: center;
+    
+    line-height: 3em;
+   padding-left: 3em;
+
+}
+
+.checks-textos-massa{
+    width: 20em;
+    font-family:'font4' ;
+    font-size: 24px;
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 3em;
+}
+
+.checks-textos-delivery{
+    width: 25em;
+    font-family:'font4' ;
+    font-size: 24px;
+
+    display: flex;
+    align-items: center;
+    padding-left: 3em;
+}
+.parte-5{
+    background-image: url('../../../public/assets/images/rectangleBranco2.png');
+    width: 100%;
+    height: 292px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 7em;
+}
 
 
+.parte-5-texts{
+    display: flex;
+    align-items: center;
+}
 
+.texts-5{
+    flex-direction: column;
+    text-align: center;
 
+    line-height: 5em;
+}
 
+.parte-5-text1{
+    font-family: 'font4';
+    font-size: 80px;
+}
 
+.parte-5-text2{
+    font-family: 'font1';
+    font-size: 80px;
+    color: #FF1F00;
+}
 
+.parte-6{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    align-items: center;
+    justify-content: center;
+
+    padding-top: 10em;
+    padding-bottom: 5em;
+    font-family: 'font4';
+    font-size: 13px;
+
+}
+
+.text-local{
+    margin-bottom: 10px;
+}
+
+.botoes-carrossel{
+    cursor: pointer;
+}
