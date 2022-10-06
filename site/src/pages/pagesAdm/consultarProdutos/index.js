@@ -46,21 +46,21 @@ export default function Index() {
 
                     <thead className='tag-thead'>
                         <tr className='tag-tr'>
-                            <th className='tag-th'>ID</th>
-                            <th>Categoria</th>
-                            <th>Nome</th>
-                            <th>Descrição</th>
-                            <th>Valor</th>
+                            <th className='th-tag'>ID</th>
+                            <th className='th-tag'>Categoria</th>
+                            <th className='th-tag'>Nome</th>
+                            <th className='th-tag'>Descrição</th>
+                            <th className='th-tag'>Valor</th>
                         </tr>
                     </thead>
 
                     <tbody className='tag-tbody'>
-                        <tr>
-                            <td className='tag-td-id'>1</td>
-                            <td className='tag-td'>Salgado</td>
-                            <td className='tag-td'>Mussarela</td>
-                            <td className='tag-td'>Queijo</td>
-                            <td className='tag-td'>26,00</td>
+                        <tr className='tr-mudarcor'>
+                            <td className='tag-td'>1</td>
+                            <td className='tag-td'>Exemplo</td>
+                            <td className='tag-td'>Exemplo</td>
+                            <td className='tag-td'>Exemplo</td>
+                            <td className='tag-td'>Exemplo</td>
                         </tr>
                     </tbody>
 

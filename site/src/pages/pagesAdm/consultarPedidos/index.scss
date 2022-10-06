@@ -1,0 +1,70 @@
+.main-pedidos {
+
+
+    .div-teste {
+        border: 1px solid black;
+        width: 80%;
+        margin-top: 40px;
+        margin-left: 50px;
+        margin-bottom: 40px;
+        margin-right: 50px;
+        border-radius: 25px;
+    }
+
+    .div-row-pagina {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    .div-row-cima {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 20px 0px 0px 30px;
+
+    }
+
+
+    .img-logo {
+        width: 70px;
+
+    }
+
+    .p-logo {
+        margin-left: 10px;
+        font-weight: bold;
+    }
+
+
+    .th-pedidos {
+        text-align: left;
+        padding: 25px 50px 10px 10px;
+        text-align: left;
+    }
+
+    .td-pedidos {
+        border: 0.5px solid black;
+        border-collapse: collapse;
+        padding: 10px 50px 10px 10px;
+        border-left: none;
+        border-right: none;
+    }
+
+
+    .table-pedidos {
+        padding-left: 1.7em;
+    }
+
+    .td-pedidos-acoes {
+        text-align: left;
+        padding: 40px 50px 10px 10px;
+        text-align: left;
+    }
+
+    .img-tabela {
+        display: flex;
+        flex-direction: row;
+    }
+
+}

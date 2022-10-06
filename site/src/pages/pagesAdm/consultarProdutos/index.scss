@@ -27,13 +27,21 @@
     }
 
 
+    .p-header {
+        font-weight: bold;
+    }
+
+
+
     .img-logo-header {
-        width: 60px;
+        width: 4em;
+        margin-right: 10px;
     }
 
 
     .div-input {
         padding-left: 12em;
+        padding-top: 10px;
     }
 
 
@@ -42,17 +50,11 @@
         border-radius: 5px;
         border: 1px solid black;
         text-decoration: none;
-
         font-size: 1em;
 
         .input-header:hover {
             cursor: pointer;
         }
-    }
-
-
-    .tag-tbody {
-        
     }
 
     .tag-table {
@@ -65,19 +67,21 @@
     .tag-td {
         border: 0.5px solid black;
         border-collapse: collapse;
-
+        padding: 0px 0px 0px 5px;
     }
-    
 
-    th {
+
+    .th-tag {
         border-collapse: collapse;
         border: 1px solid black;
+        text-align: left;
+        padding: 0px 0px 0px 5px;
     }
 
-    .tag-td-id {
-        text-align: center;
+    .tr-mudarcor:hover {
+        background-color: rgb(255, 255, 140);
     }
-    .tag-th {
-        text-align: center;
-    }
+
+    
+
 }
