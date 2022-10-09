@@ -36,34 +36,35 @@ const navigate = useNavigate();
 
             <div className='menu-itens'>
                 
-                <div className='con-text'>
+                <a href='/menuAdm' className='con-text'>
                     <img className="icons" src='/assets/images/icon1.png'/>
-                    <div className="texts">Menu Adm</div>
-                </div>
+                    <span className= 'texts'> Menu Adm </span> 
+                </a>
                 
                   
-                <div className='con-text'>
+                <a href='/consultarPedidos' className='con-text'>
                     <img className="icons" src='/assets/images/icon2.png'/>
-                    <div className="texts">Consultar pedidos pendentes</div>
-                </div>
+                    <span className='texts'> Pedidos Pendentes </span>
+                </a>
 
                   
-                <div className='con-text'>
+                <a href='/historicoPedidos' className='con-text3'>
                     <img className="icons" src='/assets/images/icon3.png'/>
-                    <div className="texts" >Consultar histórico de pedidos</div>
-                </div>
+                    <a className='texts2'> Histórico de Pedidos </a>
+                    
+                </a>
 
                   
-                <div className='con-text'>
+                <a href='/cadastrarProduto' className='con-text2'>
                     <img className="icons" src='/assets/images/icon4.png'/>
-                    <div className="texts" >Adicionar produto</div>
-                </div>
+                    <a  className='texts'> Cadastrar Produto </a>
+                </a>
 
                   
-                <div className='con-text'>
+                <a href='/consultarProdutos' className='con-text'>
                     <img className="icons" src='/assets/images/icon5.png'/>
-                    <div className="texts" >Consultar produto</div>
-                </div>
+                    <a  className='texts'> Consultar produto </a>
+                </a> 
       </div>
                     
                
