@@ -64,7 +64,7 @@ export default function Index() {
 
             <div className='logo-home-usuario'>
                 <img className="login-usuario-logo" src="/assets/images/logoroda.png" />
-                <a href='/home' className="botao-home-usuario" >Home</a>
+                <a href='/' className="botao-home-usuario" >Home</a>
             </div>
 
             <section className='page-login-usuario'>

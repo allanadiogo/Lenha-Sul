@@ -17,6 +17,9 @@ import LoginAdm from './pages/pagesAdm/loginAdm';
 import MenuAdm from './pages/pagesAdm/menuAdm';
 import StatusPedido from './pages/pagesAdm/statusPedido';
 
+import MenuAmarelo from './components/menuamarelo';
+
+
 import AcompanharPedido from './pages/pagesUsuario/acompanharPedido';
 import Bebibas from './pages/pagesUsuario/bebidas';
 import Cadastro from './pages/pagesUsuario/cadastro';
@@ -49,7 +52,8 @@ root.render(
      <Route path='/menuAdm' element={<MenuAdm/>}/>
      <Route path='/statusPedido' element={<StatusPedido/>}/>
 
-    
+     <Route path='/menuamarelo' element={<MenuAmarelo/>}/>
+
      <Route path='/acompanharPedido' element={<AcompanharPedido/>} />
      <Route path='/bebidas' element={<Bebibas/>}/>
      <Route path='/cadastro' element={<Cadastro/>}/>
