@@ -1,0 +1,110 @@
+.corpo-menu-amarelo{
+    background-image: url('../../../public/assets/images/retanguloamarelo.png') ;
+   width: 230px;
+   height: 100vh;
+   overflow: auto;
+   background-repeat: no-repeat;
+   background-size: cover;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+
+.logo-menu-usuario{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.texts-usuario{
+    padding-left: 10px;
+    font-family: 'font6';
+    font-size: 15px;
+    text-decoration: none;
+    color: black;
+    
+    
+}
+
+.texts2-usuario{
+    
+    font-family: 'font6';
+    font-size: 15px;
+    text-decoration: none;
+    color: black;
+
+
+    text-align: center;
+}
+
+
+
+.con-text-usuario{
+    
+    text-decoration: none;
+}
+
+.con-text2-usuario{
+ width: 12em;
+    text-decoration: none;
+
+}
+
+
+.menu-itens-usuario{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3em;
+}
+
+.menu-itens-usuario > a {
+    display: flex;
+    align-items: center;
+    
+    padding: 15px 25px;
+
+    transition: .3s;
+    cursor: pointer;
+}
+
+
+.menu-itens-usuario > img {
+    width: 40px;
+    height: 20px;
+
+}
+
+.menu-itens-usuario > a:hover {
+    background-color: #ffffffd0;
+   
+}
+
+.sair {
+    display: flex;
+    align-items: center;
+    padding-top: 7em;
+    padding-left: 1em; 
+
+    cursor: pointer;
+
+   
+}
+
+
+
+.text-sair{
+    font-family: 'font7' ;
+    padding-left: 6px;
+    font-size: 15px;
+   
+    
+}
+
+.linha{
+   width:164px ;
+   border-color:black;
+}
+}
+
