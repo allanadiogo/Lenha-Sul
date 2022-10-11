@@ -34,7 +34,7 @@ export default function Index() {
             storage('usuario-logado', r)
 
             setTimeout(() => {
-                navigate('/cadastrarProduto')
+                navigate('/menuAdm')
             }, 3000)
 
 
@@ -59,7 +59,7 @@ export default function Index() {
             <LoadingBar color='#000' ref={ref} />
 
             <header className="Header-Home">
-                <a className="botao-home">Home</a>
+                <a href='/' className="botao-home">Home</a>
             </header>
 
 
@@ -80,7 +80,7 @@ export default function Index() {
                             <img className="Width-Img" src="../assets/image/usuario2.png" alt="" />
                         </div>
 
-                        <input className="Input-Email" type="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} />
+                        <input className="Input-Email" type="email" placeholder="Usuário" value={email} onChange={e => setEmail(e.target.value)} />
                     </div>
 
 

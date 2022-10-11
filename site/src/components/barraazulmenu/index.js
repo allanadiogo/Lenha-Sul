@@ -9,16 +9,16 @@ export function Barraazulmenu() {
     <main className="menu">
 
 
-      <div className="logo">
-        <img src={Logo} />
+      <div className='logo'>
+        <img src='/assets/images/logodomenu.png' />
       </div>
 
       <div className="text-6">
         <img className="icon-6" src={icon6} />
-        <a className="text-sair">Sair</a>
+        <a href='/loginAdm' className="text-sair">Sair</a>
       </div>
 
-    
+
 
     </main >
   )

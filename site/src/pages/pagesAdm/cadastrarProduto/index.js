@@ -118,9 +118,7 @@ export default function Index() {
             </div>
 
 
-            <div className="div-Importar-Foto" onClick={escolherimg}>
-              <input type='file' id='imgpizza' onChange={e => setImg(e.target.files[0])} />
-            </div>
+            
 
 
             <div className="Div-Span-Input">
@@ -162,8 +160,15 @@ export default function Index() {
 
               <input className='imp-bebida' type="radio" name="tipo-salgado" value={idCategoria} onChange={e => setIdCategoria(e.target.value)}></input>
               <p className="P-Categoria-3"> Bebida </p>
+
+              
             </div>
+        
+            <button className="Button-Publicar" onClick={onClick}>Publicar</button>
+        
           </div>
+          
+         
 
 
           <div className="Lado-Direito-Informações">
@@ -214,10 +219,6 @@ export default function Index() {
                 </div>
 
               </div>
-              <button className="Button-Publicar" onClick={onClick}>Publicar</button>
-
-
-
 
             </div>
 

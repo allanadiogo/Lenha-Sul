@@ -1,10 +1,13 @@
 import './index.scss';
-
+import { Barraazulmenu } from '../../../components/barraazulmenu';
 
 export default function Index() {
     return (
         <main className='Div-menuAdm'>
            
+           <div>
+             <Barraazulmenu/>
+           </div>
    
 
             <section className='section-menuadm'>
@@ -18,20 +21,20 @@ export default function Index() {
 
                 <div className="Div-Primeira-Fileira-Balão">
 
-                    <div className="Primeiro-Balão">
+                    <a href='/consultarPedidos' className="Primeiro-Balão">
                         <div>
                             <img className="Imagem-Primeiro-Balão" src="../assets/images/image 103.png" alt="" />
                         </div>
 
-                        <div className="Div-P">
+                        <div  className="Div-P">
                             <p>Consultar pedidos</p>
                             <p className="p-margin-primeiro-balão">pendentes</p>
                         </div>
-                    </div>
+                    </a>
 
 
 
-                    <div className="Segundo-Balão">
+                    <a href='/historicoPedidos'className="Segundo-Balão">
                         <div>
                             <img className="Imagem-Segundo-Balão" src="../assets/images/Order History.png" alt="" />
                         </div>
@@ -40,7 +43,7 @@ export default function Index() {
                             <p>Consultar histórico</p>
                             <p className="p-margin-segundo-balão">de pedidos</p>
                         </div>
-                    </div>
+                    </a>
 
 
 
@@ -51,7 +54,7 @@ export default function Index() {
 
                 <div className="Div-Segunda-Fileira-Balão">
 
-                    <div className="Terceiro-Balão">
+                    <a href='/cadastrarProduto' className="Terceiro-Balão">
                         <div>
                             <img className="Imagem-Terceiro-Balão" src="../assets/images/Plus.png" alt="" />
                         </div>
@@ -59,11 +62,11 @@ export default function Index() {
                         <div className="Div-P">
                             <p>Adicionar Produto</p>
                         </div>
-                    </div>
+                    </a>
 
 
 
-                    <div className="Quarto-Balão">
+                    <a href='/consultarProdutos' className="Quarto-Balão">
                         <div>
                             <img className="Imagem-Quarto-Balão" src="../assets/images/Search.png" alt="" />
                         </div>
@@ -71,7 +74,7 @@ export default function Index() {
                         <div className="Div-P">
                             <p>Consultar produtos</p>
                         </div>
-                    </div>
+                    </a>
 
 
 

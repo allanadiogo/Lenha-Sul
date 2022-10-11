@@ -5,7 +5,7 @@
     height: 60em;
     font-weight: bold;
     margin-right: 30px;
-    overflow: auto;
+    overflow: hidden;
     
 
 
@@ -34,7 +34,9 @@
     font-family:sans-serif;
     display: flex;
     justify-content: center;
-    padding-right: 16em;
+    padding-right: 25em;
+    margin-bottom: 0.3em;
+
    }
 
    .div-p2{
@@ -43,7 +45,8 @@
     font-family:sans-serif;
     padding-top: 1em;
     justify-content: center;
-    padding-right: 21em;
+    padding-right: 30em;
+    margin-bottom: 0.3em;
    }
 
    .div-p3{
@@ -52,7 +55,8 @@
     padding-top: 1em;
     display: flex;
     justify-content: center;
-    padding-right: 20.5em;
+    padding-right: 29em;
+    margin-bottom: 0.3em;
    }
 
    .div-p4{
@@ -61,7 +65,8 @@
     padding-top: 1em;
     display: flex;
     justify-content: center;
-    padding-right: 19.5em;
+    padding-right: 28em;
+    margin-bottom: 0.2em;
    }
 
    .div-p5{
@@ -70,18 +75,13 @@
     padding-top: 1em;
     display: flex;
     justify-content: center;
-    padding-right: 18.5em;
+    padding-right: 27em;
+    margin-bottom: 0.2em;
    }
-
-   
-
-
-
-
-
 
 
    .p{
+    font-family: 'font3';
     display: flex;
     
    }
@@ -92,10 +92,18 @@ section {
 }
 
 .Input-Email {
-    border-left: none !important;
     border: 1px solid white;
     height: 3em;
-    width: 24.1em;
+    width: 33em;
+    outline: none;
+    text-indent: 10px;
+    
+ 
+}
+
+.Div-Mae-Input{
+    width: 27.5em;
+    
 }
 
 .Div-imagem-Input {
@@ -117,10 +125,23 @@ section {
     border-left: none !important;
     border: 1px solid white;
     height: 3em;
-    width: 24em;
+    width: 33em;
     margin-top: 0.3em;
     align-self: center;
+    outline: none;
+    text-indent: 10px;
+}
 
+.Input-Data{
+    border-left: none !important;
+    border: 1px solid white;
+    height: 3em;
+    width: 33em;
+    margin-top: 0.3em;
+    align-self: center;
+    outline: none;
+    text-indent: 5px;
+    font-family: 'font3';
 }
 
 .Div-imagem-Input-Senha {
@@ -162,6 +183,7 @@ h2 {
 .botao-home{
     font-family: 'font8';
     font-size: 1.5em;
+    cursor: pointer;
 }
 
 button {
@@ -178,6 +200,7 @@ button {
 .botao-entrar{
     background-color: black;
     font-size: 18px;
+    width: 15em;
 
     
 }
@@ -198,10 +221,16 @@ button {
     background-color: w;
 }
 
+.entrar{
+    font-family: 'font6';
+}
+
 ::placeholder {
     color: #909090;
-    font-family: 'font2';
-    padding-left: 0.8em;
+    font-family: 'font3';
+    font-size: 15px;
+
+
 }
 
 }

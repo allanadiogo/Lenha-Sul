@@ -64,7 +64,7 @@ export default function Index() {
 
             <div className='logo-home-usuario'>
                 <img className="login-usuario-logo" src="/assets/images/logoroda.png" />
-                <a href='/home' className="botao-home-usuario" >Home</a>
+                <a href='/' className="botao-home-usuario" >Home</a>
             </div>
 
             <section className='page-login-usuario'>
@@ -91,7 +91,7 @@ export default function Index() {
 
                     <div className="Div-Button-usuario" disabled={carregando} onClick={onClick}>
                         <div className='botao1-usuario'>
-                            <button className="botao-entrar-usuario" > Entrar</button>
+                            <button className="botao-entrar-usuario"> Entrar </button>
                         </div>
 
                         <div className='botao2-usuario' onClick={CriarConta}>
@@ -100,8 +100,8 @@ export default function Index() {
                     </div>
 
                     <div className='esqueceu-usuario'>
-                        <a>Esqueceu a senha?</a>
-                        <a href='/recuperacaoSenha'>Clique aqui</a>
+                        <span className='esq-sen'>Esqueceu a senha?</span>
+                        <a href='/recuperacaoSenha' className='clique-aqui'> Clique aqui </a>
 
                     </div>
 

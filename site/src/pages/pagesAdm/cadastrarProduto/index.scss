@@ -93,12 +93,13 @@
 .Div-Botoes-Categoria{
     display: flex;
     flex-direction: row;
-    
+    margin-bottom: 3em;
 }
 
 .imp-salgada{
     width: 5em;
     height: 1.5em;
+    
 }
 
 .imp-doce{
@@ -149,6 +150,19 @@ input[type=checkbox]{
     padding-left: 0.5em;
     outline: none;
 }
+
+.Button-Publicar{
+    background: url('../../../../public/assets/images/verdao.png');
+    height: 2.3em;
+    width: 18em;
+    margin-left: 3em;
+    font-family: 'font7';
+    font-size: 1em;
+    color: white;
+    border: none ;
+    
+}
+
 }
 
                                                                                        

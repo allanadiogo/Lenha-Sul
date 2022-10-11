@@ -42,7 +42,7 @@ export default function Index() {
 
                 <div className="Div-logo-home">
                     <img className="Img-Logo" src={logo} />
-                    <a className="botao-home">Home</a>
+                    <a href='/' className="botao-home">Home</a>
 
                 </div>
                     
@@ -86,9 +86,7 @@ export default function Index() {
                         
                     </div>
 
-                    <div className='Div-Button'>
-                    <a className="entrar" onClick={() => cadastro ()}>Fazer uma nova conta</a>
-                    </div>
+                    
 
 
                 </div>

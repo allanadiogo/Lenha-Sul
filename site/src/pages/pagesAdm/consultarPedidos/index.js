@@ -52,13 +52,13 @@ export default function Index() {
                                 <td className='td-pedidos-acoes'>
                                     <div className='img-tabela'>
                                         <div className='div-img-tabela'>
-                                            <img className='img-logo-tabela' src='/assets/images/Confere.png' />
+ 
                                         </div>
                                         <div className='div-img-tabela'>
-                                            <img className='img-logo-tabela' src='/assets/images/xis.png' />
+                    
                                         </div>
                                         <div className='div-img-tabela'>
-                                            <img className='img-logo-tabela' src='/assets/images/Moto-entrega.png' />
+                                     
                                         </div>
                                     </div>
                                 </td>

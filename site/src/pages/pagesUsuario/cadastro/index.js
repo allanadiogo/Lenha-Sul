@@ -90,13 +90,6 @@ export default function Index() {
                     </div>
 
                     <div className="Div-Mae-Input">
-                    
-                        <div>
-                            <img className="Width-Img" src="../assets/image/usuario2.png" alt="" />
-                        </div>
-                    
-
-                          
                         <input className="Input-Email" type="text" placeholder="Nome de Usuário" value={nome} onChange={e => setNome(e.target.value)} />
                     </div>
 
@@ -135,7 +128,7 @@ export default function Index() {
                     <p className='p'>Nascimento</p>
                     </div>
 
-                    <input class="Input-Senha" type="date" value={nascimento} onChange={e => setNascimento(e.target.value)} />
+                    <input class="Input-Data" type="date" value={nascimento} onChange={e => setNascimento(e.target.value)} />
                     
                     <div>
                             {erro}

@@ -40,6 +40,8 @@ section {
     border: 1px solid white;
     height: 3em;
     width: 24.1em;
+    outline: none;
+    text-indent: 10px;
 }
 
 .Div-imagem-Input {
@@ -118,6 +120,7 @@ h2 {
 .botao-home{
     font-family: 'font8';
     font-size: 1.5em;
+    cursor: pointer;
 }
 
 button {
@@ -134,7 +137,7 @@ button {
 .botao-entrar{
     background-color: black;
     font-size: 18px;
-
+    
     
 }
 
@@ -155,10 +158,13 @@ button {
     background-color: w;
 }
 
+.p{
+    font-family: 'font3';
+}
+
 ::placeholder {
     color: #909090;
-    font-family: 'font2';
-    padding-left: 0.8em;
+    font-family: 'font3';
 }
 
 }
