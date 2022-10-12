@@ -2,14 +2,8 @@ import './index.scss'
 
 import { useNavigate } from 'react-router-dom';
 
-import logohome1 from '../../assets/images/logohome1.png';
-import usuario from '../../assets/images/usuario.png';
-import carrinho from '../../assets/images/carrinho.png';
-import pizza from '../../assets/images/PizzaGigante.png';
-import iolo from '../../assets/images/homiver.png'
-
 import Carrossel from '../../components/homeComponent2'
-import Rodape from '../../components/roda-pe'
+import Rodape from '../../components/rodape'
 
 
 export default function Index() {
@@ -103,7 +97,7 @@ export default function Index() {
 
                     <p className="text-4"> Entrega rápida para toda  região</p>
 
-                    <p className="text-5"> peça uma pizza!!</p>
+                    <p className="text-5"> Peça uma pizza!!</p>
 
                 </div>
 

@@ -32,6 +32,7 @@ section {
     width: 24.1em;
     text-indent: 10px;
     outline: none;
+    font-size: 1em;
 }
 
 .Div-imagem-Input {
@@ -53,11 +54,12 @@ section {
     border-left: none !important;
     border: 1px solid white;
     height: 3em;
-    width: 24em;
+    width: 20em;
     margin-top: 0.3em;
     align-self: center;
     text-indent: 10px;
     outline: none;
+    font-size: 1em;
 
 }
 
@@ -141,6 +143,7 @@ button {
 ::placeholder {
     color: #909090;
     font-family: 'font2';
+    font-size: 1em;
    
 
 }

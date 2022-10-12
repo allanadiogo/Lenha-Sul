@@ -64,7 +64,7 @@ export default function Index() {
                     <h2 className="recuperar-senha">Recuperação de Senha</h2>
 
                     <div className='div-p2'>
-                    <p className='p'>E-mail:</p>
+             
                     </div>
 
                     <div className="Div-Mae-Input">

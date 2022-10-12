@@ -10,7 +10,7 @@
   
 
 .parte-1{
-    background-image: url('../../../public/assets/images/fundoamarelo.png');
+    background-image: url('../../../public/assets/images/fundo-amarelo-maior.png');
     width: 100%;
     height: 620px;
     background-repeat: none;
@@ -96,12 +96,13 @@
 
 .pizza{
   
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 90em;
-        height: 50vh;
-        padding-left: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90em;
+    height: 50vh;
+    padding-left: 3em;
+   
         
        
 }
@@ -119,15 +120,28 @@
     color: #FFFFFF;
     line-height: 1.2em;
     letter-spacing: 3px;
-
+    inline-size: 7em;
       
+}
+
+.texto-1 {
+    display: flex;
+    flex-direction: column;
+    margin-right: 15em;
+    
 }
 
 
 .texto-2 p{
     font-family: 'font4';
+    font-size: 20px;
     width: 25em;
     padding: 0px 0px 0px 120px;
+    margin-top: 1em;
+    inline-size: 23em;
+    margin-left: -2em;
+    
+    
 
 }
 
