@@ -1,29 +1,23 @@
 import './index.scss';
-
+import  MenuAmarelo from '../../../components/menuqrpix'
 export default function Index(){
     return(
         <main className='page-toda'>
-            <section className='menu-amarelo'>
-            <div className='logo-menuUsuario'>
-                <img src='/assets/images/logodomenu.png'/>
+           <MenuAmarelo/>
 
-            </div>
 
-            <div className='itens-menu' > 
+        <div> 
+        <h1 className='h1-div'> Pagamento Pix </h1>
+        </div>
+    
 
-            <div className='casa-menu'> 
-            <img src='/assets/images/casa-menu.png'/> Home 
-          </div>
+        <div className='div-qrpix'>  
+            <h1 className='h1qr'> QR Code : </h1> 
 
-          <div className='boneco-menu'> 
-            <img src='/assets/images/bonecoperfil-menu.png'/>
-            </div>
-                 
-            </div>
-            
-           
-          
-            </section>
+        <img className='qrpix' src='/assets/images/qrpix.png'/> 
+        
+        </div>
+         
         </main>
     )
 }

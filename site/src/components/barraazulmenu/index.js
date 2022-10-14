@@ -1,6 +1,5 @@
 import './index.scss';
 
-import Logo from '../../assets/images/logo.png';
 import icon6 from '../../assets/images/icon6.png';
 
 
@@ -9,8 +8,8 @@ export function Barraazulmenu() {
     <main className="menu">
 
 
-      <div className='logo'>
-        <img src='/assets/images/logodomenu.png' />
+      <div className='logo-menu-adm'>
+        <img src='/assets/images/image96.png' />
       </div>
 
       <div className="text-6">

@@ -23,12 +23,13 @@ export default function Index() {
 
                     <a href='/consultarPedidos' className="Primeiro-Balão">
                         <div>
-                            <img className="Imagem-Primeiro-Balão" src="../assets/images/image 103.png" alt="" />
+                            <img className="Imagem-Primeiro-Balão" src="/assets/images/image103.png" alt="" />
                         </div>
 
                         <div  className="Div-P">
                             <p>Consultar pedidos</p>
                             <p className="p-margin-primeiro-balão">pendentes</p>
+                            
                         </div>
                     </a>
 
@@ -36,7 +37,7 @@ export default function Index() {
 
                     <a href='/historicoPedidos'className="Segundo-Balão">
                         <div>
-                            <img className="Imagem-Segundo-Balão" src="../assets/images/Order History.png" alt="" />
+                            <img className="Imagem-Segundo-Balão" src="/assets/images/image104.png" alt="" />
                         </div>
 
                         <div className="Div-P">
@@ -56,7 +57,7 @@ export default function Index() {
 
                     <a href='/cadastrarProduto' className="Terceiro-Balão">
                         <div>
-                            <img className="Imagem-Terceiro-Balão" src="../assets/images/Plus.png" alt="" />
+                            <img className="Imagem-Terceiro-Balão" src="/assets/images/image105.png" alt="" />
                         </div>
 
                         <div className="Div-P">
@@ -68,7 +69,7 @@ export default function Index() {
 
                     <a href='/consultarProdutos' className="Quarto-Balão">
                         <div>
-                            <img className="Imagem-Quarto-Balão" src="../assets/images/Search.png" alt="" />
+                            <img className="Imagem-Quarto-Balão" src="/assets/images/image106.png" alt="" />
                         </div>
 
                         <div className="Div-P">

@@ -46,8 +46,8 @@
 
 .Primeiro-Balão {
     padding: 35px 0px 0px 0px;
-    width: 220px;
-    height: 200px;
+    width: 249px;
+    height: 233px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -62,8 +62,8 @@
 
 .Segundo-Balão {
     padding: 35px 0px 0px 0px;
-    width: 220px;
-    height: 200px;
+    width: 249px;
+    height: 233px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -77,8 +77,8 @@
 
 .Terceiro-Balão {
     padding: 35px 0px 0px 0px;
-    width: 220px;
-    height: 200px;
+    width: 249px;
+    height: 233px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -94,8 +94,8 @@
 
 .Quarto-Balão {
     padding: 35px 0px 0px 0px;
-    width: 220px;
-    height: 200px;
+    width: 249px;
+    height: 233px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -125,9 +125,12 @@
 }
 
 
-p {
+
+.Div-P {
     font-weight: bold;
+    font-size: 24px;
     line-height: 15px;
+    line-height: 1em;
 }
 
 .p-margin-primeiro-balão {

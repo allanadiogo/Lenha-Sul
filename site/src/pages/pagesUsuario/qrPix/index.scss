@@ -1,48 +1,20 @@
-.menu-amarelo{
-    background-image: url('../../../../public/assets/images/fundoamarelo.png');
-    position: absolute;
-width: 230px;
-height: 100vh;
-left: 0px;
-top: 0px;
-
-
-    background-size: cover;
+.page-toda {
+    display: flex;
 
 }
 
-.logo-menuUsuario{
+.div-qrpix{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 2em;
+    flex-direction: column;
 }
 
-.casa-menu{
-    position: absolute;
-width: 33px;
-height: 31px;
-left: 47px;
-top: 229px;
-
-display: flex;
-justify-content: center;
-align-items: center;
+.h1qr {
+    margin-bottom: 1em;
+    font-size: 24px;
 }
 
-.linha{
-    width: 200px;
-
+.h1-div {
+    padding: 3em;
 }
-
-.boneco-menu{
-    position: absolute;
-width: 27px;
-height: 25px;
-left: 47px;
-top: 304px;
-
-    }
-
-
-

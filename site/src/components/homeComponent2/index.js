@@ -27,7 +27,7 @@ export default function Index(){
 <h1 className='prove'>Prove as pizzas mais pedidas do Lenha Sul</h1>
 
 
-<div className='todo'>
+<div className='todo-carrossel'>
 
 
 
