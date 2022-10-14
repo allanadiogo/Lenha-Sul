@@ -42,8 +42,11 @@ export default function Index() {
 
                 <div className="Div-logo-home">
                     <img className="Img-Logo" src={logo} />
-                    <a href='/' className="botao-home">Home</a>
+                    
+                </div>
 
+                <div>
+                    
                 </div>
                     
                  
