@@ -1,5 +1,5 @@
 import './index.scss'
-import MenuAmareloQr from '../../../componentes/menuqrpix'
+import MenuAmareloQr from '../../../components/menuqrpix'
 export default function Index(){
     return(
         <main className='main-dadosCartao'>

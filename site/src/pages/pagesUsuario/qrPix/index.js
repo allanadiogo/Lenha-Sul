@@ -1,5 +1,5 @@
 import './index.scss';
-import  MenuAmarelo from '../../../componentes/menuqrpix'
+import  MenuAmarelo from '../../../components/menuqrpix'
 export default function Index(){
     return(
         

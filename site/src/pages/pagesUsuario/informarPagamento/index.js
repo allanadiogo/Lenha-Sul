@@ -1,5 +1,5 @@
 import './index.scss';
-import  MenuAmarelo from '../../../componentes/menuqrpix'
+import  MenuAmarelo from '../../../components/menuqrpix'
 export default function Index(){
     return(
         <main className='page-toda1'>
@@ -12,19 +12,19 @@ export default function Index(){
            
            <div className='div-botoes' >
            
-           <a className='div-botoes' href='/dadoscartao'>
+           <a className='div-botoes' href='/dadosCartao'>
            <button  className='dinheiro'> <img className='foto1' src='/assets/images/Money.png'/> Dinheiro  </button>  
            </a>
 
-           <a className='div-botoes' href='/dadoscartao'>
+           <a className='div-botoes' href='/dadosCartao'>
             <button   className='dinheiro'> <img className='foto1' src='/assets/images/credito.png'/> Crédito  </button>  
        </a>
 
-       <a className='div-botoes' href='/dadoscartao'>
+       <a className='div-botoes' href='/dadosCartao'>
             <button   className='dinheiro'> <img className='foto1' src='/assets/images/debito.png'/> Débito </button>  
      </a>
 
-     <a className='div-botoes' href='/dadoscartao'>
+     <a className='div-botoes' href='/dadosCartao'>
             <button    className='dinheiro'> <img className='foto1' src='/assets/images/valerefeicao.png'/> Vale-refeição  </button>  
          </a>
 
