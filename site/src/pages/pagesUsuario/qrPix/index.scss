@@ -6,15 +6,52 @@
 .div-qrpix{
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  flex-direction: column;
+  justify-content: center;
 }
+    
+
 
 .h1qr {
     margin-bottom: 1em;
     font-size: 24px;
+    font-family: 'font7';
 }
 
+
+
+
 .h1-div {
-    padding: 3em;
+    font-family: 'font4';
+    font-size: 32px;
+   padding-top: 2em;
+}
+
+
+
+
+
+
+.voltar-titulo{
+    display: flex;
+   padding: 2em;
+}
+
+    
+
+.voltar{
+    display: flex;
+cursor: pointer;
+text-decoration: none;
+
+color: black;
+
+    font-family: 'font7';
+    font-size: 20px;
+
+}
+
+.seta{
+    width: 15px;
+    height: 23px;
 }

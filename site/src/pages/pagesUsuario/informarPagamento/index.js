@@ -1,27 +1,45 @@
 import './index.scss';
-import  MenuAmarelo from '../../../components/menuqrpix'
+import  MenuAmarelo from '../../../componentes/menuqrpix'
 export default function Index(){
     return(
         <main className='page-toda1'>
            <MenuAmarelo/>
 
-           <h1> Escolha um meio de Pagamento </h1> 
-         
 
+        <section className='section-pagamentos'>  
         
-           <div>   
-            <div> <img className='foto1' src='/assets/images/Money.png'/> Dinheiro  </div>  
-            <div>   Crédito  </div>  
-            <div>   Débito   </div>  
-            <div>  Vale-reifeição </div>  
-            <div>  Pix  </div>
+     <h1 className='titulo-pagamento'>Escolha um meio de pagamento</h1>
            
-           </div>
-                   
+           <div className='div-botoes' >
+           
+           <a className='div-botoes' href='/dadoscartao'>
+           <button  className='dinheiro'> <img className='foto1' src='/assets/images/Money.png'/> Dinheiro  </button>  
+           </a>
 
+           <a className='div-botoes' href='/dadoscartao'>
+            <button   className='dinheiro'> <img className='foto1' src='/assets/images/credito.png'/> Crédito  </button>  
+       </a>
 
+       <a className='div-botoes' href='/dadoscartao'>
+            <button   className='dinheiro'> <img className='foto1' src='/assets/images/debito.png'/> Débito </button>  
+     </a>
 
+     <a className='div-botoes' href='/dadoscartao'>
+            <button    className='dinheiro'> <img className='foto1' src='/assets/images/valerefeicao.png'/> Vale-refeição  </button>  
+         </a>
 
+         <a className='div-botoes' href='/qrPix'>
+            <button   className='dinheiro'> <img className='foto1' src='/assets/images/pix.png'/> Pix </button>  
+     </a>
+       
+            </div>
+            
+            
+           </section>
+
+      
+         
+        
 
 </main>
 
