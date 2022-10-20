@@ -4,13 +4,16 @@ import { MenuAzul2 } from '../../../components/menuazul';
 import { useNavigate } from 'react-router-dom';
 import storage from 'local-storage'
 
-import { toast } from 'react-toastify';
+import LoadingBar from 'react-top-loading-bar'
+
+import { toast, ToastContainer  } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css'; 
 
 
 import { CadastrarProduto } from '../../../api/produtoAPI'
 import { ListarCategorias } from '../../../api/categoriaAPI';
 import { EnviarImagem } from '../../../api/enviarImagemAPI'
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 
 export default function Index() {
@@ -33,6 +36,7 @@ export default function Index() {
   const [id, SetId] = useState(0);
 
   const [catSelecionadas, setCatSelecionadas] = useState([]);
+  const ref = useRef();
 
 
   function AdicionarCategoria() {
@@ -57,23 +61,30 @@ export default function Index() {
 
 
   async function onClick() {
+
+    
     try {
       if (!img) throw new Error("Escolha a imagem para cadastrar")
 
       const usuario = storage('usuario-logado').id;
-      console.log(usuario)
+      
 
       if (id === 0) {
 
-        const NovoPost = await CadastrarProduto(nome, preco, ingredientes, usuario)
+        const NovoPost = await CadastrarProduto(nome, preco, ingredientes)
         const r = await EnviarImagem(NovoPost.id, img)
         toast.dark("A pizza foi cadastrada ")
 
-        SetId(NovoPost.id);
+        
       }
-
+     
+    
+        
 
     }
+
+
+    
     catch (err) {
       if (err.response)
         toast.dark(err.response.data.Erro)
@@ -103,6 +114,8 @@ export default function Index() {
   return (
 
     <main className='megadiv'>
+       <ToastContainer />
+             <LoadingBar color='#0000' ref={ref} />
 
       <div className="Div-Agrupadora-todos">
         <div>
@@ -115,6 +128,7 @@ export default function Index() {
 
             <div className="Div-H1">
               <h1 className='inf-post'>informações do Post</h1>
+              
             </div>
 
 
@@ -124,6 +138,11 @@ export default function Index() {
             <div className="Div-Span-Input">
               <div className="Span">
                 Novo item:
+              </div>
+
+              <div>
+              <h2> Importar Foto </h2>
+                            <input type='file' id='imgpizza' onChange={e => setImg(e.target.files[0])} />
               </div>
 
               <input className='Preco-Nome' data-ls-module="charCounter" maxlength="50" type='text' placeholder="Nome" value={nome} onChange={e => setNome(e.target.value)} />
@@ -164,7 +183,7 @@ export default function Index() {
               
             </div>
         
-            <button className="Button-Publicar" onClick={onClick}>Publicar</button>
+            <button className="Button-Publicar" onClick={onClick}>Salvar</button> 
         
           </div>
           
@@ -177,6 +196,13 @@ export default function Index() {
               Pré-Visualização
             </h1>
             <div className="Div-Pré-Visualização">
+
+            <div className="imgn">
+                            {!img &&
+                                <img className='img-post' src='./images/a.png' alt='' />
+                            }
+                            
+                        </div>
 
 
               <div className="info1">

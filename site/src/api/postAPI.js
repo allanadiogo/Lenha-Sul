@@ -5,13 +5,12 @@ const api = axios.create({
     baseURL: API_URL
 })
 
-export async function CadastrarProduto (nome, preco, ingredientes, categoria){
+export async function CadastrarProduto (nome, preco, ingredientes){
         const r = await api.post('/post/criar', {
                     nome: nome,
                     preco:preco,
-                    tipo:tipo,
                     ingredientes:ingredientes,
-                    categoria:categoria
+                    
         })
 
         return r.data;

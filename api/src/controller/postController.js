@@ -13,7 +13,7 @@ server.post('/post/criar', async (req,resp) => {
         if(!publi.nome.trim())throw new Error("Nome é OBRIGATÓRIO!")
         if(!publi.preco) throw new Error("Preço é OBRIGATÓRIO!")
         if(!publi.ingredientes.trim()) throw new Error("Descrição é OBRIGATÓRIO!")
-        if(!publi.categoria) throw new Error("Categoria é OBRIGATÓRIO!")
+        
 
         const resposta = await Post(publi);
         resp.status(200).send(
