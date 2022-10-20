@@ -1,0 +1,130 @@
+.main-dadosCartao {
+    display: flex;
+
+
+}
+.section{
+    display: flex;
+    flex-direction: column;
+}
+
+.nomes-inputs{
+    font-family: 'font3';
+    font-size: 15px;
+
+    padding-left: 1em;
+}
+.titulo-dados {
+    font-family: 'font4';
+    font-size: 27px;
+   padding-left: 2em;
+}
+.voltar-titulo{
+    display: flex;
+   padding: 2em;
+}
+
+
+.voltar{
+    display: flex;
+cursor: pointer;
+text-decoration: none;
+
+color: black;
+
+    font-family: 'font7';
+    font-size: 20px;
+
+}
+
+.seta{
+    width: 15px;
+    height: 23px;
+}
+
+.inputs-dados{
+    display: flex;
+    flex-direction: column;
+
+    padding-left: 5em;
+    padding-top: 2em;
+}
+
+
+
+.inputs-grandes{
+width: 416px;
+height: 58px;
+border-radius: 10px;
+background-color: #D9D9D9;
+border: 0;
+
+margin: 10px;
+}
+
+.inputs-pequenos{
+    width: 199px;
+    height: 58px;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+    border: 0;
+
+    margin:8px;
+}
+
+.pequenos{
+    display: flex;
+}
+
+.finalizar{
+    width: 267px;
+    height: 45px;
+    border: 0;
+    border-radius: 5px;
+
+    font-family: 'font7';
+    font-size: 22px;
+    color: #FFFFFF;
+    background-image: url('../../../../public/assets/images/amarelobotao.png');
+}
+
+.div-botao{
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+.cartao{
+    background-image: url('../../../../public/assets/images/fundoamarelo.png');
+    width: 372px;
+    height: 209px;
+    border-radius: 15px;
+
+    
+}
+
+.zeros{
+    padding: 1.5em;
+    font-size: 20px;
+    font-family: 'font3';
+}
+
+.nomes-abaixo{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2.5em;
+    font-family: 'font3';
+    font-size: 14px;
+}
+.cartao-section{
+    display: flex;
+    align-items: center;
+
+  padding-left: 7em;
+}
+
+
+.logo-cartao{
+   padding-top: 10px;
+   padding-left: 20px;
+}
