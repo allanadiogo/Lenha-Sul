@@ -127,7 +127,7 @@ export default function Index() {
           <div className="Lado-Esquerdo-Informações">
 
             <div className="Div-H1">
-              <h1 className='inf-post'>informações do Post</h1>
+              <h1 className='inf-post'>Informações do Post</h1>
               
             </div>
 

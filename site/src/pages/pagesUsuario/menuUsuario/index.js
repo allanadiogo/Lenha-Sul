@@ -77,21 +77,21 @@ export default function Index() {
                 <div className='div-mae-opcoes'>
 
                     <a href='/pizzasSalgadas' className='div-opcao-salgada'>
-                        <img src={require('../../../assets/images/salgada.png')} />
+                        <img className='Imagens' src={require('../../../assets/images/salgada.png')} />
                         <div className='div-p-opcao'>
                             <p className='p-opcao1'>Pizzas Salgadas</p>
                         </div>
                     </a>
 
                     <a href='/pizzasDoces' className='div-opcao-doce'>
-                        <img src={require('../../../assets/images/doce.png')} />
+                        <img className='Imagens' src={require('../../../assets/images/doce.png')} />
                         <div className='div-p-opcao'>
                             <p className='p-opcao2'>Pizzas Doces</p>
                         </div>
                     </a>
 
                     <a href='/Bebidas' className='div-opcao-bebidas'>
-                        <img src={require('../../../assets/images/bebidas.png')} />
+                        <img className='Imagens' src={require('../../../assets/images/bebidas.png')} />
                         <div className='div-p-opcao'>
                             <p className='p-opcao3'>Bebidas</p>
                         </div>

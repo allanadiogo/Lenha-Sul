@@ -111,7 +111,7 @@
     .div-propaganda-menu-usuario{
         background-image: url('../../../assets/images/propaganda.png'); 
         background-repeat: no-repeat;      
-        margin-top: 2em;
+        margin-top: 5em;
         margin-left: 26em;
         height: 24em;
         width: 50em;
@@ -162,24 +162,24 @@
 
     .p-opcao1{
        font-family: 'font4';
-       font-size: 30px;
-       margin-top: 1.5em;
+       font-size: 25px;
+       margin-top: 1.3em;
        margin-left: 1em;
       
     }
 
     .p-opcao2{
         font-family: 'font4';
-        font-size: 30px;
-        margin-top: 1.8em;
-        margin-left: 1em;
+        font-size: 25px;
+        margin-top: 1.3em;
+        margin-left: 1.5em;
     }
 
     .p-opcao3{
         font-family: 'font4';
-        font-size: 30px;
-        margin-top: 1.5em;
-        margin-left: 2.5em;
+        font-size: 25px;
+        margin-top: 1.3em;
+        margin-left: 2.3em;
     }
 
     .rodape-menu{
@@ -190,6 +190,14 @@
     a{
         text-decoration: none;
         color: black;
+    }
+
+    .div-p-opcao{
+        height: 3em;
+    }
+
+    .Imagens{
+        height: 5.5em;
     }
 
 }
