@@ -87,7 +87,7 @@ align-items: center;
 
 .abaixo{
     background-image: url('../../../public/assets/images/fundo-amarelo-maior.png');
-    height: 165px;
+    height: 189px;
 
     display: flex;
     justify-content:space-between;
@@ -107,20 +107,22 @@ align-items: center;
 
 .logo-sociais{
   display: flex;
-margin-top: 1em;
   justify-content: center;
+
+  
 }
 
 .botao-adm{
     font-family: 'font4';
     font-size: 20px;
     color: #FFFFFF;
-
+    padding: 8px 5px;
     background-color: #000000;
-    width: 222.04px;
-    height: 43px;
+    width: 222px;
+    height: 34px;
     border-radius: 10px;
     border: none;
+    
 
     cursor: pointer;
 
@@ -131,6 +133,5 @@ margin-top: 1em;
 .logo-roda{
     padding: 1em;
 }
-
 
 

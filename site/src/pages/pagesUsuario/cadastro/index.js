@@ -22,7 +22,6 @@ export default function Index() {
     const [nome, setNome] = useState('');
     const [telefone, setTelefone] = useState('');
     const [cpf, setCPF] = useState('');
-    const [nascimento, setNascimento] = useState('');
 
     const [erro, setErro] = useState('');
     const [carregando, setCarregando] = useState(false);
@@ -35,7 +34,7 @@ export default function Index() {
         setCarregando(true);
 
         try {
-            const r = await EfetuarCadastro(nome, email, senha, nascimento, telefone, cpf);
+            const r = await EfetuarCadastro(nome, email, senha, telefone, cpf);
             console.log(r);
             storage('usuario-logado', r)    
             toast.dark('Cadastrado com sucesso ✔️')
@@ -124,11 +123,6 @@ export default function Index() {
 
                     <input class="Input-Senha" type="password" placeholder="Senha" value={senha} onChange={e => setSenha(e.target.value)} />
 
-                    <div className='div-p5'>
-                    <p className='p'>Nascimento</p>
-                    </div>
-
-                    <input class="Input-Data" type="date" value={nascimento} onChange={e => setNascimento(e.target.value)} />
                     
                     <div>
                             {erro}

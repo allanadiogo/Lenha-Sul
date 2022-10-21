@@ -55,11 +55,11 @@ export default function Index() {
                 <div className='container'>
                     <div className='item'>
                          <img className='Imagens' src={require('../../../assets/images/Pizza 1.png')} />
-                        <h1 className='nome'>Chocolate ao Leite com Morango</h1>
+                        <h1 className='nome'>Pepperoni</h1>
                       
                        
                        <div className='div-p-descricao-pizzas'>
-                        <p className='p-descricao-pizzas'>Descrição:</p>
+                        <p className='p-descricao-pizzas'>Muçarela, oregano e pepperoni.</p>
                        </div>
 
                         <div className='botao-valor'>

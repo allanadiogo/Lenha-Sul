@@ -34,7 +34,7 @@ export default function Index(){
 <div className='abaixo'>
 
 <div className='logo-roda'>
-<img src="/assets/images/logoroda.png"/>
+<img className='logo' src="/assets/images/logoroda.png"/>
 </div>
 
 <div className='areaAdm'>

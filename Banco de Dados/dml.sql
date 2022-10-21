@@ -8,6 +8,11 @@ VALUES('admin@admin.com.br', 'admin123' );
 Insert INTO tb_admin (ds_email, ds_senha)
 VALUES('Admin', '1234' );    
 
+Insert INTO tb_usuario (nm_usuario, ds_cpf, ds_email, ds_senha, ds_telefone)
+VALUES('Alana', '1', 'alana@gmail.com', '1234', '99999');
+
+
+
 insert into tb_produto (nm_produto, vl_preco, ds_ingredientes)
                     values ('Pizza de Calabresa', 26.00, "Muçarela, molho de tomate, calabresa");
 

@@ -27,7 +27,7 @@ import Carrinho from './pages/pagesUsuario/carrinho';
 import DadosCartao from './pages/pagesUsuario/dadosCartao';
 import DetalhesPizzas from './pages/pagesUsuario/detalhesPizzas';
 import Endereco from './pages/pagesUsuario/endereco';
-import InformarPagamento from './pages/pagesUsuario/informarPagamento';
+import InformarPagamento from './pages/pagesUsuario/Pagamento';
 import LoginUsuario from './pages/pagesUsuario/loginUsuario';
 import MenuUsuario from './pages/pagesUsuario/menuUsuario';
 import PerfilUsuario from './pages/pagesUsuario/perfilUsuario';
@@ -61,7 +61,7 @@ root.render(
      <Route path='/dadosCartao' element={<DadosCartao/>} />
      <Route path='/detalhesPizzas' element={<DetalhesPizzas/>}/>
      <Route path='/endereco' element={<Endereco/>}/>
-     <Route path='/informarPagamento' element={<InformarPagamento/>}/>
+     <Route path='/InformarPagamento' element={<InformarPagamento/>}/>
      <Route path='/loginUsuario' element={<LoginUsuario/>} />
      <Route path='/menuUsuario' element={<MenuUsuario/>}/>
      <Route path='/perfilUsuario' element={<PerfilUsuario/>}/>

@@ -1,5 +1,16 @@
 import './index.scss';
 import  MenuAmarelo from '../../../components/menuqrpix'
+
+import { useNavigate } from 'react-router-dom';
+import storage from 'local-storage'
+
+import LoadingBar from 'react-top-loading-bar'
+
+import { EfetuarLogin } from '../../../api/usuarioAPI'
+import logo from '../../../assets/images/logo.png';
+
+import { useState, useRef } from 'react';
+
 export default function Index(){
     return(
         <main className='page-toda1'>
