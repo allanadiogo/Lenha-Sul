@@ -139,7 +139,7 @@ a{
     flex: none;
     transform: scale(0.9);
     transition: all ease 0.2s;
-
+    
    
     
 }
@@ -153,8 +153,9 @@ a{
 }
 
 .botao-adicionar{
+    font-family: 'font4';
     margin-top: 6px;
-    height: 1.5em;
+    height: 1.8em;
     font-size: 1.2em;
 }
 .Imagens{
@@ -164,13 +165,16 @@ a{
 
 .nome{
     font-size:  1.5em;
+    margin-top: 0.4em;
 
 }
 
 
-.div-p-descricao-pizzas {
-    margin-left: -2em;
-    margin-top: -0.5em;
+.p-descricao-pizzas{
+    font-family: 'font3';
+    font-size: 18px;
+    padding-bottom: 1em;
+    color: #555555;
 }
 
 

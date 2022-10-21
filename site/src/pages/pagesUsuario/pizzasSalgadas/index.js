@@ -63,7 +63,7 @@ export default function Index() {
                        </div>
 
                         <div className='botao-valor'>
-                            <button className='botao-adicionar'> + Adicionar</button>
+                            <button className='botao-adicionar'> Adicionar</button>
                             <h1 className='valor'>por R$ 26,00</h1>
                         </div>
                     </div>
