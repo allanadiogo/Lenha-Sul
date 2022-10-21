@@ -21,10 +21,6 @@
     
    }
 
-   .a-cor{
-    color: #0038FF;
-   }
-
    .entrar{
     margin-top: 1vh;
    }
@@ -197,10 +193,11 @@ button {
     
 }
 
-.botao-entrar{
+.botao-registrar{
     background-color: black;
     font-size: 18px;
     width: 15em;
+    cursor: pointer;
 
     
 }
@@ -221,8 +218,14 @@ button {
     background-color: w;
 }
 
-.entrar{
+.registrar{
     font-family: 'font6';
+    margin-top: 1em;
+}
+
+.a-cor{
+    cursor: pointer;
+    color: #0038FF;
 }
 
 ::placeholder {

@@ -137,8 +137,8 @@ export default function Index() {
 
                     <div className="Div-Button">
                         
-                        <button className="botao-entrar" onClick={onClick} disabled= {carregando} >Registrar-se</button>
-                        <p class="entrar">Já tem uma conta? <a className='a-cor' onClick={() => LoginUsuario ()} >Entrar</a></p>
+                        <button className="botao-registrar" onClick={onClick} disabled= {carregando} >Registrar-se</button>
+                        <p class="registrar">Já tem uma conta? <a className='a-cor' onClick={() => LoginUsuario ()} >Entrar</a></p>
                     </div>
                    ,
 

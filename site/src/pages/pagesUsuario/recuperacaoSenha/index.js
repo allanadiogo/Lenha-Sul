@@ -84,7 +84,7 @@ export default function Index() {
 
 
                     <div className="Div-Button">
-                        <button className="botao-entrar"  disabled={carregando}>Enviar código</button>
+                        <button className="botao-enviar"  disabled={carregando}>Enviar código</button>
 
                         
                     </div>
