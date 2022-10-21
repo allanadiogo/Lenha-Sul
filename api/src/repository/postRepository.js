@@ -13,7 +13,7 @@ export async function Post(post) {
 
 export async function inserirImagem (imagem, id) {
     const comando = 
-    `INSERT tb_produto
+    `update tb_produto
     SET img_produto             = ?
     WHERE id_produto            = ?`
 

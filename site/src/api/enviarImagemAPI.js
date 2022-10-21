@@ -5,7 +5,7 @@ const api = axios.create({
     baseURL: API_URL
 })
 
-export async function EnviarImagem (id, imagem){
+export async function inserirImagem (id, imagem){
     const formData = new FormData();
     formData.append('imgpizza', imagem);
     
