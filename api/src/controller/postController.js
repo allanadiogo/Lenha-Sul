@@ -9,6 +9,7 @@ const upload = multer({dest: 'storage/imgproduto'})
 server.post('/post/criar', async (req,resp) => {
     try {
         const publi = req.body;
+        console.log(publi);
         
         if(!publi.nome.trim())throw new Error("Nome é OBRIGATÓRIO!")
         if(!publi.preco) throw new Error("Preço é OBRIGATÓRIO!")

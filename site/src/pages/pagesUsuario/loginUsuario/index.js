@@ -32,7 +32,7 @@ export default function Index() {
             storage('usuario-logado', r)
 
             setTimeout(() => {
-                navigate('/')
+                navigate('/perfilUsuario')
             }, 3000)
 
 
@@ -79,7 +79,7 @@ export default function Index() {
 
                     <div className="Div-Mae-Input-usuario">
                         <img className='icons-login-usuario' src='/assets/images/usuario3.png' />
-                        <input className="Input-Email-usuario" placeholder="usuário ou email" value={email} onChange={e => setEmail(e.target.value)} />
+                        <input className="Input-Email-usuario" placeholder="email" value={email} onChange={e => setEmail(e.target.value)} />
                     </div>
 
 

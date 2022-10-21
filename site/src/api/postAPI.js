@@ -9,7 +9,7 @@ export async function CadastrarProduto (nome, preco, ingredientes){
         const r = await api.post('/post/criar', {
                     nome: nome,
                     preco:preco,
-                    ingredientes:ingredientes,
+                    ingredientes:ingredientes
                     
         })
 

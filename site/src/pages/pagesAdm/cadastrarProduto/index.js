@@ -10,9 +10,9 @@ import { toast, ToastContainer  } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css'; 
 
 
-import { CadastrarProduto } from '../../../api/produtoAPI'
+import { CadastrarProduto } from '../../../api/postAPI'
 import { ListarCategorias } from '../../../api/categoriaAPI';
-import { EnviarImagem } from '../../../api/enviarImagemAPI'
+import { inserirImagem } from '../../../api/enviarImagemAPI'
 import { useState, useEffect, useRef } from 'react';
 
 
@@ -58,6 +58,16 @@ export default function Index() {
     setCategorias(r);
   }
 
+  function buscarNomeCategoria(id) {
+    const cat = categorias.find(item => item.id == id);
+    return cat.categoria;
+}
+
+function removerCategoria(id) {
+    const x = catSelecionadas.filter(item => item != id);
+    setCatSelecionadas(x);
+}
+
 
 
   async function onClick() {
@@ -72,7 +82,7 @@ export default function Index() {
       if (id === 0) {
 
         const NovoPost = await CadastrarProduto(nome, preco, ingredientes)
-        const r = await EnviarImagem(NovoPost.id, img)
+        const r = await inserirImagem(NovoPost.id, img)
         toast.dark("A pizza foi cadastrada ")
 
         
@@ -103,11 +113,9 @@ export default function Index() {
       return URL.createObjectURL(img);
     }
     else {
-      return EnviarImagem(img)
+      return inserirImagem(img)
     }
   }
-
-
 
 
 
@@ -171,16 +179,29 @@ export default function Index() {
             <div className="Div-Botoes-Categoria">
 
 
-              <input className='imp-salgada' type="radio" name="tipo-salgado" value={idCategoria} onChange={e => setIdCategoria(e.target.value)}></input>
-              <p className="P-Categoria"> Salgada </p>
+            <select value={idCategoria} onChange={e => setIdCategoria(e.target.value)} >
+                                <option selected disabled hidden>Selecione</option>
+                                <option >Doce</option>
+                                <option >Salgada</option>
+                                <option >Bebida</option>
 
-              <input className='imp-doce' type="radio" name="tipo-salgado" value={idCategoria} onChange={e => setIdCategoria(e.target.value)}></input>
-              <p className="P-Categoria-2"> Doce </p>
-
-              <input className='imp-bebida' type="radio" name="tipo-salgado" value={idCategoria} onChange={e => setIdCategoria(e.target.value)}></input>
-              <p className="P-Categoria-3"> Bebida </p>
+                                {categorias.map(item =>
+                                    <option value={item.id}> {item.categoria} </option>
+                                )}
+                            </select>
 
               
+            </div>
+
+            <div>
+                        <label></label>
+                        <div className='cat-conteiner'>
+                            {catSelecionadas.map(id =>
+                                <div className='cat-selecionada' onClick={() => removerCategoria(id)}>
+                                    {buscarNomeCategoria(id)}
+                                </div>
+                            )}
+                        </div>
             </div>
         
             <button className="Button-Publicar" onClick={onClick}>Salvar</button> 
@@ -229,7 +250,7 @@ export default function Index() {
               <div className="div-ingredientes-vizu">
                 <div className="esq-1">
                   {!ingredientes &&
-                    <p> ingredientes </p>
+                    <p> Ingredientes </p>
                   }
                   {nome &&
                     <p> {ingredientes} </p>
@@ -238,8 +259,15 @@ export default function Index() {
                     <p> Preço </p>
                   }
                   {preco &&
-                    <p> {preco} </p>
+                    <p> R${preco} </p>
                   }
+                  {!idCategoria &&
+                    <p> Categoria </p>
+                  }
+                  {idCategoria &&
+                    <p> {idCategoria} </p>
+                  }
+
 
 
                 </div>
