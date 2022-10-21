@@ -55,7 +55,7 @@ root.render(
      <Route path='/menuamarelo' element={<MenuAmarelo/>}/>
 
      <Route path='/acompanharPedido' element={<AcompanharPedido/>} />
-     <Route path='/bebidas' element={<Bebibas/>}/>
+ 
      <Route path='/cadastro' element={<Cadastro/>}/>
      <Route path='/carrinho' element={<Carrinho/>}/>
      <Route path='/dadosCartao' element={<DadosCartao/>} />
@@ -65,8 +65,9 @@ root.render(
      <Route path='/loginUsuario' element={<LoginUsuario/>} />
      <Route path='/menuUsuario' element={<MenuUsuario/>}/>
      <Route path='/perfilUsuario' element={<PerfilUsuario/>}/>
-     <Route path='/pizzasDoces' element={<PizzasDoces/>}/>
      <Route path='/pizzasSalgadas' element={<PizzasSalgadas/>}/>
+     <Route path='/pizzasDoces' element={<PizzasDoces/>}/>
+     <Route path='/bebidas' element={<Bebibas/>}/>
      <Route path='/qrPix' element={<QrPix/>}/>
      <Route path='/recuperacaoSenha' element={<RecupercaoSenha/>}/>
 

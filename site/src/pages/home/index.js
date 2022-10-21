@@ -33,7 +33,7 @@ export default function Index() {
                     <div className='menu-text'>
 
                         <li className='li1'>
-                            <a href='#home' className='lin-1' >Home</a>
+                            <a href='/' className='lin-1' >Home</a>
                         </li>
                         <li className='li1'>
                             <a href='/menuusuario' className='lin-1'>Menu</a>
