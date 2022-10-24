@@ -1,5 +1,5 @@
 
-import { useNavigate } from 'react-router-dom'
+import { useNavigate} from 'react-router-dom'
 import storage from 'local-storage'
 
 import './index.scss';
@@ -7,7 +7,7 @@ import './index.scss';
 import { loginUsuario } from '../../../api/usuarioAPI'
 import LoadingBar from 'react-top-loading-bar'
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
 
@@ -22,6 +22,12 @@ export default function Index() {
 
     const ref = useRef();
     const navigate = useNavigate();
+
+    useEffect(() => {
+        if(storage('usuario-logado')){
+            navigate('/perfilUsuario')
+        }
+    }, [])
 
     async function onClick() {
         ref.current.continuousStart();

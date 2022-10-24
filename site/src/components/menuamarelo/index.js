@@ -5,26 +5,6 @@ import './index.scss'
 
 export default function Index(){
 
-const navigate = useNavigate();
-
-    function sairClick(){
-       storage.remove('usuario-logado');
-       navigate('/loginusuario');
-
-       
-    }
-
-
-    useEffect(() => {
-        if(storage('usuario-logado')){
-           navigate('/loginusuario')
-        }
-        
-        else{
-            const logado = storage('usuario-logado');
-           
-        }
-        }, [])
 
 
     return(
@@ -74,7 +54,7 @@ const navigate = useNavigate();
       </div>
                     
                
-                <div className='sair' onClick={sairClick}>
+                <div className='sair'  >
                     <img src='/assets/images/icon6.png'/>
                     <div className='text-sair'>SAIR</div>
                 </div>

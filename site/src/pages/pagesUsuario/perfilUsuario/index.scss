@@ -1,0 +1,89 @@
+.main-perfil{
+    display: flex;
+}
+
+.titulo-perfil{
+  font-size:  35px;
+font-family: 'font4';
+position: absolute;
+padding-left: 9em;
+padding-top: 2em;
+}
+
+.titulo-foto{
+    font-size: 20px;
+    font-family: 'font4';
+    margin: 1em;
+}
+
+.usuario-perfil{
+    width: 163px;
+    height: 163px;
+}
+
+.foto-perfil{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+
+padding-left: 5em;
+
+}
+
+
+
+.titulo-input-perfil{
+    font-size: 20px;
+   font-family: 'font3';
+padding-left: 1em;
+}
+.inputs-perfil{
+    display: flex;    
+align-items: center;
+flex-direction: column;
+justify-content: center;
+
+padding-left: 3em;
+
+}
+.input-perfil{
+width: 444px;
+height: 38px;
+background-color: #F1F2F3;
+
+margin: 1em;
+
+}
+
+.botao-salvar-perfil{
+    width: 149px;
+    height: 38px;
+    background-image: url('../../../../public//assets/images/salvaramarelo.png');
+    border: none;
+    cursor: pointer;
+
+    font-family: 'font7';
+    font-size: 22px;
+    color: #FFFFFF;
+
+    margin: 2em;
+
+}
+
+.linha-perfil{
+
+    width: 867px;
+    height: 0;
+  
+}
+
+
+.linha-perfil-2{
+    position: absolute;
+    height: 80vh;
+    padding-left: 20em;
+    display: flex;
+
+    align-items: flex-end;
+}

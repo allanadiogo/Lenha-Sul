@@ -4,18 +4,14 @@ export default function Index(){
     return(
         <main className='main-endereco'>
             <header className='header-carrinho'>
-                <div className='div-img-cabecalho-logo'>
-                    <img className='imagem-logo-endereco' src='/assets/images/logodomenu.png' />
-                </div>
+               
+                <div className='logo-home-endereco'>
+                <img className="endereco-usuario-logo" src="/assets/images/logoroda.png" />
+                <a href='/' className="botao-home-endereco" >Home</a>
+                <img src='/assets/images/carrinho.png'/>
+            </div>
 
-                <div>
-                    <div className='div-cabecalho-opcoes'>
-                        <a className='a-header-endereco-botao'>Home</a>
-                    </div>
-                    <div className='div-icon-header'>
-                        <img className='imagem-header-icon' src='/assets/images/' />
-                    </div>
-                </div>
+        
             </header>
 
             <div className='div-h1-carrinho'>
@@ -25,26 +21,38 @@ export default function Index(){
             </div>
 
             <section className='section-inputs'>
-                <div className='div-primeiro-input'>
-                    <label>Rua:</label>
-                    <input></input>
+                <div className='div-inputs'>
+                    <label className='labels-inputs'>Rua:</label>
+                    <input className='input-maior-endereco'></input>
                 </div>
-                <div className='div-2/3-input'>
-                    <label>Número de Residencia:</label>
-                    <input></input>
-                    <label>CEP:</label>
-                    <input></input>
+                
+                
+                
+                <div className='div-pequenos-inputs'>
+                   <div className='pequeno-input-1'>
+                    <label className='labels-inputs'>Número de Residencia:</label>
+                    <input className='input-menor-endereco'></input>
+                    </div>
+                   
+                    <div className='pequeno-input-1'>
+                    <label className='labels-inputs'>CEP:</label>
+                    <input className='input-menor-endereco'></input>
+</div>
+            
                 </div>
-                <div className='div-quarto-input'>
-                    <label>Bairro:</label>
-                    <input></input>
+               
+               
+               
+                <div className='div-inputs'>
+                    <label className='labels-inputs'>Bairro:</label>
+                    <input className='input-maior-endereco'></input>
                 </div>
-                <div className='div-quinto-input'>
-                    <label>Complemento"Opcional":</label>
-                    <input></input>
+                <div className='div-inputs'>
+                    <label className='labels-inputs'>Complemento (opcional):</label>
+                    <input className='input-maior-endereco'></input>
                 </div>
 
-                <button>Enviar</button>
+                <button className='botao-enviar-endereco'>Enviar</button>
             </section>
         </main>
     )

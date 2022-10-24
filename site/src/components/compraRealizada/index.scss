@@ -1,0 +1,67 @@
+.main-compraRealizada{
+    background-color: rgb(197, 180, 180);
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+   
+}
+
+.logo-realizado{
+width: 187px;
+height: 217px;
+}
+
+.div-realizado{
+    width: 500px;
+    height: 541px;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;  
+}
+
+.div-realizado .ok{
+padding-top: 1em;
+}
+
+.titulo-realizo{
+    font-size: 40px;
+    font-family: 'font3';
+}
+.para-pedido{
+    font-size: 24px;
+    font-family: 'font3';
+margin-top: 2em;
+
+}
+
+.linha-pedido{
+
+    width: 500px;
+    height: 0;
+  
+}
+
+
+.linha-pedido-2{
+    padding-top: 3em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.ok{
+    font-size: 40px;
+    font-family: 'font3';
+    color: #1383B2;
+    cursor: pointer;
+
+  
+}

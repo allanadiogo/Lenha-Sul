@@ -16,7 +16,8 @@ import HistoricoPedidos from './pages/pagesAdm/historicoPedidos';
 import LoginAdm from './pages/pagesAdm/loginAdm';
 import MenuAdm from './pages/pagesAdm/menuAdm';
 import StatusPedido from './pages/pagesAdm/statusPedido';
-
+import Troco from './components/troco'
+import CompraRealizada from './components/compraRealizada'
 import MenuAmarelo from './components/menuamarelo';
 
 
@@ -51,6 +52,8 @@ root.render(
      <Route path='/loginAdm' element={<LoginAdm/>}/>
      <Route path='/menuAdm' element={<MenuAdm/>}/>
      <Route path='/statusPedido' element={<StatusPedido/>}/>
+     <Route path='/compraRealizada' element={<CompraRealizada/>}/>
+     <Route path='/troco' element={<Troco/>}/>
 
      <Route path='/menuamarelo' element={<MenuAmarelo/>}/>
 

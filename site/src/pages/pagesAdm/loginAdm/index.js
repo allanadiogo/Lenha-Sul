@@ -31,7 +31,7 @@ export default function Index() {
 
         try {
             const r = await EfetuarLogin(email, senha)
-            storage('usuario-logado', r)
+            storage('admin-logado', r)
 
             setTimeout(() => {
                 navigate('/menuAdm')
