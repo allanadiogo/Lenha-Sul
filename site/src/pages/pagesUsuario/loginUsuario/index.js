@@ -35,7 +35,9 @@ export default function Index() {
 
         try {
             const r = await loginUsuario(email, senha)
-            storage('usuario-logado', r)
+            storage('usuario-logado', r);
+
+           
 
             setTimeout(() => {
                 navigate('/perfilUsuario')
@@ -91,7 +93,7 @@ export default function Index() {
 
                     <div className="Div-Mae-Input-Senha-usuario">
                         <img className='icons-login-usuario' src='/assets/images/cadeado.png' />
-                        <input data-ls-module="charCounter" maxlength="25" type="password" className="Input-Senha-usuario" placeholder="senha" value={senha} onChange={e => setSenha(e.target.value)} />
+                        <input data-ls-module="charCounter" maxLength="25" type="password" className="Input-Senha-usuario" placeholder="senha" value={senha} onChange={e => setSenha(e.target.value)} />
                     </div>
 
 

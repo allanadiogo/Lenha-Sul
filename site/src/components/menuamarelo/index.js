@@ -5,6 +5,14 @@ import './index.scss'
 
 export default function Index(){
 
+const navigate = useNavigate();
+
+    function sairClick(){
+       storage.remove('usuario-logado');
+       navigate('/loginUsuario');
+
+       
+    }
 
 
     return(
@@ -54,7 +62,7 @@ export default function Index(){
       </div>
                     
                
-                <div className='sair'  >
+                <div className='sair' onClick={sairClick} >
                     <img src='/assets/images/icon6.png'/>
                     <div className='text-sair'>SAIR</div>
                 </div>

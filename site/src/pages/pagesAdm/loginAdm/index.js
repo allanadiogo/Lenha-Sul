@@ -85,7 +85,7 @@ export default function Index() {
 
 
                     <div>
-                        <img className="Width-Img-Cadeado" src="../assets/image" alt="" />
+                        <img className="Width-Img-Cadeado" src="../assets/image/cadeado.png" alt="" />
                     </div>
 
                     <input class="Input-Senha" type="password" placeholder="Senha" value={senha} onChange={e => setSenha(e.target.value)} />

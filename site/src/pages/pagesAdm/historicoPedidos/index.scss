@@ -1,0 +1,71 @@
+.main-historico-pedidos {
+
+
+    .div-row-historico {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .div-row-logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border: 1px solid black;
+        border-bottom: none;
+        padding: 20px 50px 20px 50px;
+        border-radius: 20px 20px 0px 0px;
+    }
+
+    .div-mae-lado-direito {
+        padding-left: 3em;
+        padding-top: 3em;
+    }
+
+    .img-logo-historico {
+        width: 80px;
+        padding-right: 20px;
+    }
+
+    .p-logo-historico {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .tag-table-historico {
+        border-collapse: collapse;
+        width: 55em;
+        border-radius: 0px 0px 20px 0px;
+
+    }
+
+    .tag-historico-td {
+        border-collapse: collapse;
+        padding: 10px 0px 7px 18px;
+    }
+
+    .tag-historico-thead {
+        border-top: none !important;
+
+    }
+
+
+    .th-tag-historico {
+        border-collapse: collapse;
+        text-align: left;
+        padding: 7px 0px 7px 18px;
+    }
+
+    .tag-historico-tbody {
+        border-radius: 0px 0px 20px 0px;
+        border: 1px solid black;
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+    }
+
+    .div-tabela {
+        border: 1px solid black;
+        padding-bottom: 30px;
+        border-radius: 0px 0px 20px 20px;
+    }
+}

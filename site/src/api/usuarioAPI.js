@@ -22,7 +22,8 @@ export async function EfetuarCadastro (nome,email,senha,nascimento,telefone,cpf)
         senha: senha,
         nascimento: nascimento,
         telefone: telefone,
-        cpf: cpf
+        cpf: cpf,
+        
     });
 
     return r.data;
@@ -34,4 +35,6 @@ export async function loginUsuario (email, senha){
                 senha: senha
 
         }  )
+
+        
 }

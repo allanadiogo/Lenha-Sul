@@ -5,20 +5,27 @@ import './index.scss'
 import MenuAmarelo from '../../../components/menuamarelo'
 
 export default function Index(){
-    const [usuario, setUsuario] = useState('--');
+    const [usuario, setUsuario] = useState('');
+    const [usuariote, setUsuarioTe] = useState('');
+    const [usuarioemail, setUsuarioEmail] = useState('');
+
 
     const navigate = useNavigate();
 
     useEffect(() => {
-        if (!storage('usuario-logado')){
-            navigate('/');
-        }else{
-            const usuarioLogado = storage('usuario-logado');
-            setUsuario(usuarioLogado.nome);
-            setUsuario(usuarioLogado.email);
+        if(!storage('usuario-logado')){
+           navigate('/loginUsuario')
         }
-    }, [])
+        
+        else{
+            const usuariologado = storage('usuario-logado');
+            setUsuario(usuariologado.name)
+            setUsuarioTe(usuariologado.telefone)
+            setUsuarioEmail(usuariologado.email)
+        }
+        }, [])
 
+  
     return (
         <main className='main-perfil'>
             <MenuAmarelo/>
@@ -38,17 +45,17 @@ export default function Index(){
                 
                 <div className='nome-perfil'>
                     <h1 className='titulo-input-perfil'>Nome:</h1>
-                    <span className='input-perfil'>{usuario[0].toUpperCase()}</span>
+                    <span className='input-perfil'>{usuario}</span>
                 </div>
                
                 <div className='email-perfil'>
                     <h1 className='titulo-input-perfil'>E-mail:</h1>
-                    <input className='input-perfil'></input>
+                    <span className='input-perfil'>{usuarioemail}</span>
                 </div>
 
                 <div className='telefone-perfil'>
                     <h1 className='titulo-input-perfil'>Telefone:</h1>
-                    <input className='input-perfil'></input>
+                    <span className='input-perfil'>{usuariote}</span>
                 </div>
 
             </section>

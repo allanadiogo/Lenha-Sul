@@ -64,7 +64,7 @@ root.render(
      <Route path='/dadosCartao' element={<DadosCartao/>} />
      <Route path='/detalhesPizzas' element={<DetalhesPizzas/>}/>
      <Route path='/endereco' element={<Endereco/>}/>
-     <Route path='/InformarPagamento' element={<InformarPagamento/>}/>
+     <Route path='/Pagamento' element={<InformarPagamento/>}/>
      <Route path='/loginUsuario' element={<LoginUsuario/>} />
      <Route path='/menuUsuario' element={<MenuUsuario/>}/>
      <Route path='/perfilUsuario' element={<PerfilUsuario/>}/>

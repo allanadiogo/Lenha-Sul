@@ -9,9 +9,12 @@ import LoadingBar from 'react-top-loading-bar'
 import { EfetuarLogin } from '../../../api/usuarioAPI'
 import logo from '../../../assets/images/logo.png';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 export default function Index(){
+
+
+
     return(
         <main className='page-toda1'>
            <MenuAmarelo/>
