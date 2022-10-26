@@ -13,7 +13,7 @@ import 'react-toastify/dist/ReactToastify.min.css';
 
 
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef} from 'react';
 
 export default function Index() {
 
@@ -22,6 +22,7 @@ export default function Index() {
     const [nome, setNome] = useState('');
     const [telefone, setTelefone] = useState('');
     const [cpf, setCPF] = useState('');
+   
 
     const [erro, setErro] = useState('');
     const [carregando, setCarregando] = useState(false);
@@ -65,7 +66,7 @@ export default function Index() {
        
         <main className="main1">
             <ToastContainer />
-             <LoadingBar color='#0000' ref={ref} />
+         <LoadingBar color='#0000' ref={ref} />
 
             <header className="Header-Home">
             
@@ -124,9 +125,7 @@ export default function Index() {
                     <input class="Input-Senha" type="password" placeholder="Senha" value={senha} onChange={e => setSenha(e.target.value)} />
 
                     
-                    <div>
-                            {erro}
-                    </div>
+                
 
 
                     <div className="Div-Button">

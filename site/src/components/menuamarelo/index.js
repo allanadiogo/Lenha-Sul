@@ -7,14 +7,21 @@ export default function Index(){
 
 const navigate = useNavigate();
 
+
+    useEffect(() => {
+        if(!storage('usuario-logado')){
+           navigate('/loginUsuario')
+        }
+        }, [])
+
+        function home (){
+            navigate('/')
+        }
+        
     function sairClick(){
-       storage.remove('usuario-logado');
-       navigate('/loginUsuario');
-
-       
-    }
-
-
+        storage.remove('usuario-logado');
+        navigate('/loginUsuario');
+     }
     return(
     <main className='corpo-menu-amarelo'>
         <div>
@@ -23,11 +30,11 @@ const navigate = useNavigate();
             </div>
 
             <div className='menu-itens-usuario'>
-                
-                <a href='/' className='con-text-usuario'>
+                <div onClick={home}>
                     <img className="icons-usuario" src='/assets/images/casa-menu.png'/>
                     <span className= 'texts-usuario'>Home </span> 
-                </a>
+                </div>
+                
 
                 
                     <hr className='linha'/>

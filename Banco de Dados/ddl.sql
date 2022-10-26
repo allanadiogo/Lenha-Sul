@@ -8,7 +8,7 @@ create table tb_usuario (
     ds_email          varchar(200),
     ds_senha           varchar(200),
     ds_telefone        varchar(15),
-    dt_nascimento      date
+    img_foto          varchar(1000)
     );
     
 create table tb_pedido (
@@ -56,6 +56,21 @@ create table tb_pagamento_pix (
         foreign key (id_pedido) references tb_pedido (id_pedido)
         );      
         
+         create table tb_categoria (
+	id_categoria		int primary key auto_increment,
+        nm_categoria		varchar(200)
+);
+
+create table tb_produto (
+        id_produto				int primary key auto_increment,
+        id_categoria			int,
+	nm_produto				varchar(100),     
+        vl_preco				decimal(12.5),
+        img_produto 			varchar(1000),
+        ds_ingredientes			varchar(100),
+        foreign key (id_categoria) references tb_categoria (id_categoria)
+        );
+        
 create table tb_pedido_item (
         id_produto_item 		int primary key auto_increment,
         id_produto				int,
@@ -64,28 +79,9 @@ create table tb_pedido_item (
         foreign key (id_pedido) references tb_pedido (id_pedido)
         );
 
- create table tb_categoria (
-	id_categoria		int primary key auto_increment,
-        nm_categoria		varchar(200)
-);
-        
-create table tb_produto (
-        id_produto				int primary key auto_increment,
-        id_categoria			int,
-	nm_produto				varchar(100),     
-        vl_preco				decimal(12.5),
-        img_produto 			varchar(100),
-        ds_ingredientes			varchar(100),
-        foreign key (id_categoria) references tb_categoria (id_categoria)
-        );
-        
-
+	
 create table tb_admin (
 	id_admin		int primary key auto_increment,
         ds_email		varchar(200),
         ds_senha    	        varchar(200)
         );
-        
-        
-
-
