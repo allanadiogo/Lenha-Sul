@@ -35,14 +35,12 @@ export async function listarCategorias(id) {
 
 export async function listarPosts (id) {
     const comando = 
-    `SELECT tb_produto       id,
+    `SELECT
         id_categoria       Categoria,
         nm_produto           NomeProduto,
         vl_preco          Preço,
         ds_ingredientes   Ingredientes
-    FROM tb_produto           
-    WHERE id_categoria     = ?`
-
-    const [linhas] = await con.query(comando, [id]);
+    FROM tb_produto`
+    const [linhas] = await con.query(comando);
     return linhas;
 }

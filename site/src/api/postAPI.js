@@ -14,5 +14,9 @@ export async function CadastrarProduto (nome, preco, ingredientes){
         })
 
         return r.data;
+}
 
+export async function CarregarProdutos (){
+    const resposta = await api.get('/api/listarProduto')
+    return resposta.data
 }

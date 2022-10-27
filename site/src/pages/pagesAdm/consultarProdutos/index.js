@@ -1,8 +1,15 @@
 import { MenuAzul2 } from '../../../components/menuazul';
-
+import { CarregarProdutos } from '../../../api/postAPI'
 import './index.scss';
+import { useState } from 'react';
 
 export default function Index() {
+    const[produto,SetProduto] = useState([])
+    function CarregarProdutoos (){
+        const resposta = CarregarProdutoos();
+        SetProduto(resposta.data)
+    }
+
     return (
 
 
@@ -45,13 +52,15 @@ export default function Index() {
                 <table className='tag-table'>
 
                     <thead className='tag-thead'>
+                        {produto.map((item) =>{
                         <tr className='tag-tr'>
-                            <th className='th-tag'>ID</th>
-                            <th className='th-tag'>Categoria</th>
-                            <th className='th-tag'>Nome</th>
-                            <th className='th-tag'>Descrição</th>
-                            <th className='th-tag'>Valor</th>
-                        </tr>
+                        <th className='th-tag'>{item.id}</th>
+                        <th className='th-tag'>Categoria</th>
+                        <th className='th-tag'>`{item.NomeProduto}`</th>
+                        <th className='th-tag'>Descrição</th>
+                        <th className='th-tag'>Valor</th>
+                    </tr>
+                        })}
                     </thead>
 
                     <tbody className='tag-tbody'>
