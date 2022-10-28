@@ -1,11 +1,12 @@
 import {con}  from './connection.js'
 
 export async function Post(post) {
+    console.log(post);
     const comando = `
-    Insert INTO tb_produto(nm_produto, vl_preco, ds_ingredientes)
-    VALUES (?,?,?)
+    Insert INTO tb_produto(nm_categoria,nm_produto, vl_preco, ds_ingredientes)
+    VALUES (?,?,?,?)
     `
-    const[resposta] = await con.query (comando, [post.nome,post.preco,post.ingredientes])
+    const[resposta] = await con.query (comando, [post.nomeCat,post.nome,post.preco,post.ingredientes])
     
 
     return resposta[0];    
