@@ -36,7 +36,7 @@ export default function Index() {
 
         try {
             const r = await EfetuarCadastro(nome, email, senha, telefone, cpf);
-            console.log(r);
+            
             storage('usuario-logado', r)    
             toast.dark('Cadastrado com sucesso ✔️')
 

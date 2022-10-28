@@ -6,7 +6,7 @@ import { useState } from 'react';
 export default function Index() {
     const[produto,SetProduto] = useState([])
     function CarregarProdutoos (){
-        const resposta = CarregarProdutoos();
+        const resposta = CarregarProdutos();
         SetProduto(resposta.data)
     }
 
@@ -52,7 +52,7 @@ export default function Index() {
                 <table className='tag-table'>
 
                     <thead className='tag-thead'>
-                        {produto.map((item) =>{
+                        {produto.map(item =>{
                         <tr className='tag-tr'>
                         <th className='th-tag'>{item.id}</th>
                         <th className='th-tag'>Categoria</th>
@@ -60,7 +60,7 @@ export default function Index() {
                         <th className='th-tag'>Descrição</th>
                         <th className='th-tag'>Valor</th>
                     </tr>
-                        })}
+})}
                     </thead>
 
                     <tbody className='tag-tbody'>

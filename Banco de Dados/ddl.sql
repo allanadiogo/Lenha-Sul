@@ -57,14 +57,15 @@ create table tb_pagamento_pix (
         );      
         
          create table tb_categoria (
-	id_categoria		int primary key auto_increment,
-        nm_categoria		varchar(200)
+		id_categoria		int primary key auto_increment,
+        nm_categoria		varchar(200) 
 );
 
 create table tb_produto (
         id_produto				int primary key auto_increment,
-        id_categoria			int,
-	nm_produto				varchar(100),     
+        id_categoria            int,
+        nm_categoria			varchar(200),
+		nm_produto				varchar(100),     
         vl_preco				decimal(12.5),
         img_produto 			varchar(1000),
         ds_ingredientes			varchar(100),
@@ -85,3 +86,5 @@ create table tb_admin (
         ds_email		varchar(200),
         ds_senha    	        varchar(200)
         );
+        
+        drop table tb_produto;

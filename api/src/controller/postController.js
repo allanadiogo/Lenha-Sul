@@ -1,5 +1,5 @@
 import { Router } from "express";
-import {Post, inserirImagem, listarCategorias, listarPosts} from "../repository/postRepository.js"
+import {Post, inserirImagem, listarPosts} from "../repository/postRepository.js"
 import multer from 'multer'
 
 const server = Router();
@@ -49,17 +49,7 @@ server.put('/post/:id/imagem', upload.single('imgproduto'), async (req, resp) =>
     }
 })
 
-server.get('/api/categoria', async (req, resp) => {
-    try {
-        const linhas = await listarCategorias();
-        resp.send(linhas);
-    }
-    catch (err) {
-        resp.status(400).send({
-            erro: err.message
-        })
-    }
-})
+
 
 server.get('/api/listarProduto' , async (req,resp) =>{
     try {
