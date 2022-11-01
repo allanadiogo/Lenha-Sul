@@ -34,3 +34,38 @@ export async function listarPosts (id) {
     const [linhas] = await con.query(comando);
     return linhas;
 }
+
+export async function listarHisto (id) {
+        const pedido =
+        `SELECT
+            id_pedido       PedidoNum,
+            dt_pedido       DataDoPedido,
+            id_usuario      QualCliente,
+            tp_pagamento    tipoPagamento  
+        FROM tb_pedido      
+        `
+    const [linhas] = await con.query(pedido);
+    return linhas;
+
+}
+
+export async function listarHisto2 (id) {
+    const endereco =
+    `SELECT 
+    ds_rua      Endereço
+    from tb_endereco
+    `
+    const [linhas] = await con.query(endereco);
+    return linhas;
+}
+
+export async function listarHisto3 (id) {
+    const produto =
+    `select
+    nm_produto   Produto,
+    vl_preco     Valor
+    from tb_produto
+    `
+    const [linhas] = await con.query(produto);
+    return linhas;
+}
