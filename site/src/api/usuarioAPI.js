@@ -36,4 +36,5 @@ export async function loginUsuario (email, senha){
         }  )
 
         return r.data;
+
 }
