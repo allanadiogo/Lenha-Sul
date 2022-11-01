@@ -5,7 +5,6 @@ import './index.css';
 
 import{BrowserRouter, Routes, Route} from 'react-router-dom';
 
-import App from './App';
 
 import Home from './pages/home';
 
@@ -18,7 +17,7 @@ import MenuAdm from './pages/pagesAdm/menuAdm';
 import StatusPedido from './pages/pagesAdm/statusPedido';
 import Troco from './components/troco'
 import CompraRealizada from './components/compraRealizada'
-import MenuAmarelo from './components/menuamarelo';
+import MenuAmarelousu from './components/menuamarelo';
 
 
 import AcompanharPedido from './pages/pagesUsuario/acompanharPedido';
@@ -55,7 +54,7 @@ root.render(
      <Route path='/compraRealizada' element={<CompraRealizada/>}/>
      <Route path='/troco' element={<Troco/>}/>
 
-     <Route path='/menuamarelo' element={<MenuAmarelo/>}/>
+     <Route path='/menuamarelo' element={<MenuAmarelousu/>}/>
 
      <Route path='/acompanharPedido' element={<AcompanharPedido/>} />
  

@@ -23,8 +23,6 @@ export default function Index() {
 
 
 
-
-
     async function onClick() {
         ref.current.continuousStart();
         setCarregando(true);

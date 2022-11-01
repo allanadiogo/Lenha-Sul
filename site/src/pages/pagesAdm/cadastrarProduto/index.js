@@ -11,9 +11,9 @@ import 'react-toastify/dist/ReactToastify.min.css';
 
 
 import { CadastrarProduto } from '../../../api/postAPI'
-import { ListarCategorias } from '../../../api/categoriaAPI';
 import { inserirImagem } from '../../../api/enviarImagemAPI'
 import { useState, useEffect, useRef } from 'react';
+
 
 
 export default function Index() {
@@ -29,44 +29,23 @@ export default function Index() {
   const [ingredientes, setIngredientes] = useState('');
   const [img, setImg] = useState();
 
-  const [idCategoria, setIdCategoria] = useState();
+  const [nomeCat, setNomecat] = useState('');
+  
   const [categorias, setCategorias] = useState([]);
 
   const UserLogado = storage('usuario-logado').Nome;
   const [id, SetId] = useState(0);
 
-  const [catSelecionadas, setCatSelecionadas] = useState([]);
+  
   const ref = useRef();
-
-
-  function AdicionarCategoria() {
-    if (!catSelecionadas.find(item => item == idCategoria)) {
-      const categorias = [...catSelecionadas, idCategoria];
-      setCatSelecionadas(categorias);
-    }
-  }
-
-  function BuscarCategoria(id) {
-    const cate = categorias.find(item => item.id == id);
-    return cate.categoria;
-  }
+  
 
 
 
-  async function carregarCategorias() {
-    const r = await ListarCategorias();
-    setCategorias(r);
-  }
 
-  function buscarNomeCategoria(id) {
-    const cat = categorias.find(item => item.id == id);
-    return cat.categoria;
-}
 
-function removerCategoria(id) {
-    const x = catSelecionadas.filter(item => item != id);
-    setCatSelecionadas(x);
-}
+
+
 
 
 
@@ -81,16 +60,12 @@ function removerCategoria(id) {
 
       if (id === 0) {
 
-        const NovoPost = await CadastrarProduto(nome, preco, ingredientes)
+        const NovoPost = await CadastrarProduto(nomeCat,nome, preco, ingredientes)
         const r = await inserirImagem(NovoPost.id, img)
         toast.dark("A pizza foi cadastrada ")
 
         
       }
-     
-    
-        
-
     }
 
 
@@ -179,15 +154,11 @@ function removerCategoria(id) {
             <div className="Div-Botoes-Categoria">
 
 
-            <select value={idCategoria} onChange={e => setIdCategoria(e.target.value)} >
+            <select value={nomeCat} onChange={e => setNomecat(e.target.value)} >
                                 <option selected disabled hidden>Selecione</option>
                                 <option >Doce</option>
                                 <option >Salgada</option>
-                                <option >Bebida</option>
-
-                                {categorias.map(item =>
-                                    <option value={item.id}> {item.categoria} </option>
-                                )}
+                                <option >Bebida</option>         
                             </select>
 
               
@@ -195,13 +166,7 @@ function removerCategoria(id) {
 
             <div>
                         <label></label>
-                        <div className='cat-conteiner'>
-                            {catSelecionadas.map(id =>
-                                <div className='cat-selecionada' onClick={() => removerCategoria(id)}>
-                                    {buscarNomeCategoria(id)}
-                                </div>
-                            )}
-                        </div>
+                        
             </div>
         
             <button className="Button-Publicar" onClick={onClick}>Salvar</button> 
@@ -261,11 +226,11 @@ function removerCategoria(id) {
                   {preco &&
                     <p> R${preco} </p>
                   }
-                  {!idCategoria &&
+                  {!nomeCat &&
                     <p> Categoria </p>
                   }
-                  {idCategoria &&
-                    <p> {idCategoria} </p>
+                  {nomeCat &&
+                    <p> {nomeCat} </p>
                   }
 
 

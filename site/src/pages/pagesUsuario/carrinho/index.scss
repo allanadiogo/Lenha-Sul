@@ -1,24 +1,136 @@
 .main-carrinho {
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     .header-carrinho {
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
+        margin-right: 300px;
+        align-items: center;
+        width: 73%;
+        margin-bottom: 50px;
     }
+
+    .div-header-logo {
+        margin-right: 30px;
+    }
+
+    .div-row-header-logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .a-header-botoes {
+        margin-right: 30px;
+    }
+
 
     .div-primeira-fileira {
         display: flex;
-        flex-direction: row;        
+        flex-direction: row;
+        border: 1px solid black;
+        justify-content: space-around;
     }
-
 
     .div-segunda-fileira {
         display: flex;
         flex-direction: row;
+        border: 1px solid black;
+    }
+
+    .div-produtos {
+        padding: 90px 0px;
     }
 
     .div-terceira-fileira {
         display: flex;
-        flex-direction: row; 
+        flex-direction: row;
+        border: 1px solid black;
+        background-color: black;
+        padding: 30px;
+        justify-content: flex-end;
+        align-items: center;
     }
+
+    .div-button-continuar {
+        margin-right: 80px;
+    }
+
+    .div-button-finalizar {
+        margin-right: 100px;
+    }
+
+    .button-comprar {
+        background-color: white;
+        cursor: pointer;
+        padding: 10px 15px;
+        font-size: 12px;
+        font-weight: bold;
+        border-radius: 5px;
+    }
+
+    .button-finalizar {
+        background-color: red;
+        cursor: pointer;
+        color: white;
+        font-size: 15px;
+        padding: 15px 25px;
+        border-radius: 5px;
+    }
+
+    .div-p-preco-unitario {
+        border-right: 1px solid black;
+    }
+
+    .p-preco-unitario {
+        text-align: center;
+    }
+
+    .div-p-produto {
+        border-right: 1px solid black;
+        padding: 10px 20px;
+        align-items: flex-start;
+    }
+
+    .div-quantidade {
+        border-right: 1px solid black;
+        padding: 10px 15px;
+    }
+
+    .div-excluir {
+        padding: 10px 15px;
+    }
+
+    .div-espacamento-info {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .input-pesquisar {
+        padding: 10px 30px;
+        border: none;
+    }
+    .section-carrinho {
+        width: 90%;
+    }
+
+    .div-total-itens {
+        margin-right: 50%;
+    }
+
+    .div-p-calcular {
+        margin-right: 15%;
+        border-right: 1px solid black;
+    }
+    .div-p-total {
+        border-left: 1px solid black;
+    }
+
+    .div-total-itens {
+        border-right: 1px solid black;
+    }
+    
 }

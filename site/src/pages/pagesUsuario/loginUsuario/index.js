@@ -5,6 +5,7 @@ import storage from 'local-storage'
 import './index.scss';
 
 import { loginUsuario } from '../../../api/usuarioAPI'
+
 import LoadingBar from 'react-top-loading-bar'
 
 import { useState, useRef, useEffect } from 'react';
@@ -19,15 +20,15 @@ export default function Index() {
     const [senha, setSenha] = useState('');
     const [erro, setErro] = useState('');
     const [carregando, setCarregando] = useState(false);
-
-    const ref = useRef();
     const navigate = useNavigate();
+    const ref = useRef();
+   
 
-    useEffect(() => {
-        if(storage('usuario-logado')){
-            navigate('/perfilUsuario')
-        }
-    }, [])
+   useEffect(() => {
+    if (!storage('usuario-logado')) {
+      navigate('/loginUsuario');
+    }
+  }, [])
 
     async function onClick() {
         ref.current.continuousStart();
@@ -56,6 +57,7 @@ export default function Index() {
     }
 
 
+   
     function CriarConta() {
         navigate('/cadastro');
     }
@@ -67,7 +69,7 @@ export default function Index() {
         <main className="main-login-usuario">
             <ToastContainer />
             <LoadingBar color='#000' ref={ref} />
-
+          
 
 
             <div className='logo-home-usuario'>

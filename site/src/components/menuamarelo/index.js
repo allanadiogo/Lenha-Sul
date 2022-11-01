@@ -14,10 +14,6 @@ const navigate = useNavigate();
         }
         }, [])
 
-        function home (){
-            navigate('/')
-        }
-        
     function sairClick(){
         storage.remove('usuario-logado');
         navigate('/loginUsuario');
@@ -30,10 +26,12 @@ const navigate = useNavigate();
             </div>
 
             <div className='menu-itens-usuario'>
-                <div onClick={home}>
+                
+                
+                <a href='/'  className='con-text-usuario'>
                     <img className="icons-usuario" src='/assets/images/casa-menu.png'/>
                     <span className= 'texts-usuario'>Home </span> 
-                </div>
+                </a>
                 
 
                 

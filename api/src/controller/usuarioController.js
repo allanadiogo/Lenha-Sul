@@ -21,8 +21,8 @@ server.post('/admin/login', async (req,resp) => {
 server.post('/usuario/login', async (req,resp) => {
     try {
         const {email, senha} = req.body
-
         const resposta = await LoginUsuario(email,senha)
+    
         if(!resposta) throw new Error ("Credenciais inválidas!")
         resp.status(200).send(resposta)
         

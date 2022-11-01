@@ -1,4 +1,4 @@
-.corpo-menu-amarelo{
+.corpo-menu-amarelo-qr{
     background-image: url('../../../public/assets/images/retanguloamarelo.png') ;
    width: 230px;
    height: 100vh;
@@ -18,7 +18,7 @@
     
 }
 
-.texts-usuario{
+.texts-usuario-qr{
     padding-left: 10px;
     font-family: 'font6';
     font-size: 15px;
@@ -28,7 +28,7 @@
     
 }
 
-.texts2-usuario{
+.texts2-usuario-qr{
     
     font-family: 'font6';
     font-size: 15px;
@@ -41,25 +41,25 @@
 
 
 
-.con-text-usuario{
+.con-text-usuario-qr{
     
     text-decoration: none;
 }
 
-.con-text2-usuario{
+.con-text2-usuario-qr{
  width: 12em;
     text-decoration: none;
 
 }
 
 
-.menu-itens-usuario{
+.menu-itens-usuario-qr{
     display: flex;
     flex-direction: column;
     margin-top: 3em;
 }
 
-.menu-itens-usuario > a {
+.menu-itens-usuario-qr > a {
     display: flex;
     align-items: center;
     
@@ -70,13 +70,13 @@
 }
 
 
-.menu-itens-usuario > img {
+.menu-itens-usuario-qr > img {
     width: 40px;
     height: 20px;
 
 }
 
-.menu-itens-usuario > a:hover {
+.menu-itens-usuario-qr > a:hover {
     background-color: #ffffffd0;
    
 }
@@ -102,7 +102,7 @@
     
 }
 
-.linha{
+.linha-qr{
    width:164px ;
    border-color:black;
 }

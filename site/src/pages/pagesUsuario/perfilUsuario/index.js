@@ -1,8 +1,10 @@
 import storage from 'local-storage'
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+
+
+import Menuamarelousu from '../../../components/menuamarelo'
 import './index.scss'
-import MenuAmarelo from '../../../components/menuamarelo'
 
 export default function Index(){
     const [usuario, setUsuario] = useState('');
@@ -16,19 +18,13 @@ export default function Index(){
         if(!storage('usuario-logado')){
            navigate('/loginUsuario')
         }
-        
-        else{
-            const usuariologado = storage('usuario-logado');
-            setUsuario(usuariologado.name)
-            setUsuarioTe(usuariologado.telefone)
-            setUsuarioEmail(usuariologado.email)
-        }
         }, [])
+        
 
   
     return (
         <main className='main-perfil'>
-            <MenuAmarelo/>
+    <Menuamarelousu/>
            
             <h1 className='titulo-perfil'>Perfil</h1>
             
@@ -45,6 +41,7 @@ export default function Index(){
                 
                 <div className='nome-perfil'>
                     <h1 className='titulo-input-perfil'>Nome:</h1>
+                    
                     <span className='input-perfil'>{usuario}</span>
                 </div>
                

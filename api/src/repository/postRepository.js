@@ -1,11 +1,12 @@
 import {con}  from './connection.js'
 
 export async function Post(post) {
+    console.log(post);
     const comando = `
-    Insert INTO tb_produto(nm_produto, vl_preco, ds_ingredientes)
-    VALUES (?,?,?)
+    Insert INTO tb_produto(nm_categoria,nm_produto, vl_preco, ds_ingredientes)
+    VALUES (?,?,?,?)
     `
-    const[resposta] = await con.query (comando, [post.nome,post.preco,post.ingredientes])
+    const[resposta] = await con.query (comando, [post.nomeCat,post.nome,post.preco,post.ingredientes])
     
 
     return resposta[0];    
@@ -21,17 +22,6 @@ export async function inserirImagem (imagem, id) {
     return resposta.affectedRows;
 }
 
-export async function listarCategorias(id) {
-    const comando = `
-        select id_categoria         as id,
-               nm_categoria         as categoria
-          from tb_categoria
-         where id_categoria = ?
-    `
-
-    const [linhas] = await con.query(comando, [id]);
-    return linhas[0];
-}
 
 export async function listarPosts (id) {
     const comando = 
