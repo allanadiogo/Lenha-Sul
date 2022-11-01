@@ -35,15 +35,14 @@ server.post('/usuario/login', async (req,resp) => {
 
 server.post('/usuario/cadastro', async (req,resp) => {
     try{ 
-    const {nome,email, senha, nascimento, telefone, cpf} = req.body;
+    const {nome,email, senha, telefone, cpf} = req.body;
     if(!nome) throw new Error('O nome é Obrigatório!')
     if(!email) throw new Error('O email é Obrigatório!')
-    if(!senha) throw new Error('A senha é Obrigatório!')
-    if(!nascimento) throw new Error('O nascimento é Obrigatório!')
+    if(!senha) throw new Error('A senha é Obrigatório!') 
     if(!telefone) throw new Error('O telefone é Obrigatório!')
     if(!cpf) throw new Error('O CPF/CNPJ é Obrigatório!')
 
-    const resposta = await Cadastro(nome,email,senha,nascimento,telefone,cpf);
+    const resposta = await Cadastro(nome,email,senha,telefone,cpf);
     
     resp.send(resposta)
 }

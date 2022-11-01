@@ -30,11 +30,7 @@ export default function Index() {
     const navigate = useNavigate();
     const ref = useRef();
 
-    useEffect(() => {
-        if(storage('usuario-logado')){
-            navigate('/')
-        }
-    } ,[])
+   
 
     async function onClick(){
             

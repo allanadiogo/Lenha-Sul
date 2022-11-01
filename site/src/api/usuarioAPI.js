@@ -15,12 +15,11 @@ export async function EfetuarLogin (email,senha){
         return r.data;
 }
 
-export async function EfetuarCadastro (nome,email,senha,nascimento,telefone,cpf){
+export async function EfetuarCadastro (nome,email,senha,telefone,cpf){
     const r = await api.post('/usuario/cadastro', {
         nome: nome,
         email: email,
-        senha: senha,
-        nascimento: nascimento,
+        senha: senha,  
         telefone: telefone,
         cpf: cpf,
         
@@ -36,5 +35,5 @@ export async function loginUsuario (email, senha){
 
         }  )
 
-        
+        return r.data;
 }
