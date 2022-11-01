@@ -13,7 +13,7 @@ import 'react-toastify/dist/ReactToastify.min.css';
 
 
 
-import { useState, useRef} from 'react';
+import { useState, useRef, useEffect} from 'react';
 
 export default function Index() {
 
@@ -29,6 +29,12 @@ export default function Index() {
 
     const navigate = useNavigate();
     const ref = useRef();
+
+    useEffect(() => {
+        if (!storage('usuario-logado')) {
+          navigate('/perfilUsuario');
+        }
+      }, [])
 
    
 
