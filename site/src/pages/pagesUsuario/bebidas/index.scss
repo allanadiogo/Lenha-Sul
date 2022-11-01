@@ -1,0 +1,183 @@
+.Bebidas-Main {
+
+
+    .header-menu-usuario {
+        display: flex;
+        flex-direction: row;
+        background-image: url('../../../../public/assets/images/fundo-amarelo-maior.png');
+        height: 100px;
+    }
+    
+    .div-cabecalho-opcoes{
+        display: flex;
+        flex-direction: row;
+        margin-top: 0.5em;
+        margin-left: 8em;
+    }
+    
+    .a-header-menu-usuario {
+        list-style: none;
+        padding: 30px 0px 0px 60px;
+        font-family: 'font4';
+        font-size: 20px;
+        margin-left: 6em;
+    
+    }
+    
+    
+    
+    .div-img-cabecalho-logo {
+        align-self: center;
+        margin-left: 5em;
+        padding-left: 15em;
+    } 
+    
+    .numero-cabecalho{
+        display: flex;
+        flex-direction: column;
+        margin-top: 2em;
+        margin-left: 25em;
+        font-size: 15px;
+    }
+    
+    .p-cima-numero {
+        font-family: 'font4';
+        font-size: 15px;
+        margin-left: -0.5em;
+    }
+    
+    .p-baixo-numero {
+        font-family: 'font4';
+        font-size: 21px;
+    }
+    
+    .div-row-icons{
+        margin-left: 3em;
+        margin-right: 1em;
+    }
+    
+    .div-icons-header{
+        margin-top: 2em;
+    
+    
+    }
+    
+    .imagem-header-icon1{
+       margin-right: 0.5em;
+       cursor: pointer;
+    }
+    
+    .imagem-header-icon2{
+        cursor: pointer;
+     }
+    
+    
+    
+    
+    .div-cabecalho {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    
+    
+    
+    .div-collum-header {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .div-cabecalho-direita {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    
+    
+    .div-row-icons {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .imagem-logo-menu-usuario {
+        width: 6em;
+        margin-left: 5em;
+    }
+    
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    
+    .div-bebidas{
+        margin-top: 2em;
+        margin-left: 3em;
+    }
+    
+    .texto-bebidas{
+        font-family: 'font4';
+        font-size: 2em;
+        height: 2em;
+        
+    }
+    
+    .container{
+        margin-left: 2em;
+    }
+    
+    .item{
+        background-color: rgb(255, 255, 255);
+        width: 320px;
+        height: 370px;
+        border-radius: 15px; 
+        box-shadow: 1px 3px 5px 1px rgba(0, 0, 0, 0.281);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        justify-content: flex-start;
+        flex: none;
+        transform: scale(0.9);
+        transition: all ease 0.2s;
+        
+       
+        
+    }
+    
+    .item:hover{
+       
+        transform: scale(1);
+        border-radius: 12px;
+        color:#D02828;
+        
+    }
+    
+    .botao-adicionar{
+        font-family: 'font4';
+        margin-top: 6px;
+        height: 1.8em;
+        font-size: 1.2em;
+    }
+    .Imagens{
+       height: 170px;
+    
+    }
+    
+    .nome{
+        font-size:  1.5em;
+        margin-top: 0.4em;
+    
+    }
+    
+    
+    .p-descricao-bebidas{
+        font-family: 'font3';
+        font-size: 18px;
+        padding-right: 5em;
+        max-width: 15em;
+        padding-bottom: 1em;
+        margin-top: 0.5em;
+        color: #555555;
+    }
+    
+    }

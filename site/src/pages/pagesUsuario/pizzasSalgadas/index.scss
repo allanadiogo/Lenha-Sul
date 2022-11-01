@@ -128,7 +128,7 @@ a{
 .item{
     background-color: rgb(255, 255, 255);
     width: 320px;
-    height: 350px;
+    height: 370px;
     border-radius: 15px; 
     box-shadow: 1px 3px 5px 1px rgba(0, 0, 0, 0.281);
     display: flex;
@@ -173,10 +173,11 @@ a{
 .p-descricao-pizzas{
     font-family: 'font3';
     font-size: 18px;
+    padding-left: 1em;
+    max-width: 15em;
     padding-bottom: 1em;
+    margin-top: 0.5em;
     color: #555555;
 }
-
-
 
 }

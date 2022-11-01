@@ -58,7 +58,7 @@ export default function Index() {
                     
                                         </div>
                                         <div className='div-img-tabela'>
-                                     
+                                       <img src='./images/a.png'> </img>
                                         </div>
                                     </div>
                                 </td>
