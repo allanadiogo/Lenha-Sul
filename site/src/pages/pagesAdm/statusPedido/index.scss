@@ -1,0 +1,67 @@
+.main-acom-adm{
+    display: flex;
+ 
+}
+
+.acom-um{
+    align-items: center;
+    display: flex;
+    background-image: url('../../../../public//assets/images/fundoazul.png');
+    border-radius: 50%;
+    width: 79px;
+    height: 79px;
+   
+}
+
+.h1-acom-adm{
+    position: absolute;
+    padding-left: 10em;
+  padding-top: 4em;
+}
+
+.section-acom-adm{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+
+}
+
+
+.section-acompanhar-adm{
+    display: flex;
+    align-items: center;
+}
+   
+
+.images-acom-adm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+}
+
+
+.mds{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+
+.confirmar{
+   margin-top: 1em;
+}
+
+.acom-linha{
+    width: 148px;
+    height: 8px;
+    background-color: aqua;
+
+    position: absolute;
+   
+    display: flex;
+margin-left: 3em;
+    align-items: flex-end;
+   
+}
