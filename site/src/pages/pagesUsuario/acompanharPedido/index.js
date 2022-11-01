@@ -11,7 +11,11 @@ export default function Index(){
          
         <h1 className='h1-acompanhar'> Acompanhar pedido: </h1>
         
-        <div>
+        <div className='foto-meio'>
+       
+   <img className='acompanhar-pedido' src='/assets/images/'/>
+   voltar
+   
 
         </div>
 
