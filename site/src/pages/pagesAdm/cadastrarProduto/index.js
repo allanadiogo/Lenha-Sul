@@ -156,9 +156,9 @@ export default function Index() {
 
             <select value={nomeCat} onChange={e => setNomecat(e.target.value)} >
                                 <option selected disabled hidden>Selecione</option>
-                                <option >Doce</option>
-                                <option >Salgada</option>
-                                <option >Bebida</option>         
+                                <option>Doce</option>
+                                <option>Salgada</option>
+                                <option>Bebida</option>         
                             </select>
 
               

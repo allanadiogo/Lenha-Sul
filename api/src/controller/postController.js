@@ -8,15 +8,15 @@ const upload = multer({dest: 'storage/imgproduto'})
 
 server.post('/post/criar', async (req,resp) => {
     try {
-        const publi = req.body;
-        console.log(publi);
-        
-        if(!publi.nome.trim())throw new Error("Nome é OBRIGATÓRIO!")
-        if(!publi.preco) throw new Error("Preço é OBRIGATÓRIO!")
-        if(!publi.ingredientes.trim()) throw new Error("Descrição é OBRIGATÓRIO!")
-        if(!publi.nomeCat) throw new Error("Categoria é OBRIGATÓRIO!")
 
-        const resposta = await Post(publi);
+        const produto = req.body;
+        
+        if(!produto.nome)throw new Error("Nome é OBRIGATÓRIO!")
+        if(!produto.preco) throw new Error("Preço é OBRIGATÓRIO!")
+        if(!produto.ingredientes) throw new Error("Descrição é OBRIGATÓRIO!")
+        if(!produto.categoria) throw new Error("Categoria é OBRIGATÓRIO!")
+
+        const resposta = await Post(produto);
         resp.status(200).send(
             resposta
         )

@@ -1,14 +1,20 @@
 import { MenuAzul2 } from '../../../components/menuazul';
 import { CarregarProdutos } from '../../../api/postAPI'
 import './index.scss';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Index() {
     const[produto,SetProduto] = useState([])
-    function CarregarProdutoos (){
-        const resposta = CarregarProdutos();
-        SetProduto(resposta.data)
+
+    async function CarregarProdutoos (){
+        const resposta = await CarregarProdutos();
+        SetProduto(resposta)
+        console.log(resposta)
     }
+
+    useEffect(()=>{
+        CarregarProdutoos()
+    },[])
 
     return (
 
@@ -52,25 +58,29 @@ export default function Index() {
                 <table className='tag-table'>
 
                     <thead className='tag-thead'>
-                        {produto.map(item =>{
+                        <div>
                         <tr className='tag-tr'>
-                        <th className='th-tag'>{item.id}</th>
+                        <th className='th-tag'></th>
                         <th className='th-tag'>Categoria</th>
-                        <th className='th-tag'>`{item.NomeProduto}`</th>
+                        <th className='th-tag'></th>
                         <th className='th-tag'>Descrição</th>
                         <th className='th-tag'>Valor</th>
-                    </tr>
-})}
+                        </tr>                        
+                        
+                        </div>
+                   
                     </thead>
 
                     <tbody className='tag-tbody'>
+                        {produto.map(item =>
                         <tr className='tr-mudarcor'>
-                            <td className='tag-td'>1</td>
+                            <td className='tag-td'>{item.nome}</td>
                             <td className='tag-td'>Exemplo</td>
                             <td className='tag-td'>Exemplo</td>
                             <td className='tag-td'>Exemplo</td>
                             <td className='tag-td'>Exemplo</td>
-                        </tr>
+                        </tr>                        
+                        )}
                     </tbody>
 
 
