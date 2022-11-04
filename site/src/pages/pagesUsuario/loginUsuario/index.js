@@ -25,8 +25,8 @@ export default function Index() {
    
 
    useEffect(() => {
-    if (!storage('usuario-logado')) {
-      navigate('/');
+    if (storage('usuario-logado')) {
+      navigate('/perfilUsuario');
     }
   }, [])
 

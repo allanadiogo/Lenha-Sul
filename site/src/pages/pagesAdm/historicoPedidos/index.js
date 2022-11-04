@@ -1,8 +1,41 @@
 import './index.scss';
 
 import { MenuAzul2 } from '../../../components/menuazul';
+import { HistoricoPedido, HistoricoEndereco, HistoricoProduto } from '../../../api/HistoricoPedido';
+
+
+import { useState, useEffect } from 'react';
 
 export default function Index() {
+    const[pedido,setPedido] = useState([])
+    const[endereco, setEndereco] = useState([])
+    const[produto,setProduto] = useState([])
+    console.log(produto)
+
+    async function HistoricoPedidoo (){
+        const resposta = await HistoricoPedido();
+        setPedido(resposta)
+    }
+
+    async function HistoricoEnderecoo () {
+        const resposta = await HistoricoEndereco();
+        setEndereco(resposta)
+    }
+
+    async function HistoricoProdutoo () {
+        const resposta = await HistoricoProduto();
+        setProduto(resposta)
+    }
+
+    
+
+    useEffect(()=>{
+        HistoricoPedidoo()
+        HistoricoEnderecoo()
+        HistoricoProdutoo()
+    },[])
+
+    
     return (
         <main className='main-historico-pedidos'>
 
@@ -34,16 +67,54 @@ export default function Index() {
                                 </tr>
                             </thead>
 
+
                             <tbody className='tag-historico-tbody'>
                                 <tr className='tag-historico-tr'>
-                                    <td className='tag-historico-td'>1</td>
-                                    <td className='tag-historico-td'>Exemplo</td>
-                                    <td className='tag-historico-td'>Exemplo</td>
-                                    <td className='tag-historico-td'>Exemplo</td>
-                                    <td className='tag-historico-td'>Exemplo</td>
-                                    <td className='tag-historico-td'>Exemplo</td>
-                                    <td className='tag-historico-td'>Exemplo</td>
+                                    
+                            {pedido.map(item => 
+                              <td className='tag-historico-td'>{item.PedidoNum}</td>
+                              
+                            )}
+
+
+                            {pedido.map(item => 
+                              <td className='tag-historico-td'>{item.DataDoPedido}</td>
+                              
+                            )} 
+
+
+                           {pedido.map(item => 
+                              <td className='tag-historico-td'>{item.QualCliente}</td>
+                              
+                            )} 
+
+                            {endereco.map(item => 
+                              <td className='tag-historico-td'>{item.Endereço}</td>
+                              
+                            )}
+
+                            {produto.map(item => 
+                              <td className='tag-historico-td-produto'>{item.Produto}</td>
+                              
+                            )}
+
+                            {pedido.map(item => 
+                              <td className='tag-historico-td'>{item.tipoPagamento}</td>
+                              
+                            )}
+
+                            {produto.map(item => 
+                              <td className='tag-historico-td'>{item.Valor}</td>
+                              
+                            )}
+
+                                    
+                                   
                                 </tr>
+
+                            
+
+
                             </tbody>
                         </table>
                     </div>

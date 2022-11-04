@@ -6,7 +6,7 @@ const api = axios.create({
 })
 
 export async function HistoricoPedido (){
-    const resposta = await api.get('/api/HistoricoPedido')
+    const resposta = await api.get('/api/historicoPedido')
     return resposta.data
 }
 

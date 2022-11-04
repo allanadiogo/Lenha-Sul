@@ -2,10 +2,10 @@ import {con}  from './connection.js'
 
 export async function Post(produto) {
     const comando = `
-    Insert INTO tb_produto(nm_produto, vl_preco, ds_ingredientes, id_categoria)
+    insert into tb_produto(id_categoria,nm_produto, vl_preco, ds_ingredientes)
     VALUES (?,?,?,?);
     `
-    const[resposta] = await con.query (comando, [produto.nome, produto.preco, produto.ingredientes, produto.categoria ])
+    const[resposta] = await con.query (comando, [produto.categoria, produto.nome, produto.preco, produto.ingredientes])
     
 
     return resposta[0];    
@@ -25,25 +25,25 @@ export async function inserirImagem (imagem, id) {
 export async function listarPosts (id) {
     const comando = 
     `SELECT
-        id_categoria       Categoria,
-        nm_produto           NomeProduto,
-        vl_preco          Preço,
-        ds_ingredientes   Ingredientes
-    FROM tb_produto`
+    id_categoria       Categoria,
+    nm_categoria        NomeCategoria,
+    nm_produto             NomeProduto,
+    vl_preco          Preço,
+    ds_ingredientes   Ingredientes
+FROM tb_produto`
     const [linhas] = await con.query(comando);
     return linhas;
 }
 
 export async function listarHisto (id) {
-        const pedido =
+        const comando =
         `SELECT
             id_pedido       PedidoNum,
             dt_pedido       DataDoPedido,
             id_usuario      QualCliente,
             tp_pagamento    tipoPagamento  
-        FROM tb_pedido      
-        `
-    const [linhas] = await con.query(pedido);
+        FROM tb_pedido `
+    const [linhas] = await con.query(comando);
     return linhas;
 
 }
@@ -67,4 +67,12 @@ export async function listarHisto3 (id) {
     `
     const [linhas] = await con.query(produto);
     return linhas;
+}
+
+export async function ListarCategoria(){
+    const comando =` select nm_categoria    nome,
+                            id_categoria    id
+                     from tb_categoria `
+    const[resposta] = await con.query(comando);
+    return resposta
 }

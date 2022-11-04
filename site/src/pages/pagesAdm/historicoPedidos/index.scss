@@ -41,6 +41,12 @@
     .tag-historico-td {
         border-collapse: collapse;
         padding: 10px 0px 7px 18px;
+    
+    }
+
+    .tag-historico-td-produto {
+        display: flex;
+        flex-direction: column;
     }
 
     .tag-historico-thead {

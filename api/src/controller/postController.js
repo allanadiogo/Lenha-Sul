@@ -1,5 +1,5 @@
 import { Router } from "express";
-import {Post, inserirImagem, listarPosts, listarHisto, listarHisto2, listarHisto3} from "../repository/postRepository.js"
+import {Post, inserirImagem, listarPosts, listarHisto, listarHisto2, listarHisto3, ListarCategoria} from "../repository/postRepository.js"
 import multer from 'multer'
 
 const server = Router();
@@ -66,7 +66,7 @@ server.get('/api/listarProduto' , async (req,resp) =>{
 
 
 
-server.get('/api/HistoricoPedido' , async (req,resp) =>{
+server.get('/api/historicoPedido' , async (req,resp) =>{
         try {
             const resposta = await listarHisto();
             resp.send(resposta)
@@ -95,7 +95,7 @@ server.get('/api/HistoricoEndereco', async (req,resp) =>{
 
 server.get('/api/HistoricoProduto', async (req, resp) => {
         try {
-                const resposta = listarHisto3();
+                const resposta = await listarHisto3();
                 resp.send(resposta)    
         }
          catch (err) {
@@ -103,6 +103,18 @@ server.get('/api/HistoricoProduto', async (req, resp) => {
                 Erro : err.message
             })
         }
+})
+
+server.get('/api/ListarCategoria' , async (req,resp) =>{
+    try {
+        const resposta = await ListarCategoria();
+        resp.send(resposta)    
+    }
+     catch (err) {
+        resp.status(400).send({
+            Erro:err.message
+        })        
+    }
 })
 
 export default server;

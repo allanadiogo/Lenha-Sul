@@ -60,9 +60,9 @@ export default function Index() {
                     <thead className='tag-thead'>
                         <div>
                         <tr className='tag-tr'>
-                        <th className='th-tag'></th>
+                        <th className='th-tag'>id</th>
                         <th className='th-tag'>Categoria</th>
-                        <th className='th-tag'></th>
+                        <th className='th-tag'>Nome</th>
                         <th className='th-tag'>Descrição</th>
                         <th className='th-tag'>Valor</th>
                         </tr>                        
@@ -74,11 +74,11 @@ export default function Index() {
                     <tbody className='tag-tbody'>
                         {produto.map(item =>
                         <tr className='tr-mudarcor'>
-                            <td className='tag-td'>{item.nome}</td>
-                            <td className='tag-td'>Exemplo</td>
-                            <td className='tag-td'>Exemplo</td>
-                            <td className='tag-td'>Exemplo</td>
-                            <td className='tag-td'>Exemplo</td>
+                            <td className='tag-td'>{item.Categoria}</td>
+                            <td className='tag-td'>{item.NomeCategoria}</td>
+                            <td className='tag-td'>{item.NomeProduto}</td>
+                            <td className='tag-td'>{item.Ingredientes}</td>
+                            <td className='tag-td'>R${item.Preço}</td>
                         </tr>                        
                         )}
                     </tbody>

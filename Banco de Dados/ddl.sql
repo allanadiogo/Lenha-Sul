@@ -1,4 +1,3 @@
-create database lenhaasul;
 use lenhaasul;
 
 
@@ -12,8 +11,10 @@ create table tb_usuario (
     ds_cpf        		varchar(14)
 
     );
-    
-    
+		
+    select * from tb_produto;
+    select * from tb_endereco;
+    select * from tb_pedido;
 
     
 create table tb_pedido (
@@ -24,6 +25,8 @@ create table tb_pedido (
         ds_status			varchar(200),
         foreign key (id_usuario) references tb_usuario (id_usuario)
         );
+        
+        select * from tb_usuario;
         
 create table tb_endereco (
 		id_endereco				int primary key auto_increment,
@@ -76,12 +79,14 @@ create table tb_pedido_item (
         
 create table tb_produto (
         id_produto				int primary key auto_increment,
+        id_pedido				int,
 		nm_produto				varchar(100),     
         vl_preco				decimal(12.5),
         id_categoria			int,
         img_produto 			varchar(100),
         ds_ingredientes			varchar(100),
-        foreign key (id_categoria) references tb_categoria (id_categoria)
+        foreign key (id_categoria) references tb_categoria (id_categoria),
+        foreign key (id_pedido) references tb_pedido (id_pedido)        
         );
         
 

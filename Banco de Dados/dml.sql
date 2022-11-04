@@ -17,8 +17,8 @@ VALUES('admin@admin.com.br', 'admin123' );
 Insert INTO tb_admin (ds_email, ds_senha)
 VALUES('Admin', '1234' );    
 
-insert into tb_produto (id_categoria, nm_produto, vl_preco, ds_ingredientes)
-                    values ('Salgada', 'Pizza de Calabresa', 26.00, "Muçarela, molho de tomate, calabresa");
+insert into tb_produto(id_categoria,nm_produto, vl_preco, ds_ingredientes)
+                    values ('1', 'Pizza de Calabresa', 26.00, "Muçarela, molho de tomate, calabresa");
 
 insert into tb_produto_categoria (id_categoria, id_produto)
                             values (1, 1);
@@ -30,12 +30,19 @@ insert into tb_produto_categoria (id_categoria, id_produto)
                             values (3, 1);
                             
 Insert INTO tb_endereco(ds_rua)
-VALUES('Rua');						
+VALUES('Rua');		
+
+insert into tb_produto(id_categoria,nm_categoria,nm_produto, vl_preco, ds_ingredientes)
+                    values (1,'Salgada', 'Pizza de Calabresa', 26.00, "Muçarela, molho de tomate, calabresa");
+                    
+                    select *
+                    from tb_produto;
                             
 
 SELECT
         id_categoria       Categoria,
-        nm_produto           NomeProduto,
+        nm_categoria        NomeCategoria,
+        nm_produto             NomeProduto,
         vl_preco          Preço,
         ds_ingredientes   Ingredientes
     FROM tb_produto;
@@ -51,6 +58,25 @@ SELECT
             from tb_endereco;
             
 
+SELECT
+            id_pedido       PedidoNum,
+            dt_pedido       DataDoPedido,
+            id_usuario      QualCliente,
+            tp_pagamento    tipoPagamento  
+        FROM tb_pedido ;
+
+select * from tb_produto;
+
+select * from tb_endereco;
+select * from tb_pedido;
+select * from tb_usuario;
+
+select
+    nm_produto   Produto,
+    vl_preco     Valor
+    from tb_produto;
+        
+        
 select 
 		nm_produto   Produto,
         vl_preco     Valor
@@ -62,5 +88,10 @@ select
             dt_pedido       DataDoPedido,
             id_usuario      QualCliente,
             tp_pagamento    tipoPagamento
-        FROM tb_pedido
+        FROM tb_pedido;
 
+
+select
+    nm_produto   Produto,
+    vl_preco     Valor
+    from tb_produto

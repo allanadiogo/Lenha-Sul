@@ -10,9 +10,11 @@ import { toast, ToastContainer  } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css'; 
 
 
-import { CadastrarProduto } from '../../../api/postAPI'
+import { CadastrarProduto, ListarCategorias } from '../../../api/postAPI'
 import { inserirImagem } from '../../../api/enviarImagemAPI'
 import { useState, useEffect, useRef } from 'react';
+
+import { set } from 'local-storage';
 
 
 
@@ -28,10 +30,13 @@ export default function Index() {
   const [preco, setPreco] = useState('');
   const [ingredientes, setIngredientes] = useState('');
   const [img, setImg] = useState();
+  const[categoria,setCategoria] = useState([])
+  const[idCategoria, setIdCategoria] = useState()
+  console.log(idCategoria)
+
 
   const [nomeCat, setNomecat] = useState('');
   
-  const [categorias, setCategorias] = useState([]);
 
   const UserLogado = storage('usuario-logado').Nome;
   const [id, SetId] = useState(0);
@@ -40,8 +45,20 @@ export default function Index() {
   const ref = useRef();
   
 
+async function CarregarCategorias(){
+  try {
+    const chamada = await ListarCategorias()
+    setCategoria(chamada)  
+  } 
+  
+  catch (err) {
+    
+  }
+}
 
-
+useEffect(()=>{
+  CarregarCategorias()
+},[])
 
 
 
@@ -60,7 +77,7 @@ export default function Index() {
 
       if (id === 0) {
 
-        const NovoPost = await CadastrarProduto(nomeCat,nome, preco, ingredientes)
+        const NovoPost = await CadastrarProduto(idCategoria,nome, preco, ingredientes)
         const r = await inserirImagem(NovoPost.id, img)
         toast.dark("A pizza foi cadastrada ")
 
@@ -154,13 +171,15 @@ export default function Index() {
             <div className="Div-Botoes-Categoria">
 
 
-            <select value={nomeCat} onChange={e => setNomecat(e.target.value)} >
-                                <option selected disabled hidden>Selecione</option>
-                                <option>Doce</option>
-                                <option>Salgada</option>
-                                <option>Bebida</option>         
-                            </select>
+            <select value={idCategoria} onChange={e => setIdCategoria(e.target.value) }>
+                                    <option selected disabled hidden> Categorias </option>
 
+                                    {categoria.map(item =>
+                                        <option value={item.id}> 
+                                            {item.nome}
+                                        </option>
+                                    )}
+            </select>
               
             </div>
 

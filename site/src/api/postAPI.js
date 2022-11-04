@@ -5,9 +5,9 @@ const api = axios.create({
     baseURL: API_URL
 })
 
-export async function CadastrarProduto (nomeCat,nome, preco, ingredientes){
+export async function CadastrarProduto (categoria,nome, preco, ingredientes){
         const r = await api.post('/post/criar', {
-                    nomeCat, nomeCat,
+                    categoria: categoria,
                     nome: nome,
                     preco:preco,
                     ingredientes:ingredientes
@@ -19,5 +19,10 @@ export async function CadastrarProduto (nomeCat,nome, preco, ingredientes){
 
 export async function CarregarProdutos (){
     const resposta = await api.get('/api/listarProduto')
+    return resposta.data
+}
+
+export async function ListarCategorias(){
+    const resposta = await api.get('/api/ListarCategoria')
     return resposta.data
 }

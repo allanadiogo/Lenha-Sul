@@ -15,16 +15,16 @@ const navigate = useNavigate();
     }
 
 
-    useEffect(() => {
-        if(storage('usuario-logado')){
-           navigate('/loginusuario')
-        }
-        
-        else{
-            const logado = storage('usuario-logado');
-           
-        }
-        }, [])
+    //useEffect(() => {
+    //    if(storage('usuario-logado')){
+    //       navigate('/loginusuario')
+    //    }
+    //    
+    //    else{
+    //        const logado = storage('usuario-logado');
+    //       
+    //    }
+    //    }, [])
 
 
     return(

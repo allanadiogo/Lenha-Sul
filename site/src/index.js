@@ -19,7 +19,6 @@ import Troco from './components/troco'
 import CompraRealizada from './components/compraRealizada'
 import MenuAmarelousu from './components/menuamarelo';
 
-
 import AcompanharPedido from './pages/pagesUsuario/acompanharPedido';
 import Bebibas from './pages/pagesUsuario/bebidas';
 import Cadastro from './pages/pagesUsuario/cadastro';
