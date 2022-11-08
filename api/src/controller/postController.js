@@ -1,5 +1,5 @@
 import { Router } from "express";
-import {Post, inserirImagem, listarPosts, listarHisto, listarHisto2, listarHisto3, ListarCategoria} from "../repository/postRepository.js"
+import {Post, inserirImagem, listarPosts, listarHisto, listarHisto2, listarHisto3, ListarCategoria, CadastrarEndereco} from "../repository/postRepository.js"
 import multer from 'multer'
 
 const server = Router();
@@ -116,5 +116,33 @@ server.get('/api/ListarCategoria' , async (req,resp) =>{
         })        
     }
 })
+
+server.post('/api/CadastrarEndereco' , async (req, resp) => {
+        try {
+            const endereco = req.body;
+
+            if(!endereco.rua)throw new Error("A Rua é OBRIGATÓRIA!")
+            if(!endereco.residencia) throw new Error("A Residencia é OBRIGATÓRIA!")
+            if(!endereco.cep) throw new Error("O cep é OBRIGATÓRIO!")
+            if(!endereco.bairro) throw new Error("O Bairro é OBRIGATÓRIO!")
+            if(!endereco.complemento) throw new Error("O Complemento é OBRIGATÓRIO!")
+    
+            const resposta = await CadastrarEndereco(endereco);
+            resp.status(200).send(
+                resposta
+            )
+            
+        } catch (err) {
+            resp.status(400).send({
+                Erro:err.message
+            })
+        }
+
+
+
+
+})
+
+
 
 export default server;

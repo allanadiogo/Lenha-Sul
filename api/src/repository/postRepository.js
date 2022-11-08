@@ -76,3 +76,14 @@ export async function ListarCategoria(){
     const[resposta] = await con.query(comando);
     return resposta
 }
+
+export async function CadastrarEndereco(endereco){
+    const comando = `
+    insert into tb_endereco (ds_rua, nr_residencia, ds_cep, ds_bairro, ds_complemento)
+			values(?,?,?,?,?);
+    `
+   
+    const [resposta] = await con.query(comando , [endereco.rua, endereco.residencia, endereco.cep, endereco.bairro, endereco.complemento])
+    
+    return resposta[0];
+}
