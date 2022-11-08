@@ -87,3 +87,14 @@ export async function CadastrarEndereco(endereco){
     
     return resposta[0];
 }
+
+export async function CadastrarCartao(cartao){
+    const comando = `
+    insert into tb_pagamento_cartao(nr_cartao, nm_cartao, dt_vencimento, nr_cvv, ds_apelido, ds_cpf)
+					values(?, ?, ?, ?, ?, ?);     
+    `
+
+    const [resposta] = await con.query(comando, [cartao.numero, cartao.nome, cartao.vencimento, cartao.cvv, cartao.apelido, cartao.cpf])
+
+    return resposta[0];
+}

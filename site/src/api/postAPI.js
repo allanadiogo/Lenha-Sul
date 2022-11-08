@@ -39,3 +39,17 @@ export async function CadastrarEndereco (rua, residencia, cep, bairro, complemen
 
         return r.data;
 }
+
+export async function CadastrarCartao (numero, nome, vencimento, cvv, apelido, cpf){
+    const r = await api.post('/api/CadastrarCartao', {
+        numero: numero,
+        nome: nome,
+        vencimento: vencimento,
+        cvv: cvv,
+        apelido: apelido,
+        cpf: cpf
+        
+    })
+
+    return r.data;
+}

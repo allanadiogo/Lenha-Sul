@@ -1,5 +1,5 @@
 import { Router } from "express";
-import {Post, inserirImagem, listarPosts, listarHisto, listarHisto2, listarHisto3, ListarCategoria, CadastrarEndereco} from "../repository/postRepository.js"
+import {Post, inserirImagem, listarPosts, listarHisto, listarHisto2, listarHisto3, ListarCategoria, CadastrarEndereco, CadastrarCartao} from "../repository/postRepository.js"
 import multer from 'multer'
 
 const server = Router();
@@ -137,6 +137,33 @@ server.post('/api/CadastrarEndereco' , async (req, resp) => {
                 Erro:err.message
             })
         }
+
+
+
+
+})
+
+server.post('/api/CadastrarCartao' , async (req, resp) => {
+    try {
+        const cartao = req.body;
+
+        if(!cartao.numero)throw new Error("O Numero do cartão é OBRIGATÓRIO!")
+        if(!cartao.nome) throw new Error("O Nome Impresso do cartão é OBRIGATÓRIO!")
+        if(!cartao.vencimento) throw new Error("O Vencimento do cartão é OBRIGATÓRIO!")
+        if(!cartao.cvv) throw new Error("O CVV do cartão é OBRIGATÓRIO!")
+        if(!cartao.apelido) throw new Error("O Apelido do cartão é OBRIGATÓRIO!")
+        if(!cartao.cpf) throw new Error("O CPF/CNPJ do dono do cartão é OBRIGATÓRIO!")
+
+        const resposta = await CadastrarCartao(cartao);
+        resp.status(200).send(
+            resposta
+        )
+        
+    } catch (err) {
+        resp.status(400).send({
+            Erro:err.message
+        })
+    }
 
 
 
