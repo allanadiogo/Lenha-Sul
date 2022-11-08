@@ -47,6 +47,8 @@ create table tb_pagamento_dinheiro (
         foreign key (id_pedido) references tb_pedido (id_pedido)
         );
         
+        drop table tb_pagamento_cartao;
+        
 create table tb_pagamento_cartao(
 		id_pagamento_cartao 			int primary key auto_increment,
         id_pedido						int,
@@ -54,6 +56,9 @@ create table tb_pagamento_cartao(
         nr_cartao						varchar(200),
         ds_pedido						varchar(200),
         dt_vencimento					varchar(200),
+        nr_cvv							varchar(4),
+        ds_apelido						varchar(100),
+        ds_cpf							varchar(100),			
         foreign key (id_pedido) references tb_pedido (id_pedido)
         );
         
