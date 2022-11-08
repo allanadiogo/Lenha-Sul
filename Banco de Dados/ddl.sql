@@ -1,5 +1,6 @@
 use lenhaasul;
-
+ 
+ create database lenhaasul;
 
 create table tb_usuario (
 	id_usuario         int primary key auto_increment,
@@ -69,19 +70,12 @@ create table tb_pagamento_pix (
         foreign key (id_pedido) references tb_pedido (id_pedido)
         );      
         
-create table tb_pedido_item (
-        id_produto_item 		int primary key auto_increment,
-        id_produto				int,
-        id_pedido				int,
-        foreign key (id_produto) references tb_produto (id_produto), 
-        foreign key (id_pedido) references tb_pedido (id_pedido)
-        );
-
- create table tb_categoria (
+        
+         create table tb_categoria (
 		id_categoria		int primary key auto_increment,
         nm_categoria		varchar(200)
 );
-        
+
 create table tb_produto (
         id_produto				int primary key auto_increment,
         id_pedido				int,
@@ -93,6 +87,16 @@ create table tb_produto (
         foreign key (id_categoria) references tb_categoria (id_categoria),
         foreign key (id_pedido) references tb_pedido (id_pedido)        
         );
+        
+create table tb_pedido_item (
+        id_produto_item 		int primary key auto_increment,
+        id_produto				int,
+        id_pedido				int,
+        foreign key (id_produto) references tb_produto (id_produto), 
+        foreign key (id_pedido) references tb_pedido (id_pedido)
+        );
+
+
         
 
 create table tb_admin (
