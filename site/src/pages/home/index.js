@@ -144,9 +144,8 @@ export default function Index() {
 
             </section>
 
-            <section className='parte-7'>
-                <Rodape />
-            </section>
+           <Rodape />
+    
 
         </main>
     )
