@@ -29,6 +29,7 @@ export default function Index() {
           
             <section className='section-perfil'>
                 
+                <div className='div-perfil'>
 
                 <div className='div-foto-perfil'>
 <img src='/assets/images/editarimg.png'/>
@@ -53,9 +54,11 @@ export default function Index() {
                 </div>
 
                 <div className='perfil'>
-                    <h1 className='titulo-input-perfil'>Telefone:</h1>
+                    <h1 className='titulo-input-perfil'>Telefon:</h1>
                     <span className='span-perfil'></span>
                 </div>
+</div>
+
 </div>
             </section>
 

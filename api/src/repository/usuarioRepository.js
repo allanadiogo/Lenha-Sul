@@ -32,3 +32,13 @@ AND   ds_senha          =?`
 const [linhas] = await con.query(comando, [email,senha]);
 return linhas[0]
 }
+
+export async function fotoPerfil(imagem, id){
+    const comando = 
+    `UPDATE tb_usuario
+    SET img_usuario = ?
+    WHERE id_usuario = ?`;
+
+    const [resposta] = await con.query(comando, [imagem, id]);
+    return resposta.affectedRows;
+}
