@@ -1,7 +1,11 @@
 import { Router } from "express";
-import {Cadastro, Login, LoginUsuario} from "../repository/usuarioRepository.js";
+import {Cadastro, Login, LoginUsuario, fotoPerfil} from "../repository/usuarioRepository.js";
+
+import multer from "multer";
 
 const server = Router();
+
+const upload = multer({dest:  '/storage/usuario'})
 
 server.post('/admin/login', async (req,resp) => {
     try {
@@ -53,4 +57,24 @@ catch(err){
 }
 })  
 
+
+server.put('/usuario/:id/imagem' , upload.single('foto'), async(req, resp) =>{
+    try{
+const {id} = req.params;
+const imagem = req.file.path;
+
+const resp = await fotoPerfil(imagem, id);
+if(resp != 1)
+throw new Error('A imagem n pode ser salva');
+resposta.status(204).send();
+    }
+    catch(err){
+        resp.status(400).send({
+            erro: err.message
+        })
+    }
+})
+
+
 export default server;
+
