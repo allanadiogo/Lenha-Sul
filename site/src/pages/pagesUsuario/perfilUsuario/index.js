@@ -25,36 +25,43 @@ export default function Index() {
     return (
         <main className='main-perfil'>
 
-            
             <Menuamarelousu />
-            <section className='foto-perfil'>
-                <h1 className='titulo-foto'>Foto de perfil</h1>
-                <img className='usuario-perfil' src='/assets/images/logousuario.png' />
-                <button className='botao-salvar-perfil'>Salvar</button>
+          
+            <section className='section-perfil'>
+                
 
-            </section>
+                <div className='div-foto-perfil'>
+<img src='/assets/images/editarimg.png'/>
+<img src='/assets/images/homemper.png'/>
 
 
+<button className='botao-salvar-perfil'>Salvar</button>
 
-            <section className='inputs-perfil'>
+                </div>
 
-                <div className='nome-perfil'>
+
+               <div className='spans'>
+                <div className='perfil'>
                     <h1 className='titulo-input-perfil'>Nome:</h1>
 
-                    <span className='input-perfil'>{usuario}</span>
+                    <span className='span-perfil'></span>
                 </div>
 
-                <div className='email-perfil'>
+                <div className='perfil'>
                     <h1 className='titulo-input-perfil'>E-mail:</h1>
-                    <span className='input-perfil'>{usuarioemail}</span>
+                    <span className='span-perfil'></span>
                 </div>
 
-                <div className='telefone-perfil'>
+                <div className='perfil'>
                     <h1 className='titulo-input-perfil'>Telefone:</h1>
-                    <span className='input-perfil'>{usuariote}</span>
+                    <span className='span-perfil'></span>
                 </div>
-
+</div>
             </section>
+
+
+
+      
 
         </main>
 
