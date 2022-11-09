@@ -9,7 +9,7 @@ use lenhaasul;
 select * from tb_produto;
 
 select *
-from tb_usuario;
+from tb_categoria;
  
 Insert INTO tb_admin (ds_email, ds_senha)
 VALUES('admin@admin.com.br', 'admin123' );    
