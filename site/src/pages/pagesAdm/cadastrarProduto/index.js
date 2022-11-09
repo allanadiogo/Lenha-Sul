@@ -245,11 +245,11 @@ useEffect(()=>{
                   {preco &&
                     <p> R${preco} </p>
                   }
-                  {!nomeCat &&
+                  {!idCategoria &&
                     <p> Categoria </p>
                   }
-                  {nomeCat &&
-                    <p> {nomeCat} </p>
+                  {idCategoria &&
+                    <p> {idCategoria} </p>
                   }
 
 

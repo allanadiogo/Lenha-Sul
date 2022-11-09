@@ -43,12 +43,12 @@ export default function Index() {
                <div className='spans'>
                 <div className='perfil'>
                     <h1 className='titulo-input-perfil'>Nome:</h1>
-
+            
                     <span className='span-perfil'></span>
                 </div>
 
                 <div className='perfil'>
-                    <h1 className='titulo-input-perfil'>E-mail:</h1>
+                    <h1 className='titulo-input-perfil'>Email:</h1>
                     <span className='span-perfil'></span>
                 </div>
 

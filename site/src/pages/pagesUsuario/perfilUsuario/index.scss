@@ -2,6 +2,8 @@
     display: flex;
     background-color: #F6F6F6;
     
+
+    .main-perfil .section
     .section-perfil{
         background-color: #FFFFFF;
         width: 971px;
@@ -12,6 +14,11 @@
         justify-content: center;
 
 
+    }
+    
+    .titulo-input-perfil
+    {
+font-size: 20px;
     }
 
     .div-foto-perfil{
