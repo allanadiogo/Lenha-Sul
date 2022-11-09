@@ -46,21 +46,21 @@ export default function Index() {
                     </div>
                 </div>
             </header>
+            <div className='div-pizzas-doces'>
+                <h1 className='Pizzas-Doces'> Pizzas Doces</h1>
+            </div>
+
 
             <section className='Pizzas'>
-                <div className='div-pizzas-doces'>
-                    <h1 className='Pizzas-Doces'> Pizzas Doces</h1>
-                </div>
-
                 <div className='container'>
                     <div className='item'>
-                         <img className='Imagens' src={require('../../../assets/images/Pizza 10.png')} />
+                        <img className='Imagens' src={require('../../../assets/images/Pizza 10.png')} />
                         <h1 className='nome'>Chocolate ao Leite com M&Ms</h1>
-                      
-                       
-                       <div className='div-p-descricao-pizzas'>
-                        <p className='p-descricao-pizzas'>Lascas de Chocolate ao Leite, Creme de Leite com M&M</p>
-                       </div>
+
+
+                        <div className='div-p-descricao-pizzas'>
+                            <p className='p-descricao-pizzas'>Lascas de Chocolate ao Leite, Creme de Leite com M&M</p>
+                        </div>
 
                         <div className='botao-valor'>
                             <button className='botao-adicionar'> Adicionar</button>
@@ -68,6 +68,90 @@ export default function Index() {
                         </div>
                     </div>
                 </div>
+
+
+
+                <div className='container'>
+                    <div className='item'>
+                        <img className='Imagens' src={require('../../../assets/images/Pizza 10.png')} />
+                        <h1 className='nome'>Chocolate ao Leite com M&Ms</h1>
+
+
+                        <div className='div-p-descricao-pizzas'>
+                            <p className='p-descricao-pizzas'>Lascas de Chocolate ao Leite, Creme de Leite com M&M</p>
+                        </div>
+
+                        <div className='botao-valor'>
+                            <button className='botao-adicionar'> Adicionar</button>
+                            <h1 className='valor'>por R$ 26,00</h1>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <div className='container'>
+                    <div className='item'>
+                        <img className='Imagens' src={require('../../../assets/images/Pizza 10.png')} />
+                        <h1 className='nome'>Chocolate ao Leite com M&Ms</h1>
+
+
+                        <div className='div-p-descricao-pizzas'>
+                            <p className='p-descricao-pizzas'>Lascas de Chocolate ao Leite, Creme de Leite com M&M</p>
+                        </div>
+
+                        <div className='botao-valor'>
+                            <button className='botao-adicionar'> Adicionar</button>
+                            <h1 className='valor'>por R$ 26,00</h1>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+                <div className='container'>
+                    <div className='item'>
+                        <img className='Imagens' src={require('../../../assets/images/Pizza 10.png')} />
+                        <h1 className='nome'>Chocolate ao Leite com M&Ms</h1>
+
+
+                        <div className='div-p-descricao-pizzas'>
+                            <p className='p-descricao-pizzas'>Lascas de Chocolate ao Leite, Creme de Leite com M&M</p>
+                        </div>
+
+                        <div className='botao-valor'>
+                            <button className='botao-adicionar'> Adicionar</button>
+                            <h1 className='valor'>por R$ 26,00</h1>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <div className='container'>
+                    <div className='item'>
+                        <img className='Imagens' src={require('../../../assets/images/Pizza 10.png')} />
+                        <h1 className='nome'>Chocolate ao Leite com M&Ms</h1>
+
+
+                        <div className='div-p-descricao-pizzas'>
+                            <p className='p-descricao-pizzas'>Lascas de Chocolate ao Leite, Creme de Leite com M&M</p>
+                        </div>
+
+                        <div className='botao-valor'>
+                            <button className='botao-adicionar'> Adicionar</button>
+                            <h1 className='valor'>por R$ 26,00</h1>
+                        </div>
+                    </div>
+                </div>
+
             </section>
         </main>
     )

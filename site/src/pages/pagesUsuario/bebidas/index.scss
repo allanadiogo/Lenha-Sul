@@ -124,6 +124,14 @@
     .container{
         margin-left: 2em;
     }
+
+    .Bebidas{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding:  2em;
+    }
     
     .item{
         background-color: rgb(255, 255, 255);

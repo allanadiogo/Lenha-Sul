@@ -125,9 +125,18 @@ a{
     margin-left: 2em;
 }
 
+.Pizzas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding:  2em;
+}
+
+
 .item{
     background-color: rgb(255, 255, 255);
-    width: 320px;
+    width: 310px;
     height: 370px;
     border-radius: 15px; 
     box-shadow: 1px 3px 5px 1px rgba(0, 0, 0, 0.281);

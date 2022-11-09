@@ -45,11 +45,81 @@ export default function Index() {
                         </div>
                     </div>
                 </div>
-            </header>
+            </header>  
+            
+            <div className='div-pizzas-salgadas'>
+                    <h1 className='Pizzas-Salgadas'> Pizzas Salgadas </h1>
+                </div>
 
             <section className='Pizzas'>
-                <div className='div-pizzas-salgadas'>
-                    <h1 className='Pizzas-Salgadas'> Pizzas Salgadas </h1>
+              
+
+                <div className='container'>
+                    <div className='item'>
+                         <img className='Imagens' src={require('../../../assets/images/Pizza 1.png')} />
+                        <h1 className='nome'>Pepperoni</h1>
+                      
+                       
+                       <div className='div-p-descricao-pizzas'>
+                        <p className='p-descricao-pizzas'>Muçarela, oregano e pepperoni.</p>
+                       </div>
+
+                        <div className='botao-valor'>
+                            <button className='botao-adicionar'> Adicionar</button>
+                            <h1 className='valor'>por R$ 26,00</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <div className='container'>
+                    <div className='item'>
+                         <img className='Imagens' src={require('../../../assets/images/Pizza 1.png')} />
+                        <h1 className='nome'>Pepperoni</h1>
+                      
+                       
+                       <div className='div-p-descricao-pizzas'>
+                        <p className='p-descricao-pizzas'>Muçarela, oregano e pepperoni.</p>
+                       </div>
+
+                        <div className='botao-valor'>
+                            <button className='botao-adicionar'> Adicionar</button>
+                            <h1 className='valor'>por R$ 26,00</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <div className='container'>
+                    <div className='item'>
+                         <img className='Imagens' src={require('../../../assets/images/Pizza 1.png')} />
+                        <h1 className='nome'>Pepperoni</h1>
+                      
+                       
+                       <div className='div-p-descricao-pizzas'>
+                        <p className='p-descricao-pizzas'>Muçarela, oregano e pepperoni.</p>
+                       </div>
+
+                        <div className='botao-valor'>
+                            <button className='botao-adicionar'> Adicionar</button>
+                            <h1 className='valor'>por R$ 26,00</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <div className='container'>
+                    <div className='item'>
+                         <img className='Imagens' src={require('../../../assets/images/Pizza 1.png')} />
+                        <h1 className='nome'>Pepperoni</h1>
+                      
+                       
+                       <div className='div-p-descricao-pizzas'>
+                        <p className='p-descricao-pizzas'>Muçarela, oregano e pepperoni.</p>
+                       </div>
+
+                        <div className='botao-valor'>
+                            <button className='botao-adicionar'> Adicionar</button>
+                            <h1 className='valor'>por R$ 26,00</h1>
+                        </div>
+                    </div>
                 </div>
 
                 <div className='container'>

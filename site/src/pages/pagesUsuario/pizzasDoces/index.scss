@@ -113,6 +113,14 @@
         margin-top: 2em;
         margin-left: 3em;
     }
+
+    .Pizzas{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding:  2em;
+    }
     
     .Pizzas-Doces{
         font-family: 'font4';
