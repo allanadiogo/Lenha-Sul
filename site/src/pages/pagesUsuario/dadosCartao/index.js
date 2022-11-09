@@ -123,11 +123,28 @@ export default function Index() {
                     <img className='logo-cartao' src='/assets/images/logocartao.png' />
 
                     <div className='zeros'>
-                        <p >0000 0000 0000 0000</p>
+                    {!numero &&
+                    <p> 0000 0000 0000 0000 </p>
+                  }
+                  {numero &&
+                    <p> {numero} </p>
+                  }
+                        
                     </div>
                     <div className='nomes-abaixo'>
-                        <p className='nome-impresso'>Nome impresso no cartão</p>
-                        <p>MM/AA</p>
+                    {!nome &&
+                    <p className='nome-impresso'> Nome impresso no cartão </p>
+                  }
+                  {nome &&
+                    <p className='nome-impresso'> {nome} </p>
+                  }
+                        {!vencimento &&
+                    <p> MM/AA </p>
+                  }
+                  {vencimento &&
+                    <p> {vencimento} </p>
+                  }
+                        
                     </div>
 
                 </div>

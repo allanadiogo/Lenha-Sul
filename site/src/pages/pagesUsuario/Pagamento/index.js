@@ -4,17 +4,23 @@ import  MenuAmarelo from '../../../components/menuqrpix'
 import { useNavigate } from 'react-router-dom';
 import storage from 'local-storage'
 
-import LoadingBar from 'react-top-loading-bar'
 
-import { EfetuarLogin } from '../../../api/usuarioAPI'
-import logo from '../../../assets/images/logo.png';
 
-import { useState, useRef, useEffect } from 'react';
+
+
+import { useEffect } from 'react';
 
 export default function Index(){
 
-
    const navigate = useNavigate();
+
+   useEffect(() => {
+      if (!storage('usuario-logado')) {
+        navigate('/loginUsuario');
+      }
+    }, [])
+
+   
 
 
 
