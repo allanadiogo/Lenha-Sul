@@ -53,3 +53,17 @@ export async function CadastrarCartao (numero, nome, vencimento, cvv, apelido, c
 
     return r.data;
 }
+
+export async function Pizzas(){
+    const resposta = await api.get('/api/pizzas');
+    return resposta.data;
+}
+
+export function buscarimagem(imagem){
+    return `${api.getUri()}/${imagem}`
+}
+
+export async function ListarCategoriasNome (id){
+    const resposta = await api.get('/api/nomeCategoria/' +id)
+    return resposta
+}

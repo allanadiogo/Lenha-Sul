@@ -98,3 +98,26 @@ export async function CadastrarCartao(cartao){
 
     return resposta[0];
 }
+
+export async function Pizzas (){
+    const comando = `
+    select 
+        nm_produto   nome, 
+        vl_preco     preço,
+        ds_ingredientes     ingredientes
+        from tb_produto
+   
+    `
+const [linhas] = await con.query(comando);
+return linhas;
+}
+
+export async function ListarNomesCategorias (id){
+    const comando = `
+    select nm_categoria nome
+    from tb_categoria
+    where id_categoria = ?    
+`
+const [resposta] = await con.query(comando,id)
+return resposta[0]
+}

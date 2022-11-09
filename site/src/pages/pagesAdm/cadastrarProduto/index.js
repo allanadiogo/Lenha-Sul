@@ -10,9 +10,10 @@ import { toast, ToastContainer  } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css'; 
 
 
-import { CadastrarProduto, ListarCategorias } from '../../../api/postAPI'
+import { CadastrarProduto, ListarCategorias, ListarCategoriasNome } from '../../../api/postAPI'
 import { inserirImagem } from '../../../api/enviarImagemAPI'
 import { useState, useEffect, useRef } from 'react';
+
 
 import { set } from 'local-storage';
 
@@ -20,11 +21,7 @@ import { set } from 'local-storage';
 
 export default function Index() {
   const navigate = useNavigate();
-  useEffect(() => {
-    if (!storage('usuario-logado')) {
-      navigate('/loginAdm');
-    }
-  }, [])
+ 
 
   const [nome, setNome] = useState('');
   const [preco, setPreco] = useState('');
@@ -32,7 +29,18 @@ export default function Index() {
   const [img, setImg] = useState();
   const[categoria,setCategoria] = useState([])
   const[idCategoria, setIdCategoria] = useState()
+  const[nomeCategoria,setNomeCategoria] = useState()
   console.log(idCategoria)
+
+
+  async function CategoriaNome(){
+    try {
+      const resposta = await ListarCategoriasNome(idCategoria)
+      setNomeCategoria(resposta)
+    } catch (err) {
+
+    }
+  }
 
 
   const [nomeCat, setNomecat] = useState('');
@@ -58,6 +66,7 @@ async function CarregarCategorias(){
 
 useEffect(()=>{
   CarregarCategorias()
+  CategoriaNome()
 },[])
 
 
@@ -176,7 +185,9 @@ useEffect(()=>{
 
                                     {categoria.map(item =>
                                         <option value={item.id}> 
+
                                             {item.nome}
+
                                         </option>
                                     )}
             </select>
@@ -249,7 +260,7 @@ useEffect(()=>{
                     <p> Categoria </p>
                   }
                   {idCategoria &&
-                    <p> {idCategoria} </p>
+                    <p> {nomeCategoria} </p>
                   }
 
 
