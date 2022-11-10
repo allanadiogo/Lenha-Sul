@@ -5,7 +5,7 @@ import multer from "multer";
 
 const server = Router();
 
-const upload = multer({dest:  '/storage/usuario'})
+const upload = multer({dest:  'storage/usuario'})
 
 server.post('/admin/login', async (req,resp) => {
     try {
@@ -58,20 +58,25 @@ catch(err){
 })  
 
 
-server.put('/usuario/:id/imagem' , upload.single('foto'), async(req, resp) =>{
-    try{
-const {id} = req.params;
-const imagem = req.file.path;
 
-const resp = await fotoPerfil(imagem, id);
-if(resp != 1)
-throw new Error('A imagem n pode ser salva');
-resposta.status(204).send();
+
+server.put('/usuario/:id/imagem', upload.single('foto') ,async (req, resp) => {
+    try{
+        if(!req.file)
+        throw new Error('Escolha a imagem do artista.');
+        const {id} = req.params;
+        const imagem = req.file.path;
+
+        const resposta = await fotoPerfil(imagem, id);
+        if(resposta != 1)
+            throw new Error('A imagem não pode ser salva.');
+
+        resp.status(204).send();
     }
     catch(err){
-        resp.status(400).send({
+        resp.status(401).send({
             erro: err.message
-        })
+        })   
     }
 })
 

@@ -7,10 +7,9 @@ create table tb_usuario (
     nm_usuario          varchar(200),
 	ds_email       	    varchar(200),
     ds_senha      		varchar(100),
-    dt_nascimento 		varchar(10),
     ds_telefone   		varchar(15),
-    ds_cpf        		varchar(14)
-
+    ds_cpf        		varchar(14),
+    img_usuario            varchar(100)
     );
 		
     select * from tb_produto;

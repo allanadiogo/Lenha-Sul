@@ -8,6 +8,8 @@ import usuarioController from './controller/usuarioController.js'
 import postController    from  './controller/postController.js'
 
 const server = express();
+
+server.use('/storage/usuario', express.static('storage/usuario'));
 server.use(cors());
 server.use(express.json());
 
