@@ -121,3 +121,15 @@ export async function ListarNomesCategorias (id){
 const [resposta] = await con.query(comando,id)
 return resposta[0]
 }
+
+export async function atualizarStatus(idPedido,status){
+    console.log(id.Pedido,status)
+    const comando = `
+    update tb_pedido
+    set ds_status = ?
+    where id_pedido ?                
+    `
+
+    const [ resposta ] = await con.query (comando,[status,idPedido])
+    return resposta.affectedRows;
+}
