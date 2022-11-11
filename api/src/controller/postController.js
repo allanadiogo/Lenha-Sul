@@ -1,5 +1,5 @@
 import { Router } from "express";
-import {Post, inserirImagem, listarPosts, listarHisto, listarHisto2, listarHisto3, ListarCategoria, CadastrarEndereco, CadastrarCartao, Pizzas, ListarNomesCategorias} from "../repository/postRepository.js"
+import {Post, inserirImagem, listarPosts, listarHisto, listarHisto2, listarHisto3, ListarCategoria, CadastrarEndereco, CadastrarCartao, Pizzas, ListarNomesCategorias, atualizarStatusPedidoPreparado, atualizarStatusPedidoRealizado, atualizarStatusPedidoAcaminho} from "../repository/postRepository.js"
 import multer from 'multer'
 
 const server = Router();
@@ -194,31 +194,85 @@ server.get('/api/nomeCategoria/:id', async (req,resp) =>{
     }
     
     catch (err) {
-        Erro: err.message        
+        resp.status(400).send({
+            Erro:err.message
+        })       
     }
 })
 
-server.put('/api/produto/status//:id' , async (req,resp) => {
-try {
-    const {id} = req.params;
-    const status = req.body.status;
 
-    const resposta = await
-    atualizarStatus(id,status)
-    console.log(resposta)
+
+server.put('/api/produto/status/:id' , async (req,resp) => {
+    try {
+        const {id} = req.params;
     
-    resp.status(204).send()
-
-}
-
-catch (err) {
-    resp.status(400).send({
-        Erro:err.message
+        const resposta = await atualizarStatusPedidoPreparado(id);
+        
+        resp.status(204).send()
+    
+    }
+    
+    catch (err) {
+        resp.status(400).send({
+            Erro:err.message
+        })
+    }
+    
     })
     
-    
-}
+    server.put('/api/produto/statusRealizado/:id' , async (req,resp) => {
+        try {
+            const {id} = req.params;
+        
+            const resposta = await atualizarStatusPedidoRealizado(id);
+            
+            resp.status(204).send()
+        
+        }
+        
+        catch (err) {
+            resp.status(400).send({
+                Erro:err.message
+            })
+        }
+        
+        })
 
-})
+        server.put('/api/produto/status/:id' , async (req,resp) => {
+            try {
+                const {id} = req.params;
+            
+                const resposta = await atualizarStatusPedidoAcaminho(id);
+                
+                resp.status(204).send()
+            
+            }
+            
+            catch (err) {
+                resp.status(400).send({
+                    Erro:err.message
+                })
+            }
+            
+            })
+        
+            server.put('/api/produto/status/:id' , async (req,resp) => {
+                try {
+                    const {id} = req.params;
+                
+                    const resposta = await atualizarStatusPedidoEntregue(id);
+                    
+                    resp.status(204).send()
+                
+                }
+                
+                catch (err) {
+                    resp.status(400).send({
+                        Erro:err.message
+                    })
+                }
+                
+                })
+        
  
 export default server;

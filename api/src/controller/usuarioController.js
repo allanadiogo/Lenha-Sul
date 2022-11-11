@@ -81,5 +81,6 @@ server.put('/usuario/:id/imagem', upload.single('foto') ,async (req, resp) => {
 })
 
 
+
 export default server;
 
