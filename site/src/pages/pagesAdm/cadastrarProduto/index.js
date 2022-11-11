@@ -141,19 +141,15 @@ useEffect(()=>{
             </div>
 
 
-            
+              <div>
+              <h2> Importar Foto </h2>
+              <input className='input-imagem'  placeholder="" type='file' id='imgpizza' onChange={e => setImg(e.target.files[0])} />
+              </div>
 
-
-            <div className="Div-Span-Input">
+              <div className="Div-Span-Input">
               <div className="Span">
                 Novo item:
               </div>
-
-              <div>
-              <h2> Importar Foto </h2>
-                            <input type='file' id='imgpizza' onChange={e => setImg(e.target.files[0])} />
-              </div>
-
               <input className='Preco-Nome' data-ls-module="charCounter" maxlength="50" type='text' placeholder="Nome" value={nome} onChange={e => setNome(e.target.value)} />
             </div>
 
@@ -259,8 +255,15 @@ useEffect(()=>{
                   {!idCategoria &&
                     <p> Categoria </p>
                   }
-                  {idCategoria &&
-                    <p> {nomeCategoria} </p>
+                  {idCategoria == 1 &&
+                  <p>Salgada</p>
+
+                  }
+                  {idCategoria == 2 &&
+                  <p>Doce</p>
+                  }
+                  {idCategoria == 3 &&
+                  <p>Bebida</p>
                   }
 
 

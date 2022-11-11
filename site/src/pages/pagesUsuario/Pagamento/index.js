@@ -35,7 +35,7 @@ export default function Index(){
            
            <div className='div-botoes' >
            
-           <a className='div-botoes' href='/dadosCartao'>
+           <a className='div-botoes' href='/troco'>
            <button  className='dinheiro'> <img className='foto1' src='/assets/images/Money.png'/> Dinheiro  </button>  
            </a>
 

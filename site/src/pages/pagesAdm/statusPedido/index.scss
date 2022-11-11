@@ -15,8 +15,10 @@
 
 .h1-acom-adm{
     position: absolute;
-    padding-left: 10em;
+    padding-left: 8em;
   padding-top: 4em;
+  font-size: 40px;
+  font-family: 'font4';
 }
 
 .section-acom-adm{
@@ -31,6 +33,7 @@ justify-content: center;
 .section-acompanhar-adm{
     display: flex;
     align-items: center;
+    justify-content: center;
 }
    
 
@@ -51,11 +54,19 @@ justify-content: center;
 
 .confirmar{
    margin-top: 1em;
+   background-image: url('../../../../public/assets/images/confimar.png');
+   border: 0;
+   width: 186px;
+   height: 40px;
+   color: #FFFFFF;
+   font-size: 20px;
+   font-family: 'font7';
 }
 
 .acom-linha{
     width: 148px;
     height: 8px;
+    
     background-color: aqua;
 
     position: absolute;

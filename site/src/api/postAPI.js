@@ -54,8 +54,18 @@ export async function CadastrarCartao (numero, nome, vencimento, cvv, apelido, c
     return r.data;
 }
 
-export async function Pizzas(){
-    const resposta = await api.get('/api/pizzas');
+export async function PizzasSalgadas(){
+    const resposta = await api.get('/api/PizzasSalgadas');
+    return resposta.data;
+}
+
+export async function PizzasDoces(){
+    const resposta = await api.get('/api/PizzasDoces');
+    return resposta.data;
+}
+
+export async function Bebidas(){
+    const resposta = await api.get('/api/Bebidas');
     return resposta.data;
 }
 
@@ -66,4 +76,9 @@ export function buscarimagem(imagem){
 export async function ListarCategoriasNome (id){
     const resposta = await api.get('/api/nomeCategoria/' +id)
     return resposta
+}
+
+export async function ListarPerfil (id){
+    const resposta = await api.get('/api/ListarPerfil/' + id)
+    return resposta.data;   
 }

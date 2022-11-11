@@ -99,14 +99,40 @@ export async function CadastrarCartao(cartao){
     return resposta[0];
 }
 
-export async function Pizzas (){
+export async function PizzasSalgadas (){
     const comando = `
     select 
         nm_produto   nome, 
         vl_preco     preço,
         ds_ingredientes     ingredientes
         from tb_produto
-   
+        where id_categoria = 1
+    `
+const [linhas] = await con.query(comando);
+return linhas;
+}
+
+export async function PizzasDoces (){
+    const comando = `
+    select 
+        nm_produto   nome, 
+        vl_preco     preço,
+        ds_ingredientes     ingredientes
+        from tb_produto
+        where id_categoria = 2
+    `
+const [linhas] = await con.query(comando);
+return linhas;
+}
+
+export async function Bebidas (){
+    const comando = `
+    select 
+        nm_produto   nome, 
+        vl_preco     preço,
+        ds_ingredientes     ingredientes
+        from tb_produto
+        where id_categoria = 3
     `
 const [linhas] = await con.query(comando);
 return linhas;
@@ -132,4 +158,18 @@ export async function atualizarStatus(idPedido,status){
 
     const [ resposta ] = await con.query (comando,[status,idPedido])
     return resposta.affectedRows;
+}
+
+export async function ListarPerfil(id) {
+    const comando = `
+    select 
+	nm_usuario nome,
+    ds_email 	email,
+    ds_telefone	telefone
+    from  tb_usuario
+    `
+    
+    const [resposta] = await con.query(comando,id)
+    return resposta
+
 }

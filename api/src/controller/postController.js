@@ -1,5 +1,5 @@
 import { Router } from "express";
-import {Post, inserirImagem, listarPosts, listarHisto, listarHisto2, listarHisto3, ListarCategoria, CadastrarEndereco, CadastrarCartao, Pizzas, ListarNomesCategorias} from "../repository/postRepository.js"
+import {Post, inserirImagem, listarPosts, listarHisto, listarHisto2, listarHisto3, ListarCategoria, CadastrarEndereco, CadastrarCartao, ListarNomesCategorias, atualizarStatus, ListarPerfil, PizzasSalgadas, PizzasDoces, Bebidas} from "../repository/postRepository.js"
 import multer from 'multer'
 
 const server = Router();
@@ -170,9 +170,35 @@ server.post('/api/CadastrarCartao' , async (req, resp) => {
 
 })
 
-server.get ('/api/pizzas', async (req,resp) =>{
+server.get ('/api/PizzasSalgadas', async (req,resp) =>{
     try{ 
-    const resposta = await Pizzas();
+    const resposta = await PizzasSalgadas();
+
+    resp.status(200).send(resposta)
+}
+catch(err){
+    resp.status(400).send({
+        Erro:err.message
+    })
+}
+})
+
+server.get ('/api/PizzasDoces', async (req,resp) =>{
+    try{ 
+    const resposta = await PizzasDoces();
+
+    resp.status(200).send(resposta)
+}
+catch(err){
+    resp.status(400).send({
+        Erro:err.message
+    })
+}
+})
+
+server.get ('/api/Bebidas', async (req,resp) =>{
+    try{ 
+    const resposta = await Bebidas();
 
     resp.status(200).send(resposta)
 }
@@ -198,13 +224,12 @@ server.get('/api/nomeCategoria/:id', async (req,resp) =>{
     }
 })
 
-server.put('/api/produto/status//:id' , async (req,resp) => {
+server.put('/api/produto/status/:id' , async (req,resp) => {
 try {
     const {id} = req.params;
     const status = req.body.status;
 
-    const resposta = await
-    atualizarStatus(id,status)
+    const resposta = await atualizarStatus(id,status)
     console.log(resposta)
     
     resp.status(204).send()
@@ -219,6 +244,24 @@ catch (err) {
     
 }
 
+})
+
+server.get('/api/ListarPerfil/:id', async (req,resp) =>{
+    try {
+
+        const resposta = await ListarPerfil();
+        resp.send(resposta)
+    
+        resp.status(400).send({
+            Erro: err.message
+        })
+        
+
+    }
+    
+    catch (err) {
+            
+    }
 })
  
 export default server;

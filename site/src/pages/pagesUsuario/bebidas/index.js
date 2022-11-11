@@ -1,9 +1,25 @@
 import './index.scss';
 import { useNavigate } from 'react-router-dom';
-import { useRef } from 'react';
+import { useState, useEffect } from 'react';
+
+import { buscarimagem, Bebidas  } from '../../../api/postAPI'
 
 export default function Index() {
+
     const navigate = useNavigate();
+    const [post, setPost] = useState([])
+    
+    async function CarregarTodosPosts() {
+        const resp = await Bebidas();
+        setPost(resp);
+    }
+
+    useEffect(() => {
+        CarregarTodosPosts();
+    }, []);
+
+
+    
 
     function LoginUsuario() {
         navigate('/loginUsuario');
@@ -12,6 +28,7 @@ export default function Index() {
     function Carrinho() {
         navigate('/carrinho');
     }
+
 
     return (
         <main className='Bebidas-Main'>
@@ -53,90 +70,24 @@ export default function Index() {
 
             <section className='Bebidas'>
 
+            {post.map(item =>
                 <div className='container'>
                     <div className='item'>
-                        <img className='Imagens' src={require('../../../assets/images/bebida 9.png')} />
-                        <h1 className='nome'> Água Crystal</h1>
+                        <img className='Imagens' src={buscarimagem(item.Imagem)} />
+                        <h1 className='nome'> {item.nome}</h1>
 
 
                         <div className='div-p-descricao-bebidas'>
-                            <p className='p-descricao-bebidas'>600ml</p>
+                            <p className='p-descricao-bebidas'>{item.ingredientes}</p>
                         </div>
 
                         <div className='botao-valor'>
                             <button className='botao-adicionar'> Adicionar</button>
-                            <h1 className='valor'>por R$ 3,00</h1>
+                            <h1 className='valor'>por R${item.preço},00</h1>
                         </div>
                     </div>
                 </div>
-
-                <div className='container'>
-                    <div className='item'>
-                        <img className='Imagens' src={require('../../../assets/images/bebida 9.png')} />
-                        <h1 className='nome'> Água Crystal</h1>
-
-
-                        <div className='div-p-descricao-bebidas'>
-                            <p className='p-descricao-bebidas'>600ml</p>
-                        </div>
-
-                        <div className='botao-valor'>
-                            <button className='botao-adicionar'> Adicionar</button>
-                            <h1 className='valor'>por R$ 3,00</h1>
-                        </div>
-                    </div>
-                </div>
-
-                <div className='container'>
-                    <div className='item'>
-                        <img className='Imagens' src={require('../../../assets/images/bebida 9.png')} />
-                        <h1 className='nome'> Água Crystal</h1>
-
-
-                        <div className='div-p-descricao-bebidas'>
-                            <p className='p-descricao-bebidas'>600ml</p>
-                        </div>
-
-                        <div className='botao-valor'>
-                            <button className='botao-adicionar'> Adicionar</button>
-                            <h1 className='valor'>por R$ 3,00</h1>
-                        </div>
-                    </div>
-                </div>
-
-                <div className='container'>
-                    <div className='item'>
-                        <img className='Imagens' src={require('../../../assets/images/bebida 9.png')} />
-                        <h1 className='nome'> Água Crystal</h1>
-
-
-                        <div className='div-p-descricao-bebidas'>
-                            <p className='p-descricao-bebidas'>600ml</p>
-                        </div>
-
-                        <div className='botao-valor'>
-                            <button className='botao-adicionar'> Adicionar</button>
-                            <h1 className='valor'>por R$ 3,00</h1>
-                        </div>
-                    </div>
-                </div>
-
-                <div className='container'>
-                    <div className='item'>
-                        <img className='Imagens' src={require('../../../assets/images/bebida 9.png')} />
-                        <h1 className='nome'> Água Crystal</h1>
-
-
-                        <div className='div-p-descricao-bebidas'>
-                            <p className='p-descricao-bebidas'>600ml</p>
-                        </div>
-
-                        <div className='botao-valor'>
-                            <button className='botao-adicionar'> Adicionar</button>
-                            <h1 className='valor'>por R$ 3,00</h1>
-                        </div>
-                    </div>
-                </div>
+            )}
 
             
     

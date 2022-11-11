@@ -1,8 +1,22 @@
 import { MenuAzul2 } from '../../../components/menuazul';
 
+
+import {  } from '../../../api/postAPI'
 import './index.scss';
+import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import storage from 'local-storage'
 
 export default function Index() {
+
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if (!storage('usuario-logado')) {
+          navigate('/loginAdm');
+        }
+      }, [])
+  
     return (
         <main className='main-pedidos'>
 
@@ -58,7 +72,7 @@ export default function Index() {
                     
                                         </div>
                                         <div className='div-img-tabela'>
-                                       <img src='./images/a.png'> </img>
+                                       
                                         </div>
                                     </div>
                                 </td>

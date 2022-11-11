@@ -80,36 +80,36 @@ export default function Index() {
 
                     <div className='numero-cartao'>
                         <p className='nomes-inputs'>Número do cartão:</p>
-                        <input className='inputs-grandes' type="number" value={numero} onChange={e => setNumero(e.target.value)}></input>
+                        <input  className='inputs-grandes' type="text" maxlength="16" value={numero} onChange={e => setNumero(e.target.value)}></input>
                     </div>
 
                     <div className='nome-cartao'>
                         <p className='nomes-inputs'>Nome impresso no cartão:</p>
-                        <input className='inputs-grandes' type="text" value={nome} onChange={e => setNome(e.target.value)}></input>
+                        <input className='inputs-grandes' type="text" maxlength="20" value={nome} onChange={e => setNome(e.target.value)}></input>
                     </div>
 
 
                     <div className='pequenos'>
                         <div className='validade-cartao'>
                             <p className='nomes-inputs'>Validade:</p>
-                            <input className='inputs-pequenos' type="number" value={vencimento} onChange={e => setVencimento(e.target.value)}></input>
+                            <input className='inputs-pequenos' type="text" maxlength="04" value={vencimento} onChange={e => setVencimento(e.target.value)}></input>
                         </div>
 
                         <div className='cvv-cartao'>
                             <p className='nomes-inputs'>CVV:</p>
-                            <input className='inputs-pequenos' type="text" value={cvv} onChange={e => setCvv(e.target.value)}></input>
+                            <input className='inputs-pequenos' type="text" maxlength="03" value={cvv} onChange={e => setCvv(e.target.value)}></input>
                         </div>
 
                     </div>
 
                     <div className='apelido-cartao'>
                         <p className='nomes-inputs'>Apelido do cartão:</p>
-                        <input className='inputs-grandes' type="text" value={apelido} onChange={e => setApelido(e.target.value)}></input>
+                        <input className='inputs-grandes' type="text" maxlength="20"value={apelido} onChange={e => setApelido(e.target.value)}></input>
                     </div>
 
                     <div className='cpf-cartao'>
                         <p className='nomes-inputs'>CPF/CNPJ:</p>
-                        <input className='inputs-grandes' type="number" value={cpf} onChange={e => setCpf(e.target.value)}></input>
+                        <input className='inputs-grandes' type="text" maxlength="14"value={cpf} onChange={e => setCpf(e.target.value)}></input>
                     </div>
                 </div>
 

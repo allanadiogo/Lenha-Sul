@@ -34,6 +34,7 @@ import PizzasDoces from './pages/pagesUsuario/pizzasDoces';
 import PizzasSalgadas from './pages/pagesUsuario/pizzasSalgadas';
 import RecupercaoSenha from './pages/pagesUsuario/recuperacaoSenha';
 import QrPix from './pages/pagesUsuario/qrPix';
+import Status from './pages/pagesAdm/status';
 
 
 
@@ -43,6 +44,8 @@ root.render(
     <BrowserRouter>
    <Routes>
      <Route path='/' element={<Home/>} />
+     <Route path='/status' element={<Status/>} />
+
      <Route path='/cadastrarProduto' element={<CadastrarProduto/>}/>
      <Route path='/consultarPedidos' element={<ConsultarPedidos/>}/>
      <Route path='/consultarProdutos' element={<ConsultarProdutos/>}/>
