@@ -148,15 +148,47 @@ const [resposta] = await con.query(comando,id)
 return resposta[0]
 }
 
-export async function atualizarStatus(idPedido,status){
-    console.log(id.Pedido,status)
+export async function atualizarStatusPedidoPreparado(idPedido){
     const comando = `
     update tb_pedido
-    set ds_status = ?
-    where id_pedido ?                
+    set ds_status = 'Pedido sendo preparado'
+    where id_pedido = ?                
     `
 
-    const [ resposta ] = await con.query (comando,[status,idPedido])
+    const [ resposta ] = await con.query (comando,[idPedido])
+    return resposta.affectedRows;
+}
+
+export async function atualizarStatusPedidoRealizado(idPedido){
+    const comando = `
+    update tb_pedido
+    set ds_status = 'Pedido realizado'
+    where id_pedido = ?                
+    `
+
+    const [ resposta ] = await con.query (comando,[idPedido])
+    return resposta.affectedRows;
+}
+
+export async function atualizarStatusPedidoAcaminho(idPedido){
+    const comando = `
+    update tb_pedido
+    set ds_status = 'Pedido a caminho'
+    where id_pedido = ?                
+    `
+
+    const [ resposta ] = await con.query (comando,[idPedido])
+    return resposta.affectedRows;
+}
+
+export async function atualizarStatusPedidoEntregue(idPedido){
+    const comando = `
+    update tb_pedido
+    set ds_status = 'Pedido entregue'
+    where id_pedido = ?                
+    `
+
+    const [ resposta ] = await con.query (comando,[idPedido])
     return resposta.affectedRows;
 }
 
