@@ -22,7 +22,7 @@ export async function inserirImagem (imagem, id) {
 }
 
 
-export async function listarPosts (id) {
+export async function   listarPosts (id) {
     const comando = 
     `SELECT
     id_categoria       Categoria,
@@ -204,4 +204,13 @@ export async function ListarPerfil(id) {
     const [resposta] = await con.query(comando,id)
     return resposta
 
+}
+
+export async function ListarHisto (id) {
+    const produto =
+    `
+
+    `
+    const [linhas] = await con.query(produto);
+    return linhas;
 }

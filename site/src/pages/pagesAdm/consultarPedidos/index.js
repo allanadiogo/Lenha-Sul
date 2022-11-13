@@ -1,15 +1,46 @@
 import { MenuAzul2 } from '../../../components/menuazul';
 
 
-import {  } from '../../../api/postAPI'
+import { HistoricoPedido, HistoricoEndereco, HistoricoProduto } from '../../../api/HistoricoPedido';
+
 import './index.scss';
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import storage from 'local-storage'
 
 export default function Index() {
-
+    const[pedido,setPedido] = useState([])
+    const[endereco, setEndereco] = useState([])
+    const[produto,setProduto] = useState([])
+    
     const navigate = useNavigate();
+
+    console.log(produto)
+
+    async function HistoricoPedidoo (){
+        const resposta = await HistoricoPedido();
+        setPedido(resposta)
+    }
+
+    async function HistoricoEnderecoo () {
+        const resposta = await HistoricoEndereco();
+        setEndereco(resposta)
+    }
+
+    async function HistoricoProdutoo () {
+        const resposta = await HistoricoProduto();
+        setProduto(resposta)
+    }
+
+    
+
+    useEffect(()=>{
+        HistoricoPedidoo()
+        HistoricoEnderecoo()
+        HistoricoProdutoo()
+    },[])
+
+
 
     useEffect(() => {
         if (!storage('usuario-logado')) {
@@ -56,13 +87,42 @@ export default function Index() {
 
                         <tbody className='tbody-pedidos'>
                             <tr className='tr-campos'>
-                                <td className='td-pedidos'>1</td>
-                                <td className='td-pedidos'>Exemplo</td>
-                                <td className='td-pedidos'>Exemplo</td>
-                                <td className='td-pedidos'>Exemplo</td>
-                                <td className='td-pedidos'>Exemplo</td>
-                                <td className='td-pedidos'>Exemplo</td>
-                                <td className='td-pedidos'>Exemplo</td>
+                                {pedido.map(item => 
+                              <td className='td-pedidos'>{item.PedidoNum}</td>
+                              
+                            )}
+
+
+                            {pedido.map(item => 
+                              <td className='td-pedidos'>{item.DataDoPedido}</td>
+                              
+                            )} 
+
+
+                           {pedido.map(item => 
+                              <td className='td-pedidos'>{item.QualCliente}</td>
+                              
+                            )} 
+
+                            {endereco.map(item => 
+                              <td className='td-pedidos'>{item.Endereço}</td>
+                              
+                            )}
+
+                            {produto.map(item => 
+                              <td className='td-pedidos-produto'>{item.Produto}</td>
+                              
+                            )}
+
+                            {pedido.map(item => 
+                              <td className='td-pedidos'>{item.tipoPagamento}</td>
+                              
+                            )}
+
+                            {produto.map(item => 
+                              <td className='td-pedidos'>{item.Valor}</td>
+                              
+                            )}
                                 <td className='td-pedidos-acoes'>
                                     <div className='img-tabela'>
                                         <div className='div-img-tabela'>
