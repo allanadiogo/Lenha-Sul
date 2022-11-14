@@ -105,7 +105,7 @@ useEffect(()=>{
     }
   }
 
-  function escolherimg() {
+  function escolherImagem(){
     document.getElementById('imgpizza').click();
   }
 
@@ -141,9 +141,14 @@ useEffect(()=>{
             </div>
 
 
-              <div>
-              <h2> Importar Foto </h2>
+            <div>
+              
+              <h2 className='h2-impo'> Importar Foto: </h2>
+              
+              <div className='div-inse'onClick={escolherImagem}>
+              <img className='inserir' src='/assets/images/botaoa.png'alt=''/>
               <input className='input-imagem'  placeholder="" type='file' id='imgpizza' onChange={e => setImg(e.target.files[0])} />
+              </div>
               </div>
 
               <div className="Div-Span-Input">

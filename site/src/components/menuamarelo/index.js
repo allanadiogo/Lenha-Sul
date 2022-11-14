@@ -8,11 +8,6 @@ export default function Index() {
     const navigate = useNavigate();
 
 
-    useEffect(() => {
-        if (!storage('usuario-logado')) {
-            navigate('/loginUsuario')
-        }
-    }, [])
 
     function sairClick() {
         storage.remove('usuario-logado');

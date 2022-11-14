@@ -38,3 +38,16 @@ export async function loginUsuario (email, senha){
         return r.data;
 
 }
+
+export async function fotoPerfil(id, imagem){
+    const formData = new FormData ();
+    formData.append('foto', imagem);
+
+    const resposta = await api.put(`/usuario/${id}/imagem`, formData,{
+        headers:{
+            "Content-type": "multipart/form-data"
+        },
+    });
+
+    return resposta.status;
+}

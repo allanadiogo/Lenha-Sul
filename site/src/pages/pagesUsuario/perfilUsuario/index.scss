@@ -7,6 +7,8 @@
         display: flex;
         align-items: center;
        justify-content:center ;
+
+       padding-left: 12em;
     }
     .div-perfil{
         background-color: #FFFFFF;
@@ -17,29 +19,67 @@
         align-items: center;
         justify-content: center;
 
+    
 
     }
-    
-    .titulo-input-perfil
+    .titulo-input-perfil-tele
     {
+        
 font-size: 20px;
     }
-
-    .div-foto-perfil{
+ 
+    .titulo-input-perfil-nome
+    {
+        margin-right: 1.2em;
+font-size: 20px;
+    }
+    .titulo-input-perfil-email{
+        margin-right: 1.5em;
+        font-size: 20px;
+    }
+    .div-editar{
         background-color: #D9D9D9;
         width: 263px;
         height: 250px;
         border-radius: 10px;
+       background-image: url('../../../../public/assets/images/homemper.png');
+       background-repeat:no-repeat;
+       background-position: center;
+
+       display: flex;
+       flex-direction: column;
 
    margin-right: 5em;
+ 
+ 
     }
 
+    .tamanho-foto{
+        width: 263px;
+        height: 250px;
+        border-radius: 10px;
+    }
+    #foto-perfil{
+        visibility: hidden;
+        position: absolute;
+    }
+    .editar-foto{
+   margin: 1em;
+        width: 29px;
+        height: 24px;
+        cursor: pointer;
+           }
+   
+    
     .span-perfil{
         background-color: #D9D9D9;
         width: 360px;
         height: 50px;
 
        margin-left: 1em;
+       display: flex;
+       flex-direction: column;
+       justify-content: right;
     }
 
     .perfil{
@@ -50,10 +90,10 @@ font-size: 20px;
     .spans{
         display: flex;
         flex-direction: column;
+        
        
     }
-   
-    
+  
     .botao-salvar-perfil{
         width: 149px;
         height: 38px;
@@ -62,13 +102,27 @@ font-size: 20px;
         cursor: pointer;
     
         font-family: 'font7';
-        font-size: 22px;
+        font-size: 19px;
         color: #FFFFFF;
     
-        margin: 2em;
     
+        
+    }
+
+    .div-botao{
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 4em;
+    }
+
+    #foto-perfil{
+        visibility: hidden;
+        position: absolute;
     }
     
+    .inserir{
+        cursor: pointer;
+    }
   
 
 }    

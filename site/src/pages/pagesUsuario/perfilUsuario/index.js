@@ -2,30 +2,44 @@ import storage from 'local-storage'
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-import { ListarPerfil } from '../../../api/postAPI'
+import { fotoPerfil} from '../../../api/usuarioAPI.js'
 
-
+import { toast} from 'react-toastify'
 import Menuamarelousu from '../../../components/menuamarelo'
 import './index.scss'
 
 export default function Index() {
-    const [usuario, setUsuario] = useState([])
+    const [imagem, setImagem] = useState();
+const [usuario, setUsuario] = useState([]);
+    
 
-    const id = 1;
+async function salvarClick(){
+    try {
+        if(!imagem)
+        throw new Error('A imagem n foi inserida');
 
-    const navigate = useNavigate();
+        const r = await fotoPerfil(imagem);
 
+        toast.dark('foto salva');
+    }catch(err){
+        if(err.response)
+        toast.error(err.response.data.erro);
+        else
+        toast.error(err.massage);
 
-    async function ListarPerfiil() {
-        const resposta = await ListarPerfil();
-        setUsuario(resposta)
     }
 
+}
 
+    function escolherImagem(){
+        document.getElementById('foto-perfil').click();
+    }
 
+    function mostrarImagem(){
+        return URL.createObjectURL(imagem);
+    }
 
-    console.log(usuario)
-
+    console.log(salvarClick);
 
 
     return (
@@ -38,40 +52,60 @@ export default function Index() {
                 <div className='div-perfil'>
 
                     <div className='div-foto-perfil'>
-                        <img src='/assets/images/editarimg.png' />
-                        <img src='/assets/images/homemper.png' />
+                    
+                    <div className='div-editar'onClick={escolherImagem} >
+
+                        {!imagem &&
+                    <img className='editar-foto' src='/assets/images/editarimg.png'alt=''/>
+                        }
+                    
+                    {imagem &&
+                    <img className='tamanho-foto' src={mostrarImagem()} alt=''/>
+}
+                    <input type='file' id="foto-perfil" onChange={e => setImagem(e.target.files[0])}></input>
+                        </div>
+                        
+                        <div className='div-botao'>
+                        <button  onClick={salvarClick} className='botao-salvar-perfil'>Salvar imagem</button>
+</div>
+                       
+                    </div>
+                   
+
+<div className='spans'>
+                        <div className='perfil'>
+                         
+
+                            <h1 className='titulo-input-perfil-nome'>Nome:</h1>
+                       
+                        <span className='span-perfil'>aa</span>
+
+                        </div>
+
+                        <div className='perfil'>
+
+                            <h1 className='titulo-input-perfil-email'>Email:</h1>
+                            <span className='span-perfil'>aa</span>
+
+                        </div>
 
 
-                        <button className='botao-salvar-perfil'>Salvar</button>
+                        <div className='perfil'>
+                            <h1 className='titulo-input-perfil-tele'>Telefone:</h1>
+                            <span className='span-perfil'>aa</span>
 
+                          
+                        </div>
+
+                      
                     </div>
 
-
-                    <div className='spans'>
-                        <div className='perfil'>
-                            <h1 className='titulo-input-perfil'>Nome:{usuario}</h1>
-
-                        </div>
-
-                        <div className='perfil'>
-
-                            <h1 className='titulo-input-perfil'>Email:</h1>
-
-                        </div>
-
-
-                        <div className='perfil'>
-                            <h1 className='titulo-input-perfil'>Telefone:</h1>
-                            
-                            <span>aa</span>    
-                            
-                        </div>
-                    </div>
-
-                </div>
+                    
+</div>
             </section>
 
-
+         
+       
 
 
 
