@@ -70,11 +70,6 @@ useEffect(()=>{
 },[])
 
 
-
-
-
-
-
   async function onClick() {
 
     

@@ -51,3 +51,13 @@ export async function fotoPerfil(id, imagem){
 
     return resposta.status;
 }
+
+export async function ListarPizzaSalgada(){
+    const resposta = await api.get('/api/produtos/pizzasalgada')
+    return resposta.data
+}
+
+
+export function buscarimagem(imagem){
+    return `${api.getUri()}/${imagem}`
+}

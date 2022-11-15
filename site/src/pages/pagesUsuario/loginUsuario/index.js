@@ -105,7 +105,7 @@ export default function Index() {
                         </div>
 
                         <div className='botao2-usuario' onClick={CriarConta}>
-                            <button className="botao-criar-usuario" >Criar nova conta</button>
+                            <button className="botao-criar-usuario" >Criar conta</button>
                         </div>
                     </div>
 

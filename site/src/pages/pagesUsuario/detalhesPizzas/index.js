@@ -1,121 +1,86 @@
 import './index.scss';
+import RodapeMenu from '../../../components/rodape-menu'
+import { buscarimagem, ListarPizzaSalgada } from '../../../api/usuarioAPI';
+import { useNavigate } from 'react-router-dom';
+import { useState, useEffect} from 'react';
 
 export default function Index() {
+
+    const [produto, setProduto] = useState([]);
+
+
+    const navigate = useNavigate();
+
+    async function CarregarProdutos() {
+        const resp = await ListarPizzaSalgada();
+        setProduto(resp);
+
+    }
+
+    useEffect(() => {
+        CarregarProdutos();
+    }, [])
+
+    function AbrirDetalhes(id) {
+        navigate('/produto/' + id + '/detalhe')
+    }
+
+    function LoginUsuario() {
+        navigate('/loginUsuario');
+    }
+
+    function Carrinho() {
+        navigate('/carrinho');
+    }
+
     return (
+
         <main className='main-pagina-detalhes-pizza'>
 
-            <div className='div-primeira-detalhes'>
+            <header className='header-menu-usuario'>
+                <div className='div-cabecalho'>
 
-                <header className='header-detalhes-pizza'>
-                    <div className='div-cabecalho'>
-                        <div className='div-img-cabecalho-logo'>
-                            <img className='imagem-logo-detalhes' src='/assets/images/logodomenu.png' />
-                        </div>
-
-                        <div className='div-cabecalho-opcoes'>
-                            <a className='a-header-detalhes-pizza'>Home</a>
-                            <a className='a-header-detalhes-pizza'>Pizzaria</a>
-                            <a className='a-header-detalhes-pizza'>Menu</a>
-                        </div>
+                    <div className='div-cabecalho-opcoes'>
+                        <a href='/' className='a-header-menu-usuario'>Home</a>
                     </div>
 
-
-                    <div className='div-cabecalho-direita'>
-                        <div className='div-collum-header'>
-                            <div className='numero-cabecalho'>
-                                <p className='p-cima-numero'>Entre em contato conosco</p>
-                                <p className='p-baixo-numero'>11-999 999 999</p>
-                            </div>
-                        </div>
-
-                        <div className='div-row-icons'>
-                            <div className='div-icons-header'>
-                                <img className='imagem-header-icon' src='/assets/images/' />
-                            </div>
-                            <div className='div-icons-header'>
-                                <img className='imagem-header-icon' src='/assets/images/' />
-                            </div>
-                        </div>
+                    <div className='div-img-cabecalho-logo'>
+                        <img className='imagem-logo-menu-usuario' alt='' src="/assets/images/logohome1.png" />
                     </div>
-                </header>
-
-                <div className='div-row-conteudo-detalhe'>
-
-                    <div className='div-lado-esquerdo'>
-
-                        <div className='div-h1-detalhe'>
-                            <h1 className='h1-detalhe'>Detalhes:</h1>
-                        </div>
-
-                        <div className='div-imagem-pizza'>
-                            <img className='imagem-detalhes-pizza' src='/assets/images/logodomenu.png' />
-                        </div>
-
-                    </div>
-
-                    <div className='div-lado-direito'>
-                        <div className='div-h3-sabor'>
-                            <h3 className='h3-sabor'>
-                                Sabor:
-                            </h3>
-                        </div>
-
-                        <div className='div-p-lado-esquerdo'>
-                            <p className='p-detalhes-lado-esquerdo'>Exemplo com exemplo</p>
-                        </div>
-
-                        <div className='div-h3-tipo'>
-                            <h3 className='h3-tipo'>
-                                Tipo:
-                            </h3>
-                        </div>
-
-                        <div className='div-p-lado-esquerdo'>
-                            <p className='p-detalhes-lado-esquerdo'>categoria da braba</p>
-                        </div>
-
-                        <div className='div-h3-ingredientes'>
-                            <h3 className='h3-ingredientes'>
-                                Ingredientes:
-                            </h3>
-                        </div>
-
-                        <div className='div-p-lado-esquerdo'>
-                            <p className='p-detalhes-lado-esquerdo'>Detalhes dos ingredientes</p>
-                        </div>
-
-                        <div className='div-h3-valor'>
-                            <h3 className='h3-valor'>
-                                R$00,00
-                            </h3>
-                        </div>
-
-                        <button className='button-adicionar-carrinho'>
-                            Adicionar ao Carrinho
-                        </button>
-
-
-                        <div className='div-formas-pagamento'>
-                            <div>
-                                <h3>Formas de Pagamento:</h3>
-                            </div>
-                            <div className='div-row-formas-pagamento'>
-                                <div>~img~</div>
-                                <div>~img~</div>
-                                <div>~img~</div>
-                                <div>~img~</div>
-                                <div>~img~</div>
-                            </div>
-                        </div>
-
-
-                    </div>
-
                 </div>
 
-            </div>
+
+                <div className='div-cabecalho-direita'>
+
+                    <div className='numero-cabecalho'>
+                        <p className='p-cima-numero'>Entre em contato conosco</p>
+                        <p className='p-baixo-numero'>(99)-999 999 999</p>
+                    </div>
 
 
+                    <div className='div-row-icons'>
+                        <div className='div-icons-header' onClick={LoginUsuario}>
+                            <img className='imagem-header-icon1' alt='' src='/assets/images/usuario.png' />
+                        </div>
+                        <div className='div-icons-header' onClick={Carrinho}>
+                            <img className='imagem-header-icon2' alt='' src='/assets/images/carrinho.png' />
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div className='produtos'>
+                    {produto.map(item =>
+                        <div onClick={() => AbrirDetalhes(item.id)}>
+                            <img src={buscarimagem(item.imagem)} alt='' height='auto' width="auto" />
+                            <h3>{item.produto}</h3>
+                            <h4>por: R${item.preco.replace(".", ",")}</h4>
+                        </div>
+                    )}
+                </div>
+
+            <section className='rodape-detalhes'>
+              <RodapeMenu/>
+            </section>
 
         </main>
     )

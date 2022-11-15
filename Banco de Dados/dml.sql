@@ -12,14 +12,12 @@ Insert INTO tb_usuario(nm_usuario, ds_email, ds_senha, ds_telefone, ds_cpf)
 VALUES('Michael', 'michaelchaves@gmail.com', '123', '11965126413', '1234567890');
 
 -- Categorias
-insert into tb_produto_categoria (id_categoria, id_produto)
-                            values (1, 1);
-                            
-insert into tb_produto_categoria (id_categoria, id_produto)
-                            values (2, 1);      
-                            
-insert into tb_produto_categoria (id_categoria, id_produto)
-                            values (3, 1);
+insert into tb_categoria (nm_categoria)
+                            values ('Salgada');
+insert into tb_categoria (nm_categoria)
+                            values ('Doce');      
+insert into tb_categoria (nm_categoria)
+                            values ('Bebida');
                             
 
 -- Produtos

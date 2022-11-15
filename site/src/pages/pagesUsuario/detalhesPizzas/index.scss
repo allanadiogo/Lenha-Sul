@@ -1,10 +1,87 @@
 .main-pagina-detalhes-pizza {
+    width: 100%;
+    height: 10%;
+    background-repeat: none;
 
     .header-detalhes-pizza {
         display: flex;
         flex-direction: row;
+        background-image: url('../../../../public/assets/images/fundo-amarelo-maior.png');
+        height: 100px;
+
     }
 
+     .header-menu-usuario {
+        display: flex;
+        flex-direction: row;
+        background-image: url('../../../../public/assets/images/fundo-amarelo-maior.png');
+        height: 100px;
+    }
+
+    .div-cabecalho-opcoes{
+        display: flex;
+        flex-direction: row;
+        margin-top: 0.5em;
+        margin-left: 8em;
+    }
+
+    .a-header-menu-usuario {
+        list-style: none;
+        padding: 30px 0px 0px 60px;
+        font-family: 'font4';
+        font-size: 20px;
+        margin-left: 6em;
+
+    }
+
+
+    .div-img-cabecalho-logo {
+        align-self: center;
+        margin-left: 5em;
+        padding-left: 15em;
+    } 
+
+    .numero-cabecalho{
+        display: flex;
+        flex-direction: column;
+        margin-top: 2em;
+        margin-left: 25em;
+        font-size: 15px;
+    }
+
+    .p-cima-numero {
+        font-family: 'font4';
+        font-size: 15px;
+        margin-left: -0.5em;
+    }
+
+    .p-baixo-numero {
+        font-family: 'font4';
+        font-size: 21px;
+    }
+
+    .div-row-icons{
+        margin-left: 3em;
+        margin-right: 1em;
+    }
+
+    .div-icons-header{
+        margin-top: 2em;
+    
+    
+    }
+
+    .imagem-header-icon1{
+       margin-right: 0.5em;
+       cursor: pointer;
+    }
+
+    .imagem-header-icon2{
+        cursor: pointer;
+     }
+    
+
+  
 
     .div-cabecalho {
         display: flex;
@@ -12,23 +89,36 @@
     }
 
 
+    .div-collum-header {
+        display: flex;
+        flex-direction: column;
+    }
 
-    .div-row-conteudo-detalhe {
+    .div-cabecalho-direita {
         display: flex;
         flex-direction: row;
     }
 
+    
 
-    .div-formas-pagamento {
+    .div-row-icons {
         display: flex;
         flex-direction: row;
     }
 
-    .div-row-formas-pagamento {
-        display: flex;
-        flex-direction: row;
+    .imagem-logo-menu-usuario {
+        width: 6em;
+        margin-left: 5em;
     }
 
+    a{
+        text-decoration: none;
+        color: black;
+    }
+
+    .rodape-detalhes{
+        margin-top: 45em;
+    }
 
 
 }
