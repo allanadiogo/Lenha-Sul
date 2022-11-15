@@ -1,7 +1,8 @@
+create database lenhaasul;
 use lenhaasul;
- 
- create database lenhaasul;
 
+
+-- Tabela Usuário
 create table tb_usuario (
 	id_usuario         int primary key auto_increment,
     nm_usuario          varchar(200),
@@ -12,11 +13,8 @@ create table tb_usuario (
     img_usuario            varchar(100)
     );
 		
-    select * from tb_produto;
-    select * from tb_endereco;
-    select * from tb_pedido;
-
-    
+   
+-- Tabela Pedido
 create table tb_pedido (
 		id_pedido			int primary key auto_increment,
         id_usuario			int,
@@ -26,8 +24,8 @@ create table tb_pedido (
         foreign key (id_usuario) references tb_usuario (id_usuario)
         );
         
-        select * from tb_usuario;
-        
+
+-- Tabela Endereço
 create table tb_endereco (
 		id_endereco				int primary key auto_increment,
         id_pedido				int,
@@ -40,6 +38,7 @@ create table tb_endereco (
         );
         
         
+-- Tabela Pagamento em Dinheiro
 create table tb_pagamento_dinheiro (
 		id_pagamento_dinheiro 			int primary key auto_increment,
         id_pedido						int,
@@ -48,7 +47,9 @@ create table tb_pagamento_dinheiro (
         );
         
         drop table tb_pagamento_cartao;
-        
+
+
+-- Tabela Pagamento em Cartão
 create table tb_pagamento_cartao(
 		id_pagamento_cartao 			int primary key auto_increment,
         id_pedido						int,
@@ -61,7 +62,9 @@ create table tb_pagamento_cartao(
         ds_cpf							varchar(100),			
         foreign key (id_pedido) references tb_pedido (id_pedido)
         );
-        
+
+
+-- Tabela Pagamento no Pix   
 create table tb_pagamento_pix (
 		id_pagamento_pix 			int primary key auto_increment,
         id_pedido						int,
@@ -75,6 +78,8 @@ create table tb_pagamento_pix (
         nm_categoria		varchar(200)
 );
 
+
+-- Tabela Produto
 create table tb_produto (
         id_produto				int primary key auto_increment,
         id_pedido				int,
@@ -86,7 +91,9 @@ create table tb_produto (
         foreign key (id_categoria) references tb_categoria (id_categoria),
         foreign key (id_pedido) references tb_pedido (id_pedido)        
         );
-        
+
+
+ -- Tabela Pedido       
 create table tb_pedido_item (
         id_produto_item 		int primary key auto_increment,
         id_produto				int,
@@ -96,8 +103,7 @@ create table tb_pedido_item (
         );
 
 
-        
-
+-- Tabela Login Admin
 create table tb_admin (
 		id_admin		int primary key auto_increment,
         ds_email		varchar(200),
@@ -105,9 +111,11 @@ create table tb_admin (
         );
         
         
+-- Selects
+select * from tb_produto;
+select * from tb_endereco;
+select * from tb_pedido;
 select * from tb_usuario;
+select * from tb_categoria;
 
-Insert INTO tb_admin (ds_email,ds_senha)
-VALUES('admin@admin.com', '123' );    
-
-        
+ 
