@@ -31,7 +31,7 @@ server.post('/post/criar', async (req,resp) => {
 
 server.put('/post/:id/imagem', upload.single('imgproduto'), async (req, resp) => {
     try {
-        if(!req.file) throw new Error('Não foi possível alterar/inserir a imagem') 
+        if(!req.file) throw new Error('Não foi possível inserir a imagem') 
         const {id} = req.params;
         const imagem = req.file.path
 
@@ -39,9 +39,7 @@ server.put('/post/:id/imagem', upload.single('imgproduto'), async (req, resp) =>
 
         resp.status(204).send();
 
-        if (resposta != 1) throw new Error('Não foi possível alterar/inserir a imagem') 
 
-        
         
         
     } catch (err) {

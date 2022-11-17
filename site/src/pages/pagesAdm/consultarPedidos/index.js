@@ -42,11 +42,7 @@ export default function Index() {
 
 
 
-    useEffect(() => {
-        if (!storage('usuario-logado')) {
-          navigate('/loginAdm');
-        }
-      }, [])
+  
   
     return (
         <main className='main-pedidos'>

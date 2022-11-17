@@ -6,7 +6,7 @@ export async function Post(produto) {
     VALUES (?,?,?,?);
     `
     const[resposta] = await con.query (comando, [produto.categoria, produto.nome, produto.preco, produto.ingredientes])
-    
+   
 
     return resposta[0];    
 }

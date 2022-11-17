@@ -75,7 +75,7 @@ useEffect(()=>{
     try {
       if (!img) throw new Error("Escolha a imagem para cadastrar")
 
-      const usuario = storage('usuario-logado').id;
+    //  const usuario = storage('usuario-logado').id;
       
 
       if (id === 0) {
@@ -95,6 +95,7 @@ useEffect(()=>{
         toast.dark(err.response.data.Erro)
       else {
         toast.dark(err.message)
+        console.log(id)
       }
     }
   }
