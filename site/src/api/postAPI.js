@@ -1,7 +1,6 @@
 import { API_URL } from './config';
 
 import axios from 'axios'
-import { resolvePath } from 'react-router-dom';
 const api = axios.create({
     baseURL: API_URL
 })

@@ -15,9 +15,7 @@ export default function Index(){
             </div>
         </div>
 
-        <div className='div-input-header'>
-            <input className='input-pesquisar' type="text" placeholder='Digite o que procura' />
-        </div>
+       
     </header>
 
     <section className='section-carrinho'>

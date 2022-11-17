@@ -1,6 +1,6 @@
 import { Router } from "express";
 
-import {Post, inserirImagem, listarPosts, listarHisto, listarHisto2, listarHisto3, ListarCategoria, CadastrarEndereco, CadastrarCartao, ListarNomesCategorias, atualizarStatusPedidoPreparado, atualizarStatusPedidoRealizado, atualizarStatusPedidoAcaminho} from "../repository/postRepository.js"
+import {Post, inserirImagem, listarPosts, listarHisto, listarHisto2, listarHisto3, ListarCategoria, CadastrarEndereco, CadastrarCartao, ListarNomesCategorias, atualizarStatusPedidoPreparado, atualizarStatusPedidoRealizado, atualizarStatusPedidoAcaminho, PizzasDoces, PizzasSalgadas, Bebidas} from "../repository/postRepository.js"
 
 import multer from 'multer'
 
