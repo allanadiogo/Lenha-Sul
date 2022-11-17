@@ -76,7 +76,7 @@ export async function ListarCategoriasNome (id){
     const resposta = await api.get('/api/nomeCategoria/' +id)
     return resposta
 }
-
+        
 export async function ListarPerfil (id){
     const resposta = await api.get('/api/ListarPerfil/' + id)
     return resposta.data;   

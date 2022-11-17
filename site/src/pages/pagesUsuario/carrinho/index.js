@@ -1,71 +1,178 @@
 import './index.scss';
 
-export default function Index(){
-    return(<main className='main-carrinho'>
-    <header className='header-carrinho'>
-        <div className='div-row-header-logo'>
-            <div className='div-header-logo'>
-                <img className='imagem-logo-header' src="/assets/images/logohome1.png" />
-            </div>
+import { useEffect, useState } from 'react';
+
+import {buscarimagem} from '../../../api/usuarioAPI';
+
+import storage from 'local-storage';
+
+// import {buscarProdutosPorId} from '../../api/produtoAPI'
+
+export default function Index() {
+
+    // const [itens, setItens] = useState([])
+
+    // async function carregarCarrinho() {
+    //     let carrinho = storage('carrinho');
+    //     if(carrinho) {
+
+    //         let temp = [];
+
+    //         for (let produto of carrinho) {
+    //             let p = await buscarProdutosPorId(produto.id);
+    //             temp.push(...itens, {
+    //                 produto: p,
+    //                 qtd: produto.qtd
+    //             })
+    //         }
+    //         console.log(temp);
+    //         setItens(temp);
+    //     }
+        
+    // }
+    // useEffect(() => {
+    //     carregarCarrinho()
+    // }, [])
 
 
-            <div className='div-header-botoes'>
-                <a className='a-header-botoes'>Home</a>
-                <a className='a-header-botoes'>Menu</a>
-            </div>
-        </div>
-
-       
-    </header>
-
-    <section className='section-carrinho'>
-        <div className='div-primeira-fileira'>
-            <div className='div-p-produto'>
-                <p className='p-produto'>Produto</p>
-            </div>
-
-            <div className='div-espacamento-info'>
-                <div className='div-p-preco-unitario'>
-                    <p className='p-preco-unitario'>Preço Unitário</p>
+    return (
+    <main className='main-carrinho'>
+        <header className='header-carrinho'>
+            <div className='div-row-header-logo'>
+                <div className='div-header-logo'>
+                    <img className='imagem-logo-header' src="/assets/images/logohome1.png" />
                 </div>
 
-                <div className='div-quantidade'>
-                    <p className='p-quantidade'>Quantidade</p>
-                </div>
 
+                <div className='div-header-botoes'>
+                    <a className='a-header-botoes'>Home</a>
+                    <a className='a-header-botoes'>Menu</a>
+                </div>
+            </div>
+
+            <div className='div-input-header'>
+                <input className='input-pesquisar' type="text" placeholder='Digite o que procura' />
+            </div>
+        </header>
+
+
+        <section className='section-carrinho'>
+            <div className='div-row-info'>
+                <div className='div-produto'>
+                    Produto
+                </div>
+                <div className='div-preco'>
+                    Preço Unitário
+                </div>
+                <div className='div-qtd'>
+                    Quantidade
+                </div>
                 <div className='div-excluir'>
-                    <p className='p-excluir'>Excluir</p>
+                    Excluir
                 </div>
             </div>
-        </div>
+
+            <div className='div-informacoes'>
+                <div className='div-img-info'>
+                    <div className='div-img'>
+                  {/* <img src={buscarimagem(item.imagem)} alt='' height='auto' width="auto" /> */}
+                    </div>
+                    <div className='div-info'>
+                        <p className='p-info'>Aqui vai ficar o nome dela</p>
+                        <p className='p-info'>Aqui a descrição dela</p>
+                    </div>
+                </div>
+
+                <div className='div-preco-info'>
+                    <p>Preço</p>
+                </div>
+
+                <div className='div-row-qtd'>
+                    <label>Qtd.</label>
+                    <select>
+                        <option>01</option>
+                        <option>02</option>
+                        <option>03</option>
+                        <option>04</option>
+                        <option>05</option>
+                    </select>
+                </div>
+
+                <div className='div-img-excluir'>
+                    {/* <img src="" alt="" /> */}
+                </div>
+            </div>
 
 
-        <div className='div-produtos'>
-            <p>AQUI VAI FICAR OS PRODUTOS</p>
-        </div>
+            <div className='div-total'>
+                <h1>Total: Preço</h1>
+            </div>
 
-        <div className="div-segunda-fileira">
-            <div className='div-total-itens'>
-                <p className='p-total-itens'>Total de itens:</p>
+            <div className='div-botoes'>
+                <div>
+                    <button className='button-1'>
+                        Continuar Comprando
+                    </button>
+                </div>
+                <div>
+                    <button className='button-2'>
+                        Finalizar Compra
+                    </button>
+                </div>
             </div>
-            <div className='div-p-calcular'>
-                <p className='p-calcular'>Calcular</p>
-            </div>
-            <div className='div-p-total'>
-                <p className='div-p-total'>Total:</p>
-            </div>
-        </div>
 
-        <div className='div-terceira-fileira'>
-            <div className='div-button-continuar'>
-                <button className='button-comprar'>Continuar comprando</button>
-            </div>
-            <div className='div-button-finalizar'>
-                <button className='button-finalizar'>Finalizar compra</button>
-            </div>
-        </div>
+        </section>
 
-    </section>
-</main>
- )
+
+
+        {/* <section className='section-carrinho'>
+            <div className='div-primeira-fileira'>
+                <div className='div-p-produto'>
+                    <p className='p-produto'>Produto</p>
+                </div>
+
+                <div className='div-espacamento-info'>
+                    <div className='div-p-preco-unitario'>
+                        <p className='p-preco-unitario'>Preço Unitário</p>
+                    </div>
+
+                    <div className='div-quantidade'>
+                        <p className='p-quantidade'>Quantidade</p>
+                    </div>
+
+                    <div className='div-excluir'>
+                        <p className='p-excluir'>Excluir</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div className='div-produtos'>
+                <p>AQUI VAI FICAR OS PRODUTOS</p>
+            </div>
+
+            <div className="div-segunda-fileira">
+                <div className='div-total-itens'>
+                    <p className='p-total-itens'>Total de itens:</p>
+                </div>
+                <div className='div-p-calcular'>
+                    <p className='p-calcular'>Calcular</p>
+                </div>
+                <div className='div-p-total'>
+                    <p className='div-p-total'>Total:</p>
+                </div>
+            </div>
+
+            <div className='div-terceira-fileira'>
+                <div className='div-button-continuar'>
+                    <button className='button-comprar'>Continuar comprando</button>
+                </div>
+                <div className='div-button-finalizar'>
+                    <button className='button-finalizar'>Finalizar compra</button>
+                </div>
+            </div>
+
+        </section> */}
+    </main>
+    )
 }
