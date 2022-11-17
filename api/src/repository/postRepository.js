@@ -104,7 +104,8 @@ export async function PizzasSalgadas (){
     select 
         nm_produto   nome, 
         vl_preco     preço,
-        ds_ingredientes     ingredientes
+        ds_ingredientes     ingredientes,
+        img_produto 	Imagem
         from tb_produto
         where id_categoria = 1
     `
@@ -117,7 +118,8 @@ export async function PizzasDoces (){
     select 
         nm_produto   nome, 
         vl_preco     preço,
-        ds_ingredientes     ingredientes
+        ds_ingredientes     ingredientes,
+        img_produto 	Imagem
         from tb_produto
         where id_categoria = 2
     `
@@ -130,7 +132,8 @@ export async function Bebidas (){
     select 
         nm_produto   nome, 
         vl_preco     preço,
-        ds_ingredientes     ingredientes
+        ds_ingredientes     ingredientes,
+        img_produto 	Imagem
         from tb_produto
         where id_categoria = 3
     `
@@ -140,7 +143,8 @@ return linhas;
 
 export async function ListarNomesCategorias (id){
     const comando = `
-    select nm_categoria nome
+    select 
+    nm_categoria nome
     from tb_categoria
     where id_categoria = ?    
 `

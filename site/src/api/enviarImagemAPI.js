@@ -7,7 +7,7 @@ const api = axios.create({
 
 export async function inserirImagem (id, imagem){
     const formData = new FormData();
-    formData.append('imgpizza', imagem);
+    formData.append('imgproduto', imagem);
     
     const resposta = await api.put(`/post/${id}/imagem` , formData, {
         headers:{
