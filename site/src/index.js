@@ -69,6 +69,8 @@ root.render(
      <Route path='/loginUsuario' element={<LoginUsuario/>} />
      <Route path='/menuUsuario' element={<MenuUsuario/>}/>
      <Route path='/perfilUsuario' element={<PerfilUsuario/>}/>
+     <Route path='/perfilUsuario:idParam' element={<PerfilUsuario/>}/>
+
      <Route path='/pizzasSalgadas' element={<PizzasSalgadas/>}/>
      <Route path='/pizzasDoces' element={<PizzasDoces/>}/>
      <Route path='/bebidas' element={<Bebibas/>}/>
