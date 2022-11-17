@@ -1,5 +1,5 @@
 import { Router } from "express";
-import {Cadastro, Login, LoginUsuario, fotoPerfil} from "../repository/usuarioRepository.js";
+import {Cadastro, Login, LoginUsuario, fotoPerfil,buscarUsuarioPorId } from "../repository/usuarioRepository.js";
 
 import multer from "multer";
 
@@ -60,10 +60,10 @@ catch(err){
 
 
 
-server.put('/usuario/:id/imagem', upload.single('foto') ,async (req, resp) => {
+server.put('/usuario/:id/foto', upload.single('foto') ,async (req, resp) => {
     try{
         if(!req.file)
-        throw new Error('Escolha a imagem do artista.');
+        throw new Error('Escolhar a imagem do usuario.');
         const {id} = req.params;
         const imagem = req.file.path;
 
@@ -79,6 +79,25 @@ server.put('/usuario/:id/imagem', upload.single('foto') ,async (req, resp) => {
         })   
     }
 })
+
+server.get('/usuario/:id', async (req, resp) => {
+    try {
+        const id = Number(req.params.id);
+        
+        const resposta = await buscarUsuarioPorId(id);
+
+        if (!resposta)
+            resp.status(404).send([])
+        else
+            resp.send(resposta);
+    } catch (err) {
+        resp.status(400).send({
+            erro: err.message
+        })
+    }
+})
+
+
 
 
 

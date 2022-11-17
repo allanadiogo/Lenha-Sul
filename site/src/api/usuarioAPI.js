@@ -39,18 +39,23 @@ export async function loginUsuario (email, senha){
 
 }
 
+
 export async function fotoPerfil(id, imagem){
-    const formData = new FormData ();
+    const formData = new FormData();
     formData.append('foto', imagem);
 
-    const resposta = await api.put(`/usuario/${id}/imagem`, formData,{
+    const resposta = await api.put(`/usuario/${id}/foto`, formData,{
         headers:{
-            "Content-type": "multipart/form-data"
+            "Content-Type": "multipart/form-data"
         },
-    });
-
-    return resposta.status;
+    })
+    return resposta.status
 }
+
+export function buscarfoto(imagem){
+    return `${api.getUri()}/${imagem}`
+}
+
 
 export async function ListarPizzaSalgada(){
     const resposta = await api.get('/api/produtos/pizzasalgada')
@@ -61,3 +66,9 @@ export async function ListarPizzaSalgada(){
 export function buscarimagem(imagem){
     return `${api.getUri()}/${imagem}`
 }
+
+
+export async function buscarUsuarioPorId(id){
+    const resposta = await api.get(`/usuario/${id}`)
+    return resposta.data;
+}  

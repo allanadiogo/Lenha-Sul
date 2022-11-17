@@ -42,3 +42,20 @@ export async function fotoPerfil(imagem, id){
     const [resposta] = await con.query(comando,[imagem, id]);
     return resposta.affectedRows;
 }
+
+export async function buscarUsuarioPorId(id) {
+    const comando =
+
+    `select 
+    id_usuario id,
+    nm_usuario nome,
+    ds_telefone telefone,
+    ds_email email,
+    ds_senha senha,
+    img_usuario imagem
+    from tb_usuario
+    where id_usuario = ?`
+
+    const [linhas] = await con.query(comando, [id]);
+    return linhas[0];
+}
