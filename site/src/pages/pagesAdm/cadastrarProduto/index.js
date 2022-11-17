@@ -6,8 +6,8 @@ import storage from 'local-storage'
 
 import LoadingBar from 'react-top-loading-bar'
 
-import { toast, ToastContainer  } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.min.css'; 
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css';
 
 
 import { CadastrarProduto, ListarCategorias, ListarCategoriasNome } from '../../../api/postAPI'
@@ -21,19 +21,20 @@ import { set } from 'local-storage';
 
 export default function Index() {
   const navigate = useNavigate();
- 
+
 
   const [nome, setNome] = useState('');
   const [preco, setPreco] = useState('');
   const [ingredientes, setIngredientes] = useState('');
   const [img, setImg] = useState();
-  const[categoria,setCategoria] = useState([])
-  const[idCategoria, setIdCategoria] = useState()
-  const[nomeCategoria,setNomeCategoria] = useState()
-  console.log(idCategoria)
+  const [categoria, setCategoria] = useState([])
+  const [idCategoria, setIdCategoria] = useState()
+  const [nomeCategoria, setNomeCategoria] = useState()
 
 
-  async function CategoriaNome(){
+
+
+  async function CategoriaNome() {
     try {
       const resposta = await ListarCategoriasNome(idCategoria)
       setNomeCategoria(resposta)
@@ -44,63 +45,55 @@ export default function Index() {
 
 
   const [nomeCat, setNomecat] = useState('');
-  
+
 
   const [id, SetId] = useState(0);
 
-  
+
   const ref = useRef();
-  
 
-async function CarregarCategorias(){
-  try {
-    const chamada = await ListarCategorias()
-    setCategoria(chamada)  
-  } 
-  
-  catch (err) {
-    
+
+  async function CarregarCategorias() {
+    try {
+      const chamada = await ListarCategorias()
+      setCategoria(chamada)
+    }
+
+    catch (err) {
+
+    }
   }
-}
 
-useEffect(()=>{
-  CarregarCategorias()
-  CategoriaNome()
-},[])
+  useEffect(() => {
+    CarregarCategorias()
+    CategoriaNome()
+  }, [])
 
 
   async function onClick() {
 
-    
     try {
       if (!img) throw new Error("Escolha a imagem para cadastrar")
 
-    //  const usuario = storage('usuario-logado').id;
-      
+      //const usuario = storage('usuario-logado').id;
 
-      if (id === 0) {
-
-        const NovoPost = await CadastrarProduto(idCategoria,nome, preco, ingredientes)
+        const NovoPost = await CadastrarProduto(idCategoria, nome, preco, ingredientes)
+        console.log(NovoPost);
         const r = await inserirImagem(NovoPost.id, img)
         toast.dark("A pizza foi cadastrada ")
-
-        
-      }
     }
-
-
-    
     catch (err) {
-      if (err.response)
+      if (err.response){
+        console.log(err);
         toast.dark(err.response.data.Erro)
+      }
       else {
         toast.dark(err.message)
-        console.log(id)
       }
     }
   }
 
-  function escolherImagem(){
+  function escolherImagem() {
     document.getElementById('imgpizza').click();
   }
 
@@ -118,12 +111,12 @@ useEffect(()=>{
   return (
 
     <main className='megadiv'>
-       <ToastContainer />
-             <LoadingBar color='#0000' ref={ref} />
+      <ToastContainer />
+      <LoadingBar color='#0000' ref={ref} />
 
       <div className="Div-Agrupadora-todos">
         <div>
-          <MenuAzul2/>
+          <MenuAzul2 />
         </div>
 
         <div className='div-agrupamais'>
@@ -132,21 +125,21 @@ useEffect(()=>{
 
             <div className="Div-H1">
               <h1 className='inf-post'>Informações do Post</h1>
-              
+
             </div>
 
 
             <div>
-              
-              <h2 className='h2-impo'> Importar Foto: </h2>
-              
-              <div className='div-inse'onClick={escolherImagem}>
-              <img className='inserir' src='/assets/images/botaoa.png'alt=''/>
-              <input className='input-imagem'  placeholder="" type='file' id='imgpizza' onChange={e => setImg(e.target.files[0])} />
-              </div>
-              </div>
 
-              <div className="Div-Span-Input">
+              <h2 className='h2-impo'> Importar Foto: </h2>
+
+              <div className='div-inse' onClick={escolherImagem}>
+                <img className='inserir' src='/assets/images/botaoa.png' alt='' />
+                <input className='input-imagem' placeholder="" type='file' id='imgpizza' onChange={e => setImg(e.target.files[0])} />
+              </div>
+            </div>
+
+            <div className="Div-Span-Input">
               <div className="Span">
                 Novo item:
               </div>
@@ -176,30 +169,30 @@ useEffect(()=>{
             <div className="Div-Botoes-Categoria">
 
 
-            <select value={idCategoria} onChange={e => setIdCategoria(e.target.value) }>
-                                    <option selected disabled hidden> Categorias </option>
+              <select value={idCategoria} onChange={e => setIdCategoria(e.target.value)}>
+                <option selected disabled hidden> Categorias </option>
 
-                                    {categoria.map(item =>
-                                        <option value={item.id}> 
+                {categoria.map(item =>
+                  <option value={item.id}>
 
-                                            {item.nome}
+                    {item.nome}
 
-                                        </option>
-                                    )}
-            </select>
-              
+                  </option>
+                )}
+              </select>
+
             </div>
 
             <div>
-                        <label></label>
-                        
+              <label></label>
+
             </div>
-        
-            <button className="Button-Publicar" onClick={onClick}>Salvar</button> 
-        
+
+            <button className="Button-Publicar" onClick={onClick}>Salvar</button>
+
           </div>
-          
-         
+
+
 
 
           <div className="Lado-Direito-Informações">
@@ -209,16 +202,16 @@ useEffect(()=>{
             </h1>
             <div className="Div-Pré-Visualização">
 
-            <div className="imgn">
-                            {!img &&
-                                <img className='img-post' src='./images/a.png' alt='' />
-                            }
-                            
-                        </div>
+              <div className="imgn">
+                {!img &&
+                  <img className='img-post' src='./images/a.png' alt='' />
+                }
+
+              </div>
 
 
               <div className="info1">
-                
+
               </div>
               <div className="imgn">
                 {!img &&
@@ -256,14 +249,14 @@ useEffect(()=>{
                     <p> Categoria </p>
                   }
                   {idCategoria == 1 &&
-                  <p>Salgada</p>
+                    <p>Salgada</p>
 
                   }
                   {idCategoria == 2 &&
-                  <p>Doce</p>
+                    <p>Doce</p>
                   }
                   {idCategoria == 3 &&
-                  <p>Bebida</p>
+                    <p>Bebida</p>
                   }
 
 

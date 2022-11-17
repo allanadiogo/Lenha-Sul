@@ -5,13 +5,14 @@ export async function Post(produto) {
     insert into tb_produto(id_categoria,nm_produto, vl_preco, ds_ingredientes)
     VALUES (?,?,?,?);
     `
-    const[resposta] = await con.query (comando, [produto.categoria, produto.nome, produto.preco, produto.ingredientes])
-   
+    const [resposta] = await con.query(comando, [produto.categoria, produto.nome, produto.preco, produto.ingredientes])
+    produto.id = resposta.insertId;
 
-    return resposta[0];    
+    return produto
 }
 
 export async function inserirImagem (imagem, id) {
+    console.log(imagem, id);
     const comando = 
     `update tb_produto
     SET img_produto             = ?

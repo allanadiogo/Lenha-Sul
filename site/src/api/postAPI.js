@@ -13,7 +13,7 @@ export async function CadastrarProduto (categoria,nome, preco, ingredientes){
                     ingredientes:ingredientes
                     
         })
-
+        console.log(r);
         return r.data;
 }
 

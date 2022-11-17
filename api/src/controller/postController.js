@@ -2,7 +2,7 @@ import { Router } from "express";
 
 import {Post, inserirImagem, listarPosts, listarHisto, listarHisto2, listarHisto3, ListarCategoria, CadastrarEndereco, CadastrarCartao, ListarNomesCategorias, atualizarStatusPedidoPreparado, atualizarStatusPedidoRealizado, atualizarStatusPedidoAcaminho, PizzasDoces, PizzasSalgadas, Bebidas} from "../repository/postRepository.js"
 
-import multer from 'multer'
+import multer from 'multer';
 
 const server = Router();
 const upload = multer({dest: 'storage/imgproduto'})
@@ -19,11 +19,13 @@ server.post('/post/criar', async (req,resp) => {
         if(!produto.categoria) throw new Error("Categoria é OBRIGATÓRIO!")
 
         const resposta = await Post(produto);
+        console.log(produto)
         resp.status(200).send(
             resposta
         )
+
     } catch (err) {
-        resp.status(400).send({
+        resp.send({
             Erro:err.message
         })
     }
@@ -37,11 +39,7 @@ server.put('/post/:id/imagem', upload.single('imgproduto'), async (req, resp) =>
 
         const resposta = await inserirImagem(imagem, id);
 
-        resp.status(204).send();
-
-
-        
-        
+        resp.send();
     } catch (err) {
         resp.status(400).send({
             erro: err.message
