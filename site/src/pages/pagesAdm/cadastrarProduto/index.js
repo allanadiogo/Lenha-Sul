@@ -46,7 +46,6 @@ export default function Index() {
   const [nomeCat, setNomecat] = useState('');
   
 
-  const UserLogado = storage('usuario-logado').Nome;
   const [id, SetId] = useState(0);
 
   
@@ -218,7 +217,7 @@ useEffect(()=>{
 
 
               <div className="info1">
-                <h1> {UserLogado} </h1>
+                
               </div>
               <div className="imgn">
                 {!img &&

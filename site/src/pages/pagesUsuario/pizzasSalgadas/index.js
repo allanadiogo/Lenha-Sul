@@ -1,8 +1,8 @@
 import './index.scss';
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-
-import { buscarimagem, PizzasSalgadas  } from '../../../api/postAPI'
+import { buscarimagem, ListarPizzaSalgada } from '../../../api/usuarioAPI';
+import { PizzasSalgadas } from '../../../api/postAPI'
 
 export default function Index() {
 
