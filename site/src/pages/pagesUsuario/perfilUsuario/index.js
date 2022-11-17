@@ -31,6 +31,12 @@ export default function Index() {
         carregarUsuario();
     }, [])
 
+
+    useEffect(() => {
+
+        carregarUsuario();
+    }, [])
+
     const { idParam } = useParams()
     
     async function salvarClick() {
