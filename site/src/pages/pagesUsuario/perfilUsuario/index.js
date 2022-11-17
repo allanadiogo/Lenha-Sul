@@ -32,10 +32,10 @@ export default function Index() {
     }, [])
 
 
-    useEffect(() => {
+  //  useEffect(() => {
 
-        carregarUsuario();
-    }, [])
+      //  carregarUsuario();
+  //  }, [])
 
     const { idParam } = useParams()
     
