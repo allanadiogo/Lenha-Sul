@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 
 
-import{BrowserRouter, Routes, Route} from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 
 import Home from './pages/home';
@@ -14,7 +14,6 @@ import ConsultarProdutos from './pages/pagesAdm/consultarProdutos';
 import HistoricoPedidos from './pages/pagesAdm/historicoPedidos';
 import LoginAdm from './pages/pagesAdm/loginAdm';
 import MenuAdm from './pages/pagesAdm/menuAdm';
-import StatusPedido from './pages/pagesAdm/statusPedido';
 import Troco from './components/troco'
 import CompraRealizada from './components/compraRealizada'
 import MenuAmarelousu from './components/menuamarelo';
@@ -34,7 +33,6 @@ import PizzasDoces from './pages/pagesUsuario/pizzasDoces';
 import PizzasSalgadas from './pages/pagesUsuario/pizzasSalgadas';
 import RecupercaoSenha from './pages/pagesUsuario/recuperacaoSenha';
 import QrPix from './pages/pagesUsuario/qrPix';
-import Status from './pages/pagesAdm/status';
 
 
 
@@ -42,43 +40,36 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-   <Routes>
-     <Route path='/' element={<Home/>} />
-     <Route path='/status' element={<Status/>} />
+      <Routes>
+        <Route path='/' element={<Home />} />
 
-     <Route path='/cadastrarProduto' element={<CadastrarProduto/>}/>
-     <Route path='/consultarPedidos' element={<ConsultarPedidos/>}/>
-     <Route path='/consultarProdutos' element={<ConsultarProdutos/>}/>
-     <Route path='/historicoPedidos' element={<HistoricoPedidos/>} />
-     <Route path='/loginAdm' element={<LoginAdm/>}/>
-     <Route path='/menuAdm' element={<MenuAdm/>}/>
-     <Route path='/statusPedido' element={<StatusPedido/>}/>
-     <Route path='/compraRealizada' element={<CompraRealizada/>}/>
-     <Route path='/troco' element={<Troco/>}/>
-
-     <Route path='/menuamarelo' element={<MenuAmarelousu/>}/>
-
-     <Route path='/acompanharPedido' element={<AcompanharPedido/>} />
- 
-     <Route path='/cadastro' element={<Cadastro/>}/>
-     <Route path='/carrinho' element={<Carrinho/>}/>
-     <Route path='/dadosCartao' element={<DadosCartao/>} />
-     <Route path='/detalhesPizzas' element={<DetalhesPizzas/>}/>
-     <Route path='/endereco' element={<Endereco/>}/>
-     <Route path='/Pagamento' element={<InformarPagamento/>}/>
-     <Route path='/loginUsuario' element={<LoginUsuario/>} />
-     <Route path='/menuUsuario' element={<MenuUsuario/>}/>
-     <Route path='/perfilUsuario' element={<PerfilUsuario/>}/>
-     <Route path='/perfilUsuario:idParam' element={<PerfilUsuario/>}/>
-
-     <Route path='/pizzasSalgadas' element={<PizzasSalgadas/>}/>
-     <Route path='/pizzasDoces' element={<PizzasDoces/>}/>
-     <Route path='/bebidas' element={<Bebibas/>}/>
-     <Route path='/qrPix' element={<QrPix/>}/>
-     <Route path='/recuperacaoSenha' element={<RecupercaoSenha/>}/>
-
-   </Routes>
-     </BrowserRouter>
+        <Route path='/cadastrarProduto' element={<CadastrarProduto />}            />
+        <Route path='/consultarPedidos' element={<ConsultarPedidos />}            />
+        <Route path='/consultarProdutos' element={<ConsultarProdutos />}          />
+        <Route path='/historicoPedidos' element={<HistoricoPedidos />}            />
+        <Route path='/loginAdm' element={<LoginAdm />}                            />
+        <Route path='/menuAdm' element={<MenuAdm />}                              />
+        <Route path='/compraRealizada' element={<CompraRealizada />}              />
+        <Route path='/troco' element={<Troco />}                                  />
+        <Route path='/menuamarelo' element={<MenuAmarelousu />}                   />
+        <Route path='/acompanharPedido' element={<AcompanharPedido />}            />
+        <Route path='/cadastro' element={<Cadastro />}                            />
+        <Route path='/carrinho' element={<Carrinho />}                            />
+        <Route path='/dadosCartao' element={<DadosCartao />}                      />
+        <Route path='/detalhesPizzas' element={<DetalhesPizzas />}                />
+        <Route path='/endereco' element={<Endereco />}                            />
+        <Route path='/Pagamento' element={<InformarPagamento />}                  />
+        <Route path='/loginUsuario' element={<LoginUsuario />}                    />
+        <Route path='/menuUsuario' element={<MenuUsuario />}                      />
+        <Route path='/perfilUsuario' element={<PerfilUsuario />}                  />
+        <Route path='/perfilUsuario:idParam' element={<PerfilUsuario />}          />
+        <Route path='/pizzasSalgadas' element={<PizzasSalgadas />}                /> 
+        <Route path='/pizzasDoces' element={<PizzasDoces />}                      />
+        <Route path='/bebidas' element={<Bebibas />}                              />
+        <Route path='/qrPix' element={<QrPix />}                                  />
+        <Route path='/recuperacaoSenha' element={<RecupercaoSenha />}             />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 
 

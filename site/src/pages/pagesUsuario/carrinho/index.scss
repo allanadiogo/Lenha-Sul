@@ -3,13 +3,11 @@
     flex-direction: column;
     align-items: center;
     background-image: url('../../../assets/images/fundoamarelo.png');
-    background-size: 100%;
+    background-size: 100vh;
     height: auto;
     background-repeat: no-repeat;
+    background-size: cover;
 
-    // * {
-    //     border: 1px solid black;
-    // }
 
     .header-carrinho {
         display: flex;

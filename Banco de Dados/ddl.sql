@@ -88,7 +88,6 @@ create table tb_categoria (
 -- Tabela Produto
 create table tb_produto (
         id_produto				int primary key auto_increment,
-        id_pedido				int,
 		nm_produto				varchar(100),     
         vl_preco				decimal(12.5),
         id_categoria			int,
@@ -123,5 +122,3 @@ select * from tb_endereco;
 select * from tb_pedido;
 select * from tb_usuario;
 select * from tb_categoria;
-
- 

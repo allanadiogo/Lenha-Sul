@@ -30,7 +30,7 @@ export default function Index() {
 
 
 
-                    <hr className='linha' />
+                    <hr className='linha1' />
 
 
 
@@ -39,7 +39,7 @@ export default function Index() {
                         <span className='texts-usuario'> Meu Perfil </span>
                     </a>
 
-                    <hr className='linha' />
+                    <hr className='linha2' />
 
 
 
@@ -49,14 +49,16 @@ export default function Index() {
 
                     </a>
 
-                    <hr className='linha' />
+                    <hr className='linha3' />
 
 
 
-                    <a href='/carrinho' className='con-text-usuario'>
+                    <a href='/carrinho' className='con-text-usuario-1'>
                         <img className="icons-usuario" src='/assets/images/carrinho.png' />
                         <span className='texts-usuario'> Carrinho </span>
                     </a>
+
+                    <hr className='linha4' />
 
 
                 </div>

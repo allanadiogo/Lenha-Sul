@@ -62,7 +62,7 @@ export default function Index() {
 
 
 
-            <section>
+            <section className='section-login-adm'>
                 <div className="Div-Meio-Login">
 
                     <div className="LOGO-TESTE">

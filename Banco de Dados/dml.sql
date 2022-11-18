@@ -9,7 +9,7 @@ VALUES('Admin', '1234' );
 
 -- Conta Usuário
 Insert INTO tb_usuario(nm_usuario, ds_email, ds_senha, ds_telefone, ds_cpf)
-VALUES('Michael', 'michaelchaves@gmail.com', '123', '11965126413', '1234567890');
+VALUES('usuario', 'usuario@gmail.com', '1234', '11965126413', '1234567890');
 
 -- Categorias
 insert into tb_categoria (nm_categoria)
@@ -21,18 +21,18 @@ insert into tb_categoria (nm_categoria)
                             
 
 -- Produtos
-insert into tb_produto (id_categoria, nm_produto, vl_preco, ds_ingredientes)
-                    values ('Salgada', 'Pizza de Calabresa', 26.00, "Muçarela, molho de tomate, calabresa");
+insert into tb_produto (nm_produto, vl_preco, ds_ingredientes)
+                    values ('Pizza de Calabresa', 26.00, "Muçarela, molho de tomate, calabresa");
 
                     
 -- Endereços
 insert into tb_endereco (ds_rua, nr_residencia, ds_cep, ds_bairro, ds_complemento)
-					values('Rua Vedeta', 12, '01214-291', 'Velheiros', 'apartamento');
+					values('Rua Frei', 12, '01214-200', 'Velheiros', 'apartamento');
 
 
 -- Pagamento em Cartão   
 insert into tb_pagamento_cartao(nr_cartao, nm_cartao, dt_vencimento, nr_cvv, ds_apelido, ds_cpf)
-					values('11100022233', 'MICHAEL CHAVES', 2005-07, 333, 'Cartaqo do michael', '123123123');
+					values('11100022233', 'Usuário', 2005-07, 333, 'Teste', '123123123');
                     				
 
 -- Selects

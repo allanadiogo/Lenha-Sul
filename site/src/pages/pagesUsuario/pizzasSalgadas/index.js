@@ -1,13 +1,14 @@
 import './index.scss';
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { buscarimagem, ListarPizzaSalgada } from '../../../api/usuarioAPI';
-import { PizzasSalgadas } from '../../../api/postAPI'
+import { PizzasSalgadas, buscarimagem } from '../../../api/postAPI'
 
 export default function Index() {
 
     const [post, setPost] = useState([])
     const navigate = useNavigate();
+    const [imagem, setImagem] = useState('');
+    const [item, setItem] = useState();
 
     async function CarregarTodosPosts() {
         const resp = await PizzasSalgadas();
@@ -25,6 +26,18 @@ export default function Index() {
     function Carrinho() {
         navigate('/carrinho');
     }
+
+    function mostrarImagem() {
+        if (typeof (imagem) == 'object') {
+          return URL.createObjectURL(imagem);
+        }
+        else {
+          return (imagem)
+        }
+      }
+      
+    
+    
 
     return (
         <main className='PizzaS-Main'>
@@ -69,7 +82,7 @@ export default function Index() {
                 {post.map(item =>
                 <div className='container'>
                     <div className='item'>
-                         <img className='Imagens' src={buscarimagem(item.Imagem)} />
+                         <img className='Imagens' src={mostrarImagem()} />
                         <h1 className='nome'>{item.nome}</h1>
                       
                        
@@ -79,7 +92,7 @@ export default function Index() {
 
                         <div className='botao-valor'>
                             <button className='botao-adicionar'> Adicionar</button>
-                            <h1 className='valor'>por R${item.preço},00</h1>
+                            <h1 className='valor'>por R${item.preço}</h1>
                         </div>
                     </div>
                 </div>

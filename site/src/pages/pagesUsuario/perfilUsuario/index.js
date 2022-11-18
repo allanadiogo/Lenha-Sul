@@ -6,6 +6,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { fotoPerfil, buscarUsuarioPorId} from '../../../api/usuarioAPI.js'
 import { ToastContainer, toast } from 'react-toastify';
 import { API_URL } from '../../../api/config.js';
+
 import 'react-toastify/dist/ReactToastify.min.css';
 import Menuamarelousu from '../../../components/menuamarelo'
 import './index.scss'
@@ -67,15 +68,15 @@ export default function Index() {
         document.getElementById('foto-perfil').click();
     }
 
-    function mostrarImagem(imagem) {
-
+    function mostrarImagem() {
         if (typeof (imagem) == 'object') {
-            return URL.createObjectURL(imagem);
+          return URL.createObjectURL(imagem);
         }
         else {
-            return `${API_URL}/${imagem}`
+          return fotoPerfil(imagem)
         }
-    }
+      }
+    
 
 
     console.log(salvarClick);
@@ -105,8 +106,10 @@ export default function Index() {
 
                     <div className='div-foto-perfil'>
                     
-                    <div className='div-editar'onClick={escolherImagem}   >
+                    <div className='div-editar'onClick={escolherImagem}  >
                    
+
+
                         {!imagem &&
                     <img className='editar-foto' src='/assets/images/editarimg.png'alt=''/>
                         }

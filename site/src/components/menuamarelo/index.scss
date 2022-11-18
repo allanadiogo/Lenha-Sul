@@ -1,108 +1,131 @@
-.corpo-menu-amarelo{
-   background-image: url('../../../public/assets/images/retanguloamarelo.png') ;
-   width: 230px;
-   height: 100vh;
-   overflow: auto;
-   background-repeat: no-repeat;
-   background-size: cover;
+.corpo-menu-amarelo {
+    background-image: url('../../../public/assets/images/retanguloamarelo.png');
+    width: 230px;
+    height: 100vh;
+    overflow: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
 
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   .logo-menu-usuario{
-       display: flex;
-       align-items: center;
-       justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .logo-menu-usuario {
+        display: flex;
+        justify-content: center;
+        margin-top: -15em;
+        margin-bottom: 10em;
+    }
+
+    .linha {
+        margin-bottom: 1.3em;
+    }
+
+    .texts-usuario {
+        padding-left: 10px;
+        font-family: 'font6';
+        font-size: 16px;
+        text-decoration: none;
+        color: black;
+    }
+
+    .texts2-usuario {
+        font-family: 'font6';
+        font-size: 16px;
+        text-decoration: none;
+        color: black;
+        padding-left: 1em;
+        text-align: center;
+    }
+
+
+
+    .con-text-usuario {
+        width: 15em;
+        height: 5em;
+        text-decoration: none;
+        display: flex;
+        align-self: center;
+    }
+
+    .con-text-usuario-1 {
+        width: 15em;
+        text-decoration: none;
+        display: flex;
+        align-self: center;
+        margin-left: -0.5em;
+    }
+
+    .con-text2-usuario {
+        width: 15em;
+        text-decoration: none;
        
-   }
-   
-   .texts-usuario{
-       padding-left: 10px;
-       font-family: 'font6';
-       font-size: 15px;
-       text-decoration: none;
-       color: black;
-       
-       
-   }
-   
-   .texts2-usuario{
-       
-       font-family: 'font6';
-       font-size: 15px;
-       text-decoration: none;
-       color: black;
-   
-   
-       text-align: center;
-   }
-   
-   
-   
-   .con-text-usuario{
+
+    }
+
+
+    .menu-itens-usuario {
+        display: flex;
+        flex-direction: column;
      
-       text-decoration: none;
-   }
-   
-   .con-text2-usuario {
-    width: 12em;
-       text-decoration: none;
-   
-   }
-   
-   
-   .menu-itens-usuario{
-       display: flex;
-       flex-direction: column;
-       margin-top: 3em;
-   }
-   
-   .menu-itens-usuario > a {
-       display: flex;
-       align-items: center;
-       
-       padding: 15px 25px;
-   
-       transition: .3s;
-       cursor: pointer;
-   }
-   
-   
-   .menu-itens-usuario > img {
-       width: 40px;
-       height: 20px;
-   
-   }
-   
-   .menu-itens-usuario > a:hover {
-       background-color: #ffffffd0;
-       
-   }
-   
-   .sair {
-       display: flex;
-       align-items: center;
-       padding-top: 7em;
-       padding-left: 1em; 
-   
-       cursor: pointer;
-   
-      
-   }
-   
-   
-   
-   .text-sair{
-       font-family: 'font7' ;
-       padding-left: 6px;
-       font-size: 15px;
-      
-       
-   }
-   
-   .linha{
-      width:164px ;
-      border-color:black;
-   }
-}
+    }
 
+    .menu-itens-usuario>a {
+        display: flex;
+        align-items: center;
+      
+        padding: 20px;
+
+        transition: .3s;
+        cursor: pointer;
+    }
+
+
+    .menu-itens-usuario>img {
+        width: 40px;
+        height: 20px;
+
+    }
+
+    .menu-itens-usuario > a:hover {
+        background-color: #ffffffff;
+    }
+
+    .sair {
+        display: flex;
+        align-items: center;
+        padding-top: 7em;
+        padding-left: 1em;
+
+        cursor: pointer;
+    }
+
+
+
+    .text-sair {
+        font-family: 'font7';
+        padding-left: 6px;
+        font-size: 15px;
+    }
+
+    
+    .linha1 {
+        width: 250px;
+        border-color: black;
+    }
+
+    .linha2 {
+        width: 250px;
+        border-color: black;
+    }
+
+    .linha3 {
+        width: 250px;
+        border-color: black;
+    }
+
+    .linha4 {
+        width: 250px;
+        border-color: black;
+    }
+}

@@ -62,7 +62,7 @@ export default function Index() {
                         </div>
 
                         <div className='div-p-logo'>
-                            <p className='p-logo'>Histórico de Pedidos</p>
+                            <p className='p-logo'>Pedidos Pendentes</p>
                         </div>
                     </div>
 
