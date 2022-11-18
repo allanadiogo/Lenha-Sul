@@ -5,6 +5,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 
 import { fotoPerfil, buscarUsuarioPorId} from '../../../api/usuarioAPI.js'
 import { ToastContainer, toast } from 'react-toastify';
+import { API_URL } from '../../../api/config.js';
 import 'react-toastify/dist/ReactToastify.min.css';
 import Menuamarelousu from '../../../components/menuamarelo'
 import './index.scss'
@@ -14,8 +15,7 @@ export default function Index() {
     const [usuario, setUsuario] = useState([])
 
 
-    const [ids, setIds] = useState(0)
-    const [foto, setFoto] = useState()
+ 
     const navigate = useNavigate()
 
 
@@ -32,22 +32,24 @@ export default function Index() {
     }, [])
 
 
-  //  useEffect(() => {
-
-      //  carregarUsuario();
-  //  }, [])
 
     const { idParam } = useParams()
     
     async function salvarClick() {
         try {
 
-            if (typeof (imagem) == 'object') {
-                await fotoPerfil(idParam, imagem)
-
+            if (!idParam, imagem) {
+               
+                const j = fotoPerfil(imagem)
+                toast.success('Imagem salva')
+                
             }
 
-            toast.success('Imagem inserida')
+            if(!imagem){
+                throw new Error('Insira')
+            }
+
+
 
         } catch (err) {
             if (err.response)
@@ -58,15 +60,23 @@ export default function Index() {
         
     }
 
+    
 
 
     function escolherImagem(){
         document.getElementById('foto-perfil').click();
     }
 
-    function mostrarImagem(){
-        return URL.createObjectURL(imagem);
+    function mostrarImagem(imagem) {
+
+        if (typeof (imagem) == 'object') {
+            return URL.createObjectURL(imagem);
+        }
+        else {
+            return `${API_URL}/${imagem}`
+        }
     }
+
 
     console.log(salvarClick);
 
@@ -95,14 +105,16 @@ export default function Index() {
 
                     <div className='div-foto-perfil'>
                     
-                    <div className='div-editar'onClick={escolherImagem} >
-
+                    <div className='div-editar'onClick={escolherImagem}   >
+                   
                         {!imagem &&
                     <img className='editar-foto' src='/assets/images/editarimg.png'alt=''/>
                         }
                     
                     {imagem &&
                     <img className='tamanho-foto' src={mostrarImagem()} alt=''/>
+
+                    
 }
                     <input type='file' id="foto-perfil" onChange={e => setImagem(e.target.files[0])}></input>
                         </div>

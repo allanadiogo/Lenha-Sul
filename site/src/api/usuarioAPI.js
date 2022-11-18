@@ -40,7 +40,7 @@ export async function loginUsuario (email, senha){
 }
 
 
-export async function fotoPerfil(id, imagem){
+export async function fotoPerfil(imagem, id){
     const formData = new FormData();
     formData.append('foto', imagem);
 

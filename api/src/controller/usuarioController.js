@@ -60,6 +60,9 @@ catch(err){
 
 
 
+
+
+
 server.put('/usuario/:id/foto', upload.single('foto') ,async (req, resp) => {
     try{
         if(!req.file)
@@ -79,6 +82,7 @@ server.put('/usuario/:id/foto', upload.single('foto') ,async (req, resp) => {
         })   
     }
 })
+
 
 server.get('/usuario/:id', async (req, resp) => {
     try {

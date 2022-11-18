@@ -33,7 +33,6 @@ const [linhas] = await con.query(comando, [email,senha]);
 return linhas[0]
 }
 
-
 export async function fotoPerfil(imagem, id){
     const comando = `UPDATE tb_usuario
                     SET img_usuario = ?

@@ -16,3 +16,4 @@ export async function inserirImagem (id, imagem){
     });
     return resposta.status;
 }
+
