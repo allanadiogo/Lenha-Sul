@@ -2,7 +2,7 @@ import { API_URL } from './config';
 
 import axios from 'axios'
 const api = axios.create({
-    baseURL: API_URL
+    baseURL: 'http://localhost:5000'
 })
 
 export async function EfetuarLogin (email,senha){
@@ -14,6 +14,8 @@ export async function EfetuarLogin (email,senha){
         
         return r.data;
 }
+
+
 
 export async function EfetuarCadastro (nome,email,senha,telefone,cpf){
     const r = await api.post('/usuario/cadastro', {

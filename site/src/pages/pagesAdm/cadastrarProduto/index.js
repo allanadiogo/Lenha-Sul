@@ -26,7 +26,7 @@ export default function Index() {
   const [nome, setNome] = useState('');
   const [preco, setPreco] = useState('');
   const [ingredientes, setIngredientes] = useState('');
-  const [img, setImg] = useState('');
+  const [imagem, setImagem] = useState();
   const [categoria, setCategoria] = useState([])
   const [idCategoria, setIdCategoria] = useState()
   const [nomeCategoria, setNomeCategoria] = useState()
@@ -73,13 +73,13 @@ export default function Index() {
   async function onClick() {
 
     try {
-      if (!img) throw new Error("Escolha a imagem para cadastrar")
+      if (!imagem) throw new Error("Escolha a imagem para cadastrar")
 
       //const usuario = storage('usuario-logado').id;
 
         const NovoPost = await CadastrarProduto(idCategoria, nome, preco, ingredientes)
         console.log(NovoPost);
-        const r = await inserirImagem(NovoPost.id, img)
+        const r = await inserirImagem(NovoPost.id, imagem)
         toast.dark("A pizza foi cadastrada ")
     }
     catch (err) {
@@ -98,11 +98,11 @@ export default function Index() {
   }
 
   function mostrarImagem() {
-    if (typeof (img) == 'object') {
-      return URL.createObjectURL(img);
+    if (typeof (imagem) == 'object') {
+      return URL.createObjectURL(imagem);
     }
     else {
-      return inserirImagem(img)
+      return inserirImagem(imagem)
     }
   }
 
@@ -135,7 +135,7 @@ export default function Index() {
 
               <div className='div-inse' onClick={escolherImagem}>
                 <img className='inserir' src='/assets/images/botaoa.png' alt='' />
-                <input className='input-imagem' placeholder="" type='file' id='imgpizza' onChange={e => setImg(e.target.files[0])} />
+                <input className='input-imagem' placeholder="" type='file' id='imgpizza' onChange={e => setImagem(e.target.files[0])} />
               </div>
             </div>
 
@@ -203,7 +203,7 @@ export default function Index() {
             <div className="Div-Pré-Visualização">
 
               <div className="imgn">
-                {!img &&
+                {!imagem &&
                   <img className='img-post' src='./images/a.png' alt='' />
                 }
 
@@ -214,10 +214,10 @@ export default function Index() {
 
               </div>
               <div className="imgn">
-                {!img &&
+                {!imagem &&
                   <img className='img-post' src='./images/a.png' alt='' />
                 }
-                {img &&
+                {imagem &&
                   <img className='img-post' src={mostrarImagem()} alt='' />
                 }
               </div>

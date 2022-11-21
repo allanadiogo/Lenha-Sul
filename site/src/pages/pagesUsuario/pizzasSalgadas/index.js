@@ -1,15 +1,17 @@
 import './index.scss';
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { ListarPizzasSalgadas, buscarimagem } from '../../../api/postAPI'
+import { ListarPizzasSalgadas,  } from '../../../api/postAPI'
+import { buscarimagem  } from '../../../api/usuarioAPI'
+
 
 
 export default function Index() {
 
-
     const navigate = useNavigate();
-    const [busca, setBusca] = useState('');
+
     const [produto, setProduto] = useState([]);
+
     
 
 
@@ -21,6 +23,7 @@ export default function Index() {
 
     useEffect(() => {
         CarregarTodosPosts();
+      
     }, []);
 
     function LoginUsuario() {
@@ -83,7 +86,7 @@ export default function Index() {
                 <div className='container'>
                      
                         <div className='item'>
-                            <img src= {buscarimagem(item.Imagem)}  className='Imagens' />
+                            <img src= {buscarimagem(item.imagem)}  className='Imagens' />
                             <h1 className='nome'>{item.nome}</h1>
                            
 
