@@ -15,6 +15,7 @@ const navigate = useNavigate();
     }
 
 
+
     useEffect(() => {
         if(storage('adm-logado')){
            navigate('/loginadm')
@@ -25,6 +26,8 @@ const navigate = useNavigate();
            
         }
         }, [])
+
+        
 
 
     return(

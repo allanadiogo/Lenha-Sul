@@ -87,6 +87,34 @@ export default function Index(){
             <h1 className='valor'>por R$ 26,00</h1>
             </div>
         </div>
+
+        <div className='item'>
+            <img src='/assets/images/pizzacalabresa.png'/>
+            <h1 className='nome'>Calabresa</h1>
+            <div className='botao-valor'>
+            <button className='botao-adicionar'> + Adicionar</button>
+            <h1 className='valor'>por R$ 26,00</h1>
+            </div>
+        </div>
+
+        <div className='item'>
+            <img src='/assets/images/PizzaChocolateBranco.png'/>
+            <h1 className='nome'>Chocolate Branco com M&M´s
+</h1>
+            <div className='botao-valor'>
+            <button className='botao-adicionar'> + Adicionar</button>
+            <h1 className='valor'>por R$ 26,00</h1>
+            </div>
+        </div>
+
+        <div className='item'>
+            <img src='/assets/images/ChocolateBrancoMorango.png'/>
+            <h1 className='nome'>Chocolate Branco com Morango</h1>
+            <div className='botao-valor'>
+            <button className='botao-adicionar'> + Adicionar</button>
+            <h1 className='valor'>por R$ 26,00</h1>
+            </div>
+        </div>
        
         
         </div>

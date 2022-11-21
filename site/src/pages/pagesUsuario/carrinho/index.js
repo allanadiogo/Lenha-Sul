@@ -1,24 +1,21 @@
 import './index.scss'
-
 import { useEffect, useState } from 'react';
-
-import Storage from 'local-storage';
-
-// import { buscarProdutoPorId } from '../../api/produtoAPI';
-
-import CarrinhoItem from '../../../components/carrinho';
-
+ import Storage from 'local-storage';
+ //import { buscarProdutoPorId } from '../../api/produtoAPI';
+import CarrinhoItem from '../../../components/carrinhoItem1';
 import { useNavigate } from 'react-router-dom';
 
-export default function Carrinho() {
+
+
+export default function Carrinho(){
 
     const [itens, setItens] = useState([]);
     const navigate = useNavigate();
 
-
     function irPedido() {
         navigate('/pedido');
     }
+
 
 
 
@@ -51,10 +48,10 @@ export default function Carrinho() {
             let temp = [];
 
             for (let produto of carrinho) {
-                // let p = await buscarProdutoPorId(produto.id);
+             //    let p = await buscarProdutoPorId(produto.id);
 
                 temp.push({
-                    // produto: p,
+                //     produto: p,
                     qtd: produto.qtd
                 })
             }
@@ -70,7 +67,7 @@ export default function Carrinho() {
 
 
     return (
-        <main className='carrinho'>
+        <main className='main-carrinho'>
 
             <header className='header-carrinho'>
                 <div className='div-row-header-logo'>
@@ -80,8 +77,8 @@ export default function Carrinho() {
 
 
                     <div className='div-header-botoes'>
-                        <a className='a-header-botoes'>Home</a>
-                        <a className='a-header-botoes'>Menu</a>
+                        <a href='/' className='a-header-botoes'>Home</a>
+                        <a href='/menuUsuario' className='a-header-botoes'>Menu</a>
                     </div>
                 </div>
             </header>
@@ -103,7 +100,7 @@ export default function Carrinho() {
                     <p className='p-1'> Subtotal </p>
                     <p className='p-2'> ({qtdItens()} itens) </p>
                     <p className='p-3'> R$ {calcularValorTotal()} </p>
-                    <button onClick={irPedido}> Fechar Pedido </button>
+                    <button  onClick={irPedido}> Fechar Pedido </button>
                 </div>
 
             </section>
@@ -114,88 +111,86 @@ export default function Carrinho() {
                 </div>
             </div>
 
-        </main>
-
-
-        // <main className='main-carrinho'>
-
-
-        //         <div className='div-input-header'>
-        //             <input className='input-pesquisar' type="text" placeholder='Digite o que procura' />
-        //         </div>
-        //     </header>
-
-
-        //     <section className='section-carrinho'>
-        //         <div className='div-row-info'>
-        //             <div className='div-produto'>
-        //                 Produto
-        //             </div>
-        //             <div className='div-preco'>
-        //                 Preço Unitário
-        //             </div>
-        //             <div className='div-qtd'>
-        //                 Quantidade
-        //             </div>
-        //             <div className='div-excluir'>
-        //                 Excluir
-        //             </div>
-        //         </div>
-
-        //         <div className='div-informacoes'>
-        //             <div className='div-img-info'>
-        //                 <div className='div-img'>
-        //               {/* <img src={buscarimagem(item.imagem)} alt='' height='auto' width="auto" /> */}
-        //                 </div>
-        //                 <div className='div-info'>
-        //                     <p className='p-info'>Aqui vai ficar o nome dela</p>
-        //                     <p className='p-info'>Aqui a descrição dela</p>
-        //                 </div>
-        //             </div>
-
-        //             <div className='div-preco-info'>
-        //                 <p>Preço</p>
-        //             </div>
-
-        //             <div className='div-row-qtd'>
-        //                 <label>Qtd.</label>
-        //                 <select>
-        //                     <option>01</option>
-        //                     <option>02</option>
-        //                     <option>03</option>
-        //                     <option>04</option>
-        //                     <option>05</option>
-        //                 </select>
-        //             </div>
-
-        //             <div className='div-img-excluir'>
-        //                 {/* <img src="" alt="" /> */}
-        //             </div>
-        //         </div>
-
-
-        //         <div className='div-total'>
-        //             <h1>Total: Preço</h1>
-        //         </div>
-
-        //         <div className='div-botoes'>
-        //             <div>
-        //                 <button className='button-1'>
-        //                     Continuar Comprando
-        //                 </button>
-        //             </div>
-        //             <div>
-        //                 <button className='button-2'>
-        //                     Finalizar Compra
-        //                 </button>
-        //             </div>
-        //         </div>
-
-        //     </section>
 
 
 
-        /* <section className='section-carrinho'>
+
+                 <div className='div-input-header'>
+                    <input className='input-pesquisar' type="text" placeholder='Digite o que procura' />
+                </div>
+             
+
+
+             <section className='section-carrinho'>
+                 <div className='div-row-info'>
+                     <div className='div-produto'>
+                         Produto
+                     </div>
+                     <div className='div-preco'>
+                        Preço Unitário
+                     </div>
+                     <div className='div-qtd'>
+                        Quantidade
+                     </div>
+                     <div className='div-excluir'>
+                         Excluir
+                 </div>
+             </div>
+
+               <div className='div-informacoes'>
+                     <div className='div-img-info'>
+                         <div className='div-img'>
+              { <img  alt='' height='auto' width="auto" /> }
+                         </div>
+                        <div className='div-info'>
+                             <p className='p-info'>Aqui vai ficar o nome dela</p>
+                             <p className='p-info'>Aqui a descrição dela</p>
+                         </div>
+                     </div>
+
+                     <div className='div-preco-info'>
+                         <p>Preço</p>
+                     </div>
+
+                    <div className='div-row-qtd'>
+                         <label>Qtd.</label>
+                         <select>
+                             <option>01</option>
+                             <option>02</option>
+        <option>03</option>
+                            <option>04</option>
+                       <option>05</option>
+                         </select>
+                     </div>
+
+                     <div className='div-img-excluir'>
+                         {<img src="" alt="" /> }
+                     </div>
+                </div>
+
+
+                 <div className='div-total'>
+                     <h1>Total: Preço</h1>
+                 </div>
+
+                 <div className='div-botoes'>
+                     <div>
+                         <button className='button-1'>
+                             Continuar Comprando
+                         </button>
+                     </div>
+                     <div>
+                         <button className='button-2'>
+                             Finalizar Compra
+                         </button>
+                     </div>
+                </div>
+
+         </section>
+
+
+
+        <section className='section-carrinho'>
             <div className='div-primeira-fileira'>
                 <div className='div-p-produto'>
                     <p className='p-produto'>Produto</p>
@@ -240,11 +235,12 @@ export default function Carrinho() {
                 
             </div>
 
-        </section> */
-        // </main >
+        </section> 
+         </main >
 
-    );
+        );
 }
+
 
 
 
