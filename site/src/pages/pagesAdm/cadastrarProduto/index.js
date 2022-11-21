@@ -26,7 +26,7 @@ export default function Index() {
   const [nome, setNome] = useState('');
   const [preco, setPreco] = useState('');
   const [ingredientes, setIngredientes] = useState('');
-  const [img, setImg] = useState();
+  const [img, setImg] = useState('');
   const [categoria, setCategoria] = useState([])
   const [idCategoria, setIdCategoria] = useState()
   const [nomeCategoria, setNomeCategoria] = useState()

@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useRef } from 'react';
 import { useState, useEffect } from 'react';
 
-import { PizzasDoces, buscarimagem } from '../../../api/postAPI';
+import { ListarPizzasDoces, buscarimagem } from '../../../api/postAPI';
 
 export default function Index() {
     
@@ -12,7 +12,7 @@ export default function Index() {
     const navigate = useNavigate();
 
     async function CarregarTodosPosts() {
-        const resp = await PizzasDoces();
+        const resp = await ListarPizzasDoces();
         setPost(resp);
     }
 

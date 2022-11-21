@@ -1,18 +1,22 @@
 import './index.scss';
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { PizzasSalgadas, buscarimagem } from '../../../api/postAPI'
+import { ListarPizzasSalgadas, buscarimagem } from '../../../api/postAPI'
+
 
 export default function Index() {
 
-    const [post, setPost] = useState([])
+
     const navigate = useNavigate();
-    const [imagem, setImagem] = useState('');
-    const [item, setItem] = useState();
+    const [busca, setBusca] = useState('');
+    const [produto, setProduto] = useState([]);
+    
+
 
     async function CarregarTodosPosts() {
-        const resp = await PizzasSalgadas();
-        setPost(resp);
+        const resp = await ListarPizzasSalgadas();
+        setProduto(resp);
+
     }
 
     useEffect(() => {
@@ -27,21 +31,16 @@ export default function Index() {
         navigate('/carrinho');
     }
 
-    function mostrarImagem() {
-        if (typeof (imagem) == 'object') {
-          return URL.createObjectURL(imagem);
-        }
-        else {
-          return (imagem)
-        }
-      }
-      
-    
-    
+    console.log(produto);
+
+
+
 
     return (
         <main className='PizzaS-Main'>
+
             <header className='header-menu-usuario'>
+
                 <div className='div-cabecalho'>
 
                     <div className='div-cabecalho-opcoes'>
@@ -71,35 +70,40 @@ export default function Index() {
                         </div>
                     </div>
                 </div>
-            </header>  
-            
+            </header>
+
             <div className='div-pizzas-salgadas'>
-                    <h1 className='Pizzas-Salgadas'> Pizzas Salgadas </h1>
-                </div>
+                <h1 className='Pizzas-Salgadas'> Pizzas Salgadas </h1>
+            </div>
 
-            <section className='Pizzas'>
-              
-                {post.map(item =>
+            <section className='Pizza'>
+
+
+          {produto.map(item =>
                 <div className='container'>
-                    <div className='item'>
-                         <img className='Imagens' src={mostrarImagem()} />
-                        <h1 className='nome'>{item.nome}</h1>
-                      
-                       
-                       <div className='div-p-descricao-pizzas'>
-                        <p className='p-descricao-pizzas'>{item.ingredientes}</p>
-                       </div>
+                     
+                        <div className='item'>
+                            <img src= {buscarimagem(item.Imagem)}  className='Imagens' />
+                            <h1 className='nome'>{item.nome}</h1>
+                           
 
-                        <div className='botao-valor'>
-                            <button className='botao-adicionar'> Adicionar</button>
-                            <h1 className='valor'>por R${item.preço}</h1>
+                            <div className='div-p-descricao-pizzas'>
+                                <p className='p-descricao-pizzas'>{item.ingredientes}</p>
+                            </div>
+
+                            <div className='botao-valor'>
+                                <button className='botao-adicionar'> Adicionar</button>
+                                <h1 className='valor'>por R${item.preço}</h1>
+                            </div>
                         </div>
-                    </div>
+                       
                 </div>
-                )}
+                 )}
 
-               
-            </section>
+                
+                </section>
+
+           
         </main>
     )
 }

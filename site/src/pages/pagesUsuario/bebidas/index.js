@@ -2,7 +2,7 @@ import './index.scss';
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
-import { buscarimagem, Bebidas  } from '../../../api/postAPI'
+import { buscarimagem, ListarBebidas  } from '../../../api/postAPI'
 
 export default function Index() {
 
@@ -10,7 +10,7 @@ export default function Index() {
     const [post, setPost] = useState([])
     
     async function CarregarTodosPosts() {
-        const resp = await Bebidas();
+        const resp = await ListarBebidas();
         setPost(resp);
     }
 
