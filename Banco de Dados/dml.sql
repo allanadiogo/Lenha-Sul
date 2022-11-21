@@ -77,5 +77,33 @@ SELECT
         FROM tb_pedido;
 
 select * from tb_pagamento_cartao;
+
+     
                     
 select * from tb_endereco;
+
+
+
+
+select tb_produto.id_produto        as id,
+            nm_produto                      as produto,
+            vl_preco                        as preco,
+            ds_ingredientes                   as ingredientes,
+            count(nm_categoria)             as qtdCategorias
+        from tb_produto 
+        inner join tb_produto_categoria on tb_produto_categoria.id_produto = tb_produto.id_produto
+        inner join tb_categoria on tb_categoria.id_categoria = tb_produto_categoria.id_categoria
+        group 
+            by tb_produto.id_produto,
+                nm_produto,
+                vl_preco,
+                ds_ingredientes;
+                
+                
+                select 
+                id_produto                      as id,
+                nm_produto                      as produto,
+                vl_preco                        as preco,
+                ds_ingredientes                     as ingredientes
+        from tb_produto 
+       where id_produto = 1;

@@ -42,17 +42,6 @@ export default function Index() {
                     <hr className='linha2' />
 
 
-
-                    <a href='/acompanharPedido' className='con-text2-usuario'>
-                        <img className="icons-usuario" src='/assets/images/motomenu.png' />
-                        <span className='texts2-usuario'> Acompanhar Pedido </span>
-
-                    </a>
-
-                    <hr className='linha3' />
-
-
-
                     <a href='/carrinho' className='con-text-usuario-1'>
                         <img className="icons-usuario" src='/assets/images/carrinho.png' />
                         <span className='texts-usuario'> Carrinho </span>

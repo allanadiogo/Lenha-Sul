@@ -21,6 +21,8 @@ export default function Index() {
 
 
 
+
+
     async function carregarUsuario() {
         const id = Storage('usuario-logado').id
         const resp = await buscarUsuarioPorId(id);
@@ -68,15 +70,24 @@ export default function Index() {
         document.getElementById('foto-perfil').click();
     }
 
-    function mostrarImagem() {
-        if (typeof (imagem) == 'object') {
-          return URL.createObjectURL(imagem);
+    //function mostrarImagem() {
+      //  if (typeof (imagem) == 'object') {
+        //  return URL.createObjectURL(imagem);
+      //  }
+      //  else {
+       //   return fotoPerfil(imagem)
+     //   }
+    //  }
+    
+      function mostrarImagem(imagem) {
+       
+if (typeof (imagem) == 'string') {
+            return `${API_URL}/${imagem}`
         }
         else {
-          return fotoPerfil(imagem)
+            return URL.createObjectURL(imagem);
         }
-      }
-    
+    }
 
 
     console.log(salvarClick);

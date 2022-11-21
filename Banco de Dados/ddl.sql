@@ -1,7 +1,6 @@
 create database lenhaasul;
+drop database lenhaasul;
 use lenhaasul;
-
-
 -- Tabela Usuário
 create table tb_usuario (
 	id_usuario         int primary key auto_increment,
@@ -73,7 +72,10 @@ create table tb_pagamento_pix (
         );      
         
         
- 
+         create table tb_categoria (
+		id_categoria		int primary key auto_increment,
+        nm_categoria		varchar(200)
+);
 
 -- Tabela Categoria
 create table tb_categoria (
@@ -82,13 +84,21 @@ create table tb_categoria (
 );
 
 
+create table tb_produto_categoria (
+	id_produto_categoria	int primary key auto_increment,
+    id_categoria			int,
+    id_produto				int,
+    foreign key (id_categoria) references tb_categoria (id_categoria),
+    foreign key (id_produto) references tb_produto (id_produto)
+);
+
 -- Tabela Produto
 create table tb_produto (
         id_produto				int primary key auto_increment,
-		id_pedido				int,
+         id_categoria			int,
+         id_pedido              int,
 		nm_produto				varchar(100),     
         vl_preco				decimal(12.5),
-        id_categoria			int,
         img_produto 			varchar(100),
         ds_ingredientes			varchar(100),
         foreign key (id_categoria) references tb_categoria (id_categoria),
